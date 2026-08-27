@@ -43,8 +43,8 @@ const PROJECTS = [
     year: '2026',
     domain: 'aerospace',
     domainLabel: 'AEROSPACE',
-    headline: '1U CubeSat Structural Thermal Model',
-    body: 'Structural design, FEM modal analysis, vibration test campaign, ECSS-aligned documentation. STM qualification and 4S Symposium 2026 paper.',
+    headline: '2U CubeSat Structural Thermal Model',
+    body: 'Structural modelling, FEM modal analysis and vibration-test correlation for the AlbaSat STM, documented for 4S Symposium 2026.',
     tags: ['CubeSat', 'FEM', 'Vibration', 'ECSS'],
     featured: true,
     image: '/assets/img/still-aerospace.jpg',
@@ -177,91 +177,81 @@ const DOMAINS = [
 
 const EXPERIENCE = [
   {
-    role: 'System Engineering Lead',
-    company: 'BEPI Programme',
-    domain: 'SYSTEMS ENGINEERING',
+    role: 'Software Development & Management',
+    company: 'Space Research Group · University of Padua',
+    domain: 'SYSTEMS ENGINEERING · MBSE',
     location: 'Padova, IT',
-    dates: '2024 to Present',
-    summary: 'Designed and shipped the multi-tenant MBSE platform: 22 tables, 79 RLS policies, 18 triggers, 11 pages, 9 integrations, 8 RBAC roles.',
+    dates: 'Mar 2026 to Present',
+    summary: 'Developing an MBSE-based systems-engineering platform and digital-twin ecosystem for mission requirements and complex aerospace-system data.',
     bullets: [
-      'Requirements, FMECA and configuration baselines under one row-level-secure schema',
-      'Role-aware dashboards for engineering, QA, programme management',
-      'Event-driven automation with webhooks and triggers across the platform',
+      'Supabase SQL backend for requirements traceability and mission data',
+      'Python reporting workflows aligned with ESA and NASA frameworks',
+      'Product-tree, onboarding, collaboration and REST integration features',
     ],
   },
   {
-    role: 'Aerospace Engineer · AlbaSat',
-    company: 'University of Padua · ESA / ASI',
+    role: 'ST&M Subsystem Engineer · AlbaSat',
+    company: 'University of Padua · ESA ESEC-Galaxia',
     domain: 'AEROSPACE · STRUCTURES',
     location: 'Padova, IT',
-    dates: '2023 to 2026',
-    summary: 'Structural Thermal Model design and qualification for a 1U CubeSat. FEM modal analysis correlated with measured vibration test data, presented at 4S Symposium 2026.',
+    dates: 'Nov 2025 to Present',
+    summary: 'Structural modelling and FEM-to-test correlation for the AlbaSat 2U CubeSat STM, including vibration-test analysis documented for 4S Symposium 2026.',
     bullets: [
-      'ECSS-aligned documentation across phases A–D',
-      'Modal parameter extraction and test-to-analysis agreement',
-      'Student-friendly ground segment integration',
+      'ECSS-oriented structural modelling and launcher constraints',
+      'Modal parameter extraction and test-to-analysis correlation',
+      'STM mass verification and vibration-test campaign support',
     ],
   },
   {
-    role: 'Full-Stack Developer',
-    company: 'Independent + Collaborations',
-    domain: 'SOFTWARE · FULL-STACK',
+    role: 'IT Specialist',
+    company: 'Dog Welfare Ltd',
+    domain: 'IT · AUTOMATION',
+    location: 'Hybrid',
+    dates: 'Jan 2026 to Present',
+    summary: 'Building lightweight, secure operational tools for client communication, Video Sales Letter analytics and data-driven workflow improvement.',
+    bullets: [
+      'IMAP/SMTP communication bridge without a third-party helpdesk',
+      'VSL Visualizer for performance tracking and engagement analysis',
+      'Operational tools focused on practical, maintainable automation',
+    ],
+  },
+  {
+    role: 'IT Manager & Systems Architect',
+    company: 'Probiz Consulting LLC',
+    domain: 'AUTOMATION · INTEGRATION',
     location: 'Remote',
-    dates: '2022 to Present',
-    summary: 'Production web apps with React, Next.js, TypeScript, Tailwind, FastAPI, Postgres, Supabase. Three.js / R3F for 3D-heavy interfaces.',
+    dates: 'Aug 2025 to Feb 2026',
+    summary: 'Designed the data architecture linking GoHighLevel, Make and Google Sheets for lead distribution and controlled synchronisation.',
     bullets: [
-      'Multi-tenant SaaS with row-level security and event-driven integrations',
-      'Mission-ops scheduling service for satellite pass prediction',
-      'Internal AI observability dashboards',
-    ],
-  },
-  {
-    role: 'Automation Engineer',
-    company: 'Research + Industry Projects',
-    domain: 'AI · AUTOMATION',
-    location: 'Padova, IT',
-    dates: '2023 to Present',
-    summary: 'Built n8n + Make + Apps Script networks for engineering review automation, scheduling, observability, and report generation.',
-    bullets: [
-      'Webhook orchestration with retry, idempotency and rollback',
-      'Prompt-engineered AI pipelines for classification and synthesis',
-      'Internal tooling for ops, QA, programme management',
+      'Round Robin distribution and webhook-based lead routing',
+      'One-way Google Sheets to GoHighLevel profiling synchronisation',
+      'Technical documentation covering flows, constraints and maintenance',
     ],
   },
 ];
 
 const EDUCATION = [
   {
-    degree: 'M.Sc. Aerospace Engineering',
-    field: 'Aerospace Engineering',
-    inst: 'University of Padua',
-    dates: '2023 to 2026 (in progress)',
-    status: 'in-progress',
-    notes: 'Thesis on CubeSat STM structural qualification and FEM / test correlation.',
-  },
-  {
     degree: 'B.Sc. Aerospace Engineering',
     field: 'Aerospace Engineering',
     inst: 'University of Padua',
-    dates: '2020 to 2023',
-    status: 'completed',
-    notes: 'Curriculum across structures, propulsion, systems, and space mission design.',
+    dates: '2023 to Present',
+    status: 'in-progress',
+    notes: 'Active Alba CubeSat ST&M team member and Space Research Group IT developer.',
   },
   {
-    degree: 'Scientific High School Diploma',
-    field: 'Scientific Lyceum',
-    inst: 'Liceo Scientifico',
-    dates: '2015 to 2020',
+    degree: 'Technical Diploma',
+    field: 'Computer Science, Telecommunications & Systems Administration',
+    inst: 'ITIS Meucci',
+    dates: '2018 to 2023',
     status: 'completed',
-    notes: 'Mathematics, physics, science track.',
+    notes: 'Final grade: 87/100. Focus on IT infrastructure, programming, electronics and network administration.',
   },
 ];
 
 const CERTIFICATIONS = [
-  { name: 'ECSS-M-ST-10C Systems Engineering', issuer: 'ESA', status: 'COMPLETED', dot: 'fire'  },
-  { name: 'Supabase RLS & Postgres',          issuer: 'SUPABASE', status: 'COMPLETED', dot: 'fire'  },
-  { name: 'React + TypeScript Professional',   issuer: 'META', status: 'COMPLETED', dot: 'fire'  },
-  { name: 'Generative AI with LLMs',           issuer: 'DEEPLEARNING.AI', status: 'COMPLETED', dot: 'fire'  },
+  { name: 'English B2: Reading & Listening', issuer: 'UNIVERSITY OF PADUA', status: 'COMPLETED', dot: 'fire' },
+  { name: 'Team Management: Managerial Training', issuer: 'UNIVERSITY OF BUSINESS IN WROCLAW', status: 'COMPLETED', dot: 'fire' },
 ];
 
 const TICKER_ITEMS = [
@@ -319,10 +309,19 @@ function renderNav() {
     list.append(el('li', {}, el('a', { href: link.href, class: 'nav-link', 'data-target': link.href.slice(1) }, link.label)));
   }
 
+  const drawer = el('div', { class: 'nav-drawer', id: 'nav-drawer' });
+  const drawerList = el('ul');
+  for (const link of NAV_LINKS) {
+    drawerList.append(el('li', {}, el('a', { href: link.href, class: 'nav-link', 'data-target': link.href.slice(1) }, link.label)));
+  }
+  drawer.appendChild(drawerList);
+  document.body.appendChild(drawer);
+
   const toggle = $('#nav-toggle');
   toggle?.addEventListener('click', () => {
-    list.classList.toggle('open');
-    toggle.classList.toggle('open');
+    const open = drawer.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
   });
 
   // Smooth scroll for in-page anchors (offset for fixed nav)
@@ -334,8 +333,9 @@ function renderNav() {
       e.preventDefault();
       const y = target.getBoundingClientRect().top + scrollY - 72;
       scrollTo({ top: y, behavior: REDUCED ? 'auto' : 'smooth' });
-      list.classList.remove('open');
+      drawer.classList.remove('open');
       toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
     });
   });
 
@@ -869,8 +869,10 @@ function setupHero() {
 // =============================================================================
 function setupPlanetScrub() {
   const video = $('#planet-video');
-  const section = $('#about');
-  if (!video || !section) return;
+  const background = $('#site-planet-bg');
+  const firstSection = $('#about');
+  const lastSection = $('#contact');
+  if (!video || !background || !firstSection || !lastSection) return;
 
   const onLoaded = () => {
     try { video.pause(); video.removeAttribute('autoplay'); } catch {}
@@ -878,7 +880,7 @@ function setupPlanetScrub() {
   };
   const onError = () => { /* poster remains */ };
 
-  video.addEventListener('loadeddata', onLoaded);
+  video.addEventListener('loadeddata', onLoaded, { once: true });
   video.addEventListener('error', onError);
   video.load();
 
@@ -887,34 +889,56 @@ function setupPlanetScrub() {
 
     let target = 0;
     let current = 0;
+    let frame = 0;
+    let seeking = false;
+
+    const requestDrive = () => {
+      if (!frame) frame = requestAnimationFrame(drive);
+    };
 
     const setTarget = () => {
       if (!video.duration || !isFinite(video.duration)) {
         target = 0;
         return;
       }
-      // Progress = how far the section has scrolled past the viewport top,
-      // clamped 0..1 across the section's own height.
-      const r = section.getBoundingClientRect();
-      const total = r.height + innerHeight;
-      const scrolled = Math.min(Math.max(-r.top, 0), total);
-      const t = scrolled / total;
+      // The journey starts as section 01 enters and ends at section 10's exit.
+      const start = firstSection.offsetTop - innerHeight * 0.8;
+      const end = lastSection.offsetTop + lastSection.offsetHeight - innerHeight;
+      const t = Math.min(1, Math.max(0, (scrollY - start) / Math.max(1, end - start)));
       target = t * video.duration;
+      // Fade in only as the journey begins. Do not brighten the video over
+      // the rest of the site: the scroll controls the frame, not exposure.
+      background.style.opacity = (Math.min(1, t * 20) * 0.74).toFixed(3);
+      requestDrive();
     };
 
     addEventListener('scroll', setTarget, { passive: true });
     addEventListener('resize', setTarget, { passive: true });
-    setTarget();
 
     const lerp = (a, b, t) => a + (b - a) * t;
-    const tick = () => {
+    function drive() {
+      frame = 0;
+      if (seeking || !video.duration) return;
       current = lerp(current, target, 0.25);
-      if (Math.abs(current - target) > 0.004 && video.duration) {
-        try { video.currentTime = current; } catch {}
+      if (Math.abs(current - target) <= 0.004) {
+        current = target;
       }
-      requestAnimationFrame(tick);
-    };
-    tick();
+      if (Math.abs(video.currentTime - current) > 0.004) {
+        seeking = true;
+        try { video.currentTime = current; } catch { seeking = false; }
+      }
+      if (!seeking && Math.abs(current - target) > 0.004) {
+        requestDrive();
+      }
+    }
+
+    video.addEventListener('seeked', () => {
+      seeking = false;
+      current = video.currentTime;
+      if (Math.abs(current - target) > 0.004) requestDrive();
+    });
+
+    setTarget();
   }
 }
 
@@ -944,6 +968,51 @@ function setupFooter() {
 }
 
 // =============================================================================
+// LANGUAGE SWITCHER
+// =============================================================================
+function setupTranslation() {
+  const buttons = $$('.language-button');
+  if (!buttons.length) return;
+
+  const match = document.cookie.match(/(?:^|;\s*)googtrans=\/en\/([^;]+)/);
+  const activeLanguage = match?.[1] === 'it' ? 'it' : 'en';
+  const setActive = (language) => {
+    buttons.forEach(button => {
+      const active = button.dataset.language === language;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+  };
+  setActive(activeLanguage);
+
+  buttons.forEach(button => button.addEventListener('click', () => {
+    const language = button.dataset.language;
+    if (language === activeLanguage) return;
+    if (language === 'en') {
+      document.cookie = 'googtrans=;path=/;max-age=0';
+      document.cookie = `googtrans=;path=/;domain=${location.hostname};max-age=0`;
+    } else {
+      document.cookie = `googtrans=/en/${language};path=/`;
+      document.cookie = `googtrans=/en/${language};path=/;domain=${location.hostname}`;
+    }
+    location.reload();
+  }));
+
+  window.googleTranslateElementInit = () => {
+    if (!window.google?.translate) return;
+    new window.google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,it',
+      autoDisplay: false,
+    }, 'google-translate-anchor');
+  };
+  const script = document.createElement('script');
+  script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  script.async = true;
+  document.head.appendChild(script);
+}
+
+// =============================================================================
 // BOOT
 // =============================================================================
 function boot() {
@@ -959,6 +1028,7 @@ function boot() {
   setupPlanetScrub();
   setupInView();
   setupFooter();
+  setupTranslation();
 }
 
 if (document.readyState === 'loading') {

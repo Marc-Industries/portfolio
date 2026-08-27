@@ -28,6 +28,12 @@
        PAGE BACKGROUND — engineering grid + red vignette
        ============================================================ -->
   <div class="page-bg" aria-hidden="true"></div>
+  <div class="site-planet-bg" id="site-planet-bg" aria-hidden="true">
+    <video id="planet-video" muted playsinline preload="auto" poster="/assets/img/planet-poster.jpg">
+      <source src="/assets/video/Planet-clean.mp4" type="video/mp4" />
+    </video>
+    <div class="site-planet-bg-vignette"></div>
+  </div>
   <div class="scan-line-global" aria-hidden="true"></div>
 
   <!-- ============================================================
@@ -40,6 +46,10 @@
         <span class="brand-text">Matteo Marcon</span>
       </a>
       <ul class="nav-links" id="nav-links"></ul>
+      <div class="language-switch notranslate" aria-label="Language selector">
+        <button type="button" class="language-button active" data-language="en" aria-pressed="true">EN</button>
+        <button type="button" class="language-button" data-language="it" aria-pressed="false">IT</button>
+      </div>
       <button class="nav-toggle" id="nav-toggle" aria-label="Menu">≡ MENU</button>
     </div>
   </nav>
@@ -118,7 +128,7 @@
          ============================================================ -->
     <section class="block block-with-planet" id="about" data-num="01" data-eyebrow="// IDENTITY">
       <div class="planet-stage" aria-hidden="true">
-        <video id="planet-video" muted playsinline preload="auto" loop poster="/assets/img/planet-poster.jpg">
+        <video id="planet-stage-video" muted playsinline preload="none" loop poster="/assets/img/planet-poster.jpg">
           <source src="/assets/video/Planet-clean.mp4" type="video/mp4" />
         </video>
         <div class="planet-stage-vignette"></div>
@@ -159,7 +169,7 @@
             </p>
             <p class="muted">
               My path moves between ECSS-aligned space systems engineering and shipping
-              production software, from the test campaign of a 1U CubeSat to the
+              production software, from the test campaign of a 2U CubeSat to the
               architecture of a multi-tenant MBSE platform.
             </p>
             <div class="stat-grid">
@@ -255,14 +265,14 @@
             </div>
             <h3 class="flagship-name">AlbaSat</h3>
             <p class="flagship-body">
-              A 1U CubeSat designed, integrated and qualified as part of an ECSS-aligned
-              university team project. Mission: low-cost Earth observation with on-board
-              processing and a student-friendly ground segment.
+              A 2U CubeSat Structural and Thermal Model developed within a University of
+              Padua team. My work focuses on structural modelling and FEM-to-test
+              correlation for the vibration-test campaign.
             </p>
             <div class="flagship-grid">
               <div class="flagship-cell">
                 <div class="mono" style="font-size:9px; letter-spacing:0.28em; color:var(--text-3);">FORM FACTOR</div>
-                <div class="flagship-cell-val">1U</div>
+                <div class="flagship-cell-val">2U</div>
               </div>
               <div class="flagship-cell">
                 <div class="mono" style="font-size:9px; letter-spacing:0.28em; color:var(--text-3);">STATUS</div>
@@ -717,6 +727,7 @@
     </div>
   </footer>
 
+  <div id="google-translate-anchor" aria-hidden="true"></div>
   <script type="module" src="/assets/app.js"></script>
 
 </body>
