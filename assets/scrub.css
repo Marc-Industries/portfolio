@@ -1,0 +1,95 @@
+/* =============================================================================
+   SCRUB PAGE — alternate take
+   ============================================================================= */
+
+.scrub-stage {
+  position: relative;
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 7rem 1.5rem 4rem;
+  overflow: hidden;
+}
+
+.scrub-load {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: var(--bg-0);
+  z-index: 4;
+  transition: opacity 0.6s ease;
+}
+.scrub-load.hidden { opacity: 0; pointer-events: none; }
+.scrub-load-ring {
+  width: 32px; height: 32px;
+  border: 1px solid var(--line-strong);
+  border-top-color: var(--accent-crimson);
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+.scrub-load-label {
+  margin-top: 1rem;
+  font-size: 10px; letter-spacing: 0.32em;
+  color: var(--text-2);
+}
+
+.scrub-poster {
+  position: absolute; inset: 0; z-index: 1;
+}
+.scrub-poster img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: contrast(1.05) saturate(1.1) brightness(0.65);
+}
+
+#scrub-video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  filter: contrast(1.05) saturate(1.1) brightness(0.7);
+}
+
+.scrub-overlay {
+  position: absolute; inset: 0; z-index: 3; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(212, 63, 63, 0.18), transparent 60%),
+    linear-gradient(180deg, rgba(5,0,0,0.0) 0%, rgba(5,0,0,0.4) 60%, rgba(5,0,0,0.95) 100%);
+}
+
+.scrub-captions {
+  position: relative; z-index: 5;
+  max-width: 1200px; margin: 0 auto; width: 100%;
+}
+.scrub-caption {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 5vw, 4.5rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--text-0);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  margin-top: 0.5rem;
+}
+.scrub-caption.show { opacity: 1; transform: translateY(0); }
+.scrub-caption-final { color: var(--text-0); font-weight: 600; }
+
+.scrub-meta {
+  position: absolute;
+  bottom: 1.5rem; right: 1.5rem;
+  z-index: 5;
+  font-size: 9px; letter-spacing: 0.28em;
+  color: var(--text-2);
+  text-align: right;
+}
+.scrub-meta-em {
+  color: var(--accent-crimson);
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .scrub-meta { bottom: 1rem; right: 1rem; font-size: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #scrub-video { display: none !important; }
+}

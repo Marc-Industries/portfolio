@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>Matteo Marcon — Aerospace · Systems · Software · AI</title>
+  <meta name="description" content="Aerospace & Systems Engineer building software, MBSE platforms and AI-driven automation. CubeSat, Digital Engineering, full-stack development." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Matteo Marcon — Aerospace · Systems · Software · AI" />
+  <meta property="og:description" content="Aerospace & Systems Engineer building software, MBSE platforms and AI-driven automation." />
+  <meta property="og:image" content="/assets/img/og.jpg" />
+  <meta property="og:url" content="https://matteomarcon.dev" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050000'/%3E%3Crect x='12' y='12' width='8' height='8' fill='%23D43F3F' transform='rotate(45 16 16)'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+
+  <link rel="stylesheet" href="/assets/site.css" />
+</head>
+<body data-theme="dark">
+
+  <!-- ============================================================
+       PAGE BACKGROUND — engineering grid + red vignette
+       ============================================================ -->
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="scan-line-global" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NAV — fixed top
+       ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="brand">
+        <img src="/assets/img/logo.jfif" alt="Matteo Marcon" class="brand-img" />
+        <span class="brand-text">M·M</span>
+      </a>
+      <ul class="nav-links" id="nav-links"></ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">≡ MENU</button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       TELEMETRY BAR — fixed, just under nav
+       ============================================================ -->
+  <div class="telemetry" id="telemetry">
+    <div class="telemetry-left">
+      <span class="dot fire"></span>
+      <span class="mono">LIVE</span>
+    </div>
+    <div class="telemetry-track">
+      <div class="ticker" id="ticker"></div>
+    </div>
+    <div class="telemetry-right">
+      <span class="mono">UTC <span id="utc-clock">--:--:--</span></span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       HERO — autoplay video + auto-cycling captions
+       ============================================================ -->
+  <section id="hero" class="hero">
+    <div class="hero-load" id="hero-load">
+      <div class="hero-load-ring"></div>
+      <div class="hero-load-label mono">INITIALISING MISSION</div>
+    </div>
+
+    <div class="hero-poster" id="hero-poster" hidden>
+      <img id="hero-poster-img" src="/assets/img/hero-poster.jpg" alt="" />
+      <div class="hero-poster-vignette"></div>
+    </div>
+
+    <video id="hero-video" muted playsinline preload="auto" loop autoplay poster="/assets/img/hero-poster.jpg" hidden>
+      <source src="/assets/video/hero-clean.mp4" type="video/mp4" />
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-captions" id="hero-captions">
+      <div class="hero-caption" data-beat="1">Aerospace engineer.</div>
+      <div class="hero-caption" data-beat="2">Software, too.</div>
+      <div class="hero-caption" data-beat="3">MBSE, AI, automation.</div>
+      <div class="hero-caption hero-caption-final" data-beat="4">Matteo Marcon.</div>
+    </div>
+
+    <div class="hero-meta hero-meta-tl">
+      <img src="/assets/img/logo.jfif" alt="" class="hero-logo" />
+      <span class="dot fire"></span>
+      <span class="mono">SYSTEMS ONLINE · MISSION READY</span>
+    </div>
+    <div class="hero-meta hero-meta-tr mono">
+      <div>LAT 45.4064 N</div>
+      <div>LON 11.8768 E</div>
+      <div class="hero-meta-em">— PDV / UTC+01 —</div>
+    </div>
+    <div class="hero-meta hero-meta-br mono">
+      <div>SECTION 00 · IDENTITY</div>
+      <div class="hero-meta-em">SCROLL TO PROCEED</div>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="#projects" class="btn btn-primary">View Projects <span>→</span></a>
+      <a href="#contact" class="btn">Get in Touch</a>
+      <a href="/scrub.html" class="btn">Take 02 · Alt framing <span>→</span></a>
+      <a href="https://www.linkedin.com/in/matteo-marcon-287999368/" target="_blank" rel="noreferrer" class="btn">LinkedIn ↗</a>
+      <a href="https://github.com/Marc-Industries" target="_blank" rel="noreferrer" class="btn">GitHub ↗</a>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- ============================================================
+         01 · ABOUT — Planet video scrubbed by section scroll
+         ============================================================ -->
+    <section class="block block-with-planet" id="about" data-num="01" data-eyebrow="// IDENTITY">
+      <div class="planet-stage" aria-hidden="true">
+        <video id="planet-video" muted playsinline preload="auto" loop poster="/assets/img/planet-poster.jpg">
+          <source src="/assets/video/Planet-clean.mp4" type="video/mp4" />
+        </video>
+        <div class="planet-stage-vignette"></div>
+        <div class="planet-stage-meta mono">
+          <span class="dot fire"></span>
+          <span>SCRUB · SCROLL TO ROTATE ORBIT</span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="block-head">
+          <span class="block-num mono">01</span>
+          <span class="block-hairline"></span>
+          <span class="block-eyebrow mono">// IDENTITY</span>
+        </div>
+        <h2 class="block-title">An engineer who lives in both worlds.</h2>
+        <p class="block-lede">
+          Aerospace &amp; systems engineering on one side, production software on the other.
+          Same discipline in both: clear requirements, observable systems, evidence over intuition.
+        </p>
+
+        <div class="block-hero block-hero-wide">
+          <img src="/assets/img/still-about.jpg" alt="" loading="lazy" />
+          <div class="block-hero-vignette"></div>
+          <div class="block-hero-meta mono">
+            <span class="dot fire"></span>
+            <span>MISSION CONTROL · IDENTITY</span>
+            <span class="block-hero-tag">ABOUT</span>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-graph" id="about-graph"></div>
+          <div class="about-bio">
+            <p>
+              I'm an <span class="accent">Aerospace Engineer</span> from the University of Padua
+              who also builds <span class="accent">production software</span>. My work spans the
+              full lifecycle: requirements, architecture, implementation, testing, integration.
+            </p>
+            <p class="muted">
+              My path moves between ECSS-aligned space systems engineering and shipping
+              production software, from the test campaign of a 1U CubeSat to the
+              architecture of a multi-tenant MBSE platform.
+            </p>
+            <div class="stat-grid">
+              <div class="stat card corner-brackets">
+                <div class="stat-label mono">PROJECTS SHIPPED</div>
+                <div class="stat-value" data-count="11">0</div>
+              </div>
+              <div class="stat card corner-brackets">
+                <div class="stat-label mono">DOMAINS</div>
+                <div class="stat-value" data-count="7">0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         02 · AEROSPACE
+         ============================================================ -->
+    <section class="block" id="aerospace" data-num="02" data-eyebrow="// AEROSPACE & SPACE SYSTEMS">
+      <div class="container">
+        <div class="block-head">
+          <span class="block-num mono">02</span>
+          <span class="block-hairline"></span>
+          <span class="block-eyebrow mono">// AEROSPACE &amp; SPACE SYSTEMS</span>
+        </div>
+        <h2 class="block-title">From concept to orbit.</h2>
+        <p class="block-lede">
+          ECSS-aligned engineering across the full space mission lifecycle:
+          requirements, structure, thermal, operations.
+        </p>
+
+        <div class="block-hero">
+          <img src="/assets/img/still-aerospace.jpg" alt="" loading="lazy" />
+          <div class="block-hero-vignette"></div>
+          <div class="block-hero-meta mono">
+            <span class="dot fire"></span>
+            <span>SUBJECT · 1U CUBESAT STM</span>
+            <span class="block-hero-tag">AEROSPACE</span>
+          </div>
+        </div>
+
+        <div class="ecss-strip">
+          <div class="ecss-line"></div>
+          <div class="ecss-phases">
+            <div class="ecss-phase">
+              <div class="ecss-dot">A</div>
+              <div class="ecss-label">Concept</div>
+              <div class="ecss-desc">Mission analysis, feasibility, concept-of-operations.</div>
+            </div>
+            <div class="ecss-phase">
+              <div class="ecss-dot">B</div>
+              <div class="ecss-label">Preliminary</div>
+              <div class="ecss-desc">Requirements baseline, breadboards, trade studies.</div>
+            </div>
+            <div class="ecss-phase">
+              <div class="ecss-dot">C</div>
+              <div class="ecss-label">Detailed</div>
+              <div class="ecss-desc">Design, FMECA, qualification, integration testing.</div>
+            </div>
+            <div class="ecss-phase">
+              <div class="ecss-dot">D</div>
+              <div class="ecss-label">Qualification</div>
+              <div class="ecss-desc">Qualification &amp; acceptance reviews (QR / AR).</div>
+            </div>
+            <div class="ecss-phase">
+              <div class="ecss-dot">E</div>
+              <div class="ecss-label">Operations</div>
+              <div class="ecss-desc">Launch, commissioning, in-orbit ops, end-of-life.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="card corner-brackets">
+            <div class="card-label mono">CORE STACK</div>
+            <ul class="list">
+              <li><span class="dot fire"></span><span>CubeSat engineering</span></li>
+              <li><span class="dot fire"></span><span>System engineering</span></li>
+              <li><span class="dot fire"></span><span>Requirements &amp; traceability</span></li>
+              <li><span class="dot fire"></span><span>Structural / FEM</span></li>
+              <li><span class="dot fire"></span><span>Vibration testing</span></li>
+              <li><span class="dot fire"></span><span>ECSS-oriented workflow</span></li>
+            </ul>
+          </div>
+
+          <div class="card corner-brackets flagship-card" style="position:relative; overflow:hidden;">
+            <div style="position:absolute; top:0; right:0; width:6px; height:100%; background: repeating-linear-gradient(45deg, #8B0F0F, #8B0F0F 8px, transparent 8px, transparent 16px);" aria-hidden="true"></div>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+              <div class="card-label mono" style="color:var(--accent-crimson);">FLAGSHIP · CUBESAT</div>
+              <div class="mono" style="font-size:10px; letter-spacing:0.28em; color:var(--text-3);">PHASE C</div>
+            </div>
+            <h3 class="flagship-name">AlbaSat</h3>
+            <p class="flagship-body">
+              A 1U CubeSat designed, integrated and qualified as part of an ECSS-aligned
+              university team project. Mission: low-cost Earth observation with on-board
+              processing and a student-friendly ground segment.
+            </p>
+            <div class="flagship-grid">
+              <div class="flagship-cell">
+                <div class="mono" style="font-size:9px; letter-spacing:0.28em; color:var(--text-3);">FORM FACTOR</div>
+                <div class="flagship-cell-val">1U</div>
+              </div>
+              <div class="flagship-cell">
+                <div class="mono" style="font-size:9px; letter-spacing:0.28em; color:var(--text-3);">STATUS</div>
+                <div class="flagship-cell-val" style="color:var(--accent-crimson);">Phase C</div>
+              </div>
+              <div class="flagship-cell">
+                <div class="mono" style="font-size:9px; letter-spacing:0.28em; color:var(--text-3);">STANDARD</div>
+                <div class="flagship-cell-val">ECSS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         03 · MBSE / BEPI
+         ============================================================ -->
+    <section class="block" id="mbse" data-num="03" data-eyebrow="// MBSE · DIGITAL ENGINEERING">
+      <div class="container">
+        <div class="block-head">
+          <span class="block-num mono">03</span>
+          <span class="block-hairline"></span>
+          <span class="block-eyebrow mono">// MBSE · DIGITAL ENGINEERING</span>
+        </div>
+        <h2 class="block-title">A flagship digital-twin platform.</h2>
+        <p class="block-lede">
+          A system-engineering platform that turns spreadsheet sprawl into a single source
+          of truth: requirements, configuration, FMECA, integration, all under row-level security.
+        </p>
+
+        <div class="block-hero block-hero-left">
+          <img src="/assets/img/still-mbse.jpg" alt="" loading="lazy" />
+          <div class="block-hero-vignette"></div>
+          <div class="block-hero-meta mono">
+            <span class="dot fire"></span>
+            <span>DIGITAL TWIN · WIREFRAME</span>
+            <span class="block-hero-tag">MBSE</span>
+          </div>
+        </div>
+
+        <div class="card corner-brackets flagship-card" style="position:relative; overflow:hidden;">
+          <div style="position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg, transparent, var(--accent-crimson), transparent);"></div>
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+            <div>
+              <div class="card-label mono" style="color:var(--accent-crimson);">FLAGSHIP PLATFORM · PROFESSIONAL</div>
+              <h3 class="flagship-name" style="font-size:1.875rem;">BEPI · System Engineering Platform</h3>
+            </div>
+            <div class="mono" style="font-size:10px; letter-spacing:0.28em; color:var(--text-3);">CASE STUDY</div>
+          </div>
+          <p class="flagship-body">
+            A digital twin of a satellite programme: requirements, FMECA, configuration
+            baselines, reviews, and a stakeholder-facing dashboard, all backed by
+            event-driven logic. This is a high-level case study; specific implementation
+            details remain proprietary.
+          </p>
+
+          <div class="metric-grid">
+            <div class="metric"><div class="metric-val">22</div><div class="metric-key mono">DB TABLES</div><div class="metric-desc">Reusable schema across all subsystems.</div></div>
+            <div class="metric"><div class="metric-val">79</div><div class="metric-key mono">RLS POLICIES</div><div class="metric-desc">Row-level security, end-to-end.</div></div>
+            <div class="metric"><div class="metric-val">18</div><div class="metric-key mono">TRIGGERS</div><div class="metric-desc">Event-driven automation across the platform.</div></div>
+            <div class="metric"><div class="metric-val">11</div><div class="metric-key mono">PAGES</div><div class="metric-desc">Operational views for every engineering role.</div></div>
+            <div class="metric"><div class="metric-val">9</div><div class="metric-key mono">INTEGRATIONS</div><div class="metric-desc">External systems connected via webhooks.</div></div>
+            <div class="metric"><div class="metric-val">8</div><div class="metric-key mono">RBAC ROLES</div><div class="metric-desc">Granular permissions and audit trails.</div></div>
+          </div>
+
+          <div class="pillar-grid">
+            <div class="pillar">
+              <div class="pillar-title">Digital Twin</div>
+              <div class="pillar-body">Single source of truth for requirements, configuration, and review state.</div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-title">Stakeholder UI</div>
+              <div class="pillar-body">Role-aware dashboards. Everyone sees exactly what their role permits.</div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-title">Event-Driven</div>
+              <div class="pillar-body">Webhooks, triggers and integrations automate the engineering workflow end-to-end.</div>
+            </div>
+          </div>
+
+          <div style="margin-top:2rem;">
+            <a href="/projects/bepi.html" class="btn btn-primary">Read full case study <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="card corner-brackets">
+          <div class="card-label mono">SYSTEMS ENGINEERING TOOLBOX</div>
+          <div class="tag-wall">
+            <span class="tag">MBSE</span>
+            <span class="tag">Digital Twin</span>
+            <span class="tag">FMECA</span>
+            <span class="tag">CPM / critical path</span>
+            <span class="tag">PDR/CDR deliverables</span>
+            <span class="tag">Product tree</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         04 · SOFTWARE
+         ============================================================ -->
+    <section class="block" id="software" data-num="04" data-eyebrow="// SOFTWARE & IT SYSTEMS">
+      <div class="container">
+        <div class="block-head">
+          <span class="block-num mono">04</span>
+          <span class="block-hairline"></span>
+          <span class="block-eyebrow mono">// SOFTWARE &amp; IT SYSTEMS</span>
+        </div>
+        <h2 class="block-title">Production-grade software, engineered like a system.</h2>
+        <p class="block-lede">
+          Full-stack work with the same discipline as aerospace:
+          tested, observable, modular, designed for failure modes.
+        </p>
+
+        <div class="layer-stack">
+          <div class="layer">
+            <div class="layer-tag mono">L0</div>
+            <div class="layer-card glass corner-brackets">
+              <div>
+                <div class="layer-title">Frontend</div>
+                <div class="layer-body">React, Next.js, TypeScript, Tailwind, Framer Motion.</div>
+              </div>
+              <span class="dot fire"></span>
+            </div>
+          </div>
+          <div class="layer">
+            <div class="layer-tag mono">L1</div>
+            <div class="layer-card glass corner-brackets">
+              <div>
+                <div class="layer-title">API</div>
+                <div class="layer-body">FastAPI, Node.js, REST, webhooks, serverless functions.</div>
+              </div>
+              <span class="dot fire"></span>
+            </div>
+          </div>
+          <div class="layer">
+            <div class="layer-tag mono">L2</div>
+            <div class="layer-card glass corner-brackets">
+              <div>
+                <div class="layer-title">Backend</div>
+                <div class="layer-body">Python services, scheduled jobs, async workers.</div>
+              </div>
+              <span class="dot fire"></span>
+            </div>
+          </div>
+          <div class="layer">
+            <div class="layer-tag mono">L3</div>
+            <div class="layer-card glass corner-brackets">
+              <div>
+                <div class="layer-title">Data</div>
+                <div class="layer-body">Postgres, Supabase, schema design, RLS, migrations.</div>
+              </div>
+              <span class="dot fire"></span>
+            </div>
+          </div>
+          <div class="layer">
+            <div class="layer-tag mono">L4</div>
+            <div class="layer-card glass corner-brackets">
+              <div>
+                <div class="layer-title">Infra</div>
+                <div class="layer-body">Git, CI/CD, containers, observability, secrets.</div>
+              </div>
+              <span class="dot fire"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card corner-brackets">
+          <div class="card-label mono">LANGUAGES &amp; FRAMEWORKS</div>
+          <div class="tag-wall">
+            <span class="tag">React</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Tailwind</span>
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Three.js</span>
+            <span class="tag">R3F</span>
+            <span class="tag">SolidWorks</span>
+            <span class="tag">ANSYS</span>
+            <span class="tag">MATLAB</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         05 · AI / AUTOMATION
+         ============================================================ -->
+    <section class="block" id="automation" data-num="05" data-eyebrow="// AI · AUTOMATION">
+      <div class="container">
+        <div class="block-head">
+          <span class="block-num mono">05</span>
+          <span class="block-hairline"></span>
+          <span class="block-eyebrow mono">// AI · AUTOMATION</span>
+        </div>
+        <h2 class="block-title">Event-driven workflows that think.</h2>
+        <p class="block-lede">
+          Combining AI agents, rule engines, and webhook orchestration into reliable
+          pipelines. Observability and rollback by design.
+        </p>
+
+        <div class="block-hero">
+          <img src="/assets/img/still-automation.jpg" alt="" loading="lazy" />
+          <div class="block-hero-vignette"></div>
+          <div class="block-hero-meta mono">
+            <span class="dot fire"></span>
+            <span>CLOSED LOOP · 5 NODES</span>
+            <span class="block-hero-tag">AUTOMATION</span>
+          </div>
+        </div>
+
+        <div class="card corner-brackets" style="overflow-x:auto;">
+          <div class="card-label mono" style="color:var(--accent-crimson); margin-bottom:1.5rem;">EVENT FLOW · ANIMATED</div>
+          <svg viewBox="0 0 800 320" class="flow-svg" aria-hidden="true" id="flow-svg">
+            <g id="flow-edges"></g>
+            <g id="flow-nodes"></g>
+            <g>
+              <text x="20" y="20" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--text-3)" id="flow-legend-l">FLOW LATENCY</text>
+              <text x="20" y="40" font-family="JetBrains Mono, monospace" font-size="14" fill="var(--accent-crimson)" id="flow-legend-v">~120ms · p99</text>
+              <text x="780" y="20" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--text-3)">NODES</text>
+              <text x="780" y="40" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="14" fill="var(--accent-crimson)">5 / 5 ONLINE</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="two-col">
+          <div class="card corner-brackets">
+            <div class="card-label mono" style="color:var(--accent-crimson);">AI / ML</div>
+            <div class="tag-wall">
+              <span class="tag">OpenAI</span>
+              <span class="tag">Gemini</span>
+              <span class="tag">Hugging Face</span>
+              <span class="tag">Prompt engineering</span>
+            </div>
+          </div>
+          <div class="card corner-brackets">
+            <div class="card-label mono" style="color:var(--accent-crimson);">AUTOMATION</div>
+            <div class="tag-wall">
+              <span class="tag">n8n</span>
+              <span class="tag">Make</span>
+              <span class="tag">Google Apps Script</span>
+              <span class="tag">Webhooks</span>
+              <span class="tag">REST</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         06 · PROJECTS
+         ============================================================ -->
+    <section class="block" id="projects" data-num="06" data-eyebrow="// PROJECTS">
+      <div class="container">
+        <div class="block-head">
+          <span class="block-num mono">06</span>
+          <span class="block-hairline"></span>
+          <span class="block-eyebrow mono">// PROJECTS</span>
+        </div>
+        <h2 class="block-title">Selected work, end to end.</h2>
+        <p class="block-lede">
+          From a 1U CubeSat structural qualification to a multi-tenant MBSE platform
+          and a network of automation tools.
+        </p>
+
+        <div class="filter-bar" id="filter-bar"></div>
+
+        <div class="projects-featured" id="projects-featured"></div>
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         07 · EXPERIENCE
+         ============================================================ -->
+    <section class="block" id="experience" data-num="07" data-eyebrow="// EXPERIENCE">
+      <div class="container">
+        <div class="block-head">
+          <span class="block-num mono">07</span>
+          <span class="block-hairline"></span>
+          <span class="block-eyebrow mono">// EXPERIENCE</span>
+        </div>
+        <h2 class="block-title">Where I've been working.</h2>
+        <p class="block-lede">Roles, missions, and the people I've built with.</p>
+
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         08 · PUBLICATION
+         ============================================================ -->
+    <section class="block" id="publication" data-num="08" data-eyebrow="// PUBLICATION">
+      <div class="container">
+        <div class="block-head">
+          <span class="block-num mono">08</span>
+          <span class="block-hairline"></span>
+          <span class="block-eyebrow mono">// PUBLICATION</span>
+        </div>
+        <h2 class="block-title">Where the work speaks in public.</h2>
+
+        <div class="card corner-brackets publication-card">
+          <div class="publication-stripe" aria-hidden="true"></div>
+          <div class="publication-body">
+            <div class="card-label mono" style="color:var(--accent-crimson);">CONFERENCE PAPER · ACCEPTED</div>
+            <h3 class="publication-title">Simulations and Vibration Test Results for the AlbaSat STM</h3>
+            <p class="publication-lede">
+              Structural dynamics FEM predictions correlated with measured vibration test data
+              on the AlbaSat Structural Thermal Model. Modal parameters, mode shapes, and
+              test-to-analysis agreement are presented within an ECSS-aligned qualification flow.
+            </p>
+            <div class="publication-chips">
+              <span class="chip mono">4S SYMPOSIUM 2026</span>
+              <span class="chip mono">SMALL SATELLITES</span>
+              <span class="chip mono">ESA · ASI · UNIPD</span>
+            </div>
+          </div>
+          <div class="publication-stamp">
+            <span class="mono publication-stamp-label">PAPER</span>
+            <span class="publication-stamp-year">2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         09 · EDUCATION
+         ============================================================ -->
+    <section class="block" id="education" data-num="09" data-eyebrow="// EDUCATION & CERTIFICATIONS">
+      <div class="container">
+        <div class="block-head">
+          <span class="block-num mono">09</span>
+          <span class="block-hairline"></span>
+          <span class="block-eyebrow mono">// EDUCATION &amp; CERTIFICATIONS</span>
+        </div>
+        <h2 class="block-title">Where I learned to engineer.</h2>
+
+        <div class="edu-grid" id="edu-grid"></div>
+
+        <div class="cert-grid" id="cert-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         10 · CONTACT
+         ============================================================ -->
+    <section class="block" id="contact" data-num="10" data-eyebrow="// CONTACT">
+      <div class="container">
+        <div class="block-head">
+          <span class="block-num mono">10</span>
+          <span class="block-hairline"></span>
+          <span class="block-eyebrow mono">// CONTACT</span>
+        </div>
+        <h2 class="block-title">Let's build something.</h2>
+        <p class="block-lede">
+          Open to aerospace systems, software, MBSE, or AI automation roles,
+          and to interesting collaborations.
+        </p>
+
+        <div class="contact-grid">
+          <div class="card corner-brackets contact-primary">
+            <div class="card-label mono" style="color:var(--accent-crimson);">CHANNELS</div>
+            <div class="contact-ctas">
+              <a href="https://www.linkedin.com/in/matteo-marcon-287999368/" target="_blank" rel="noreferrer" class="btn btn-primary">LinkedIn <span>↗</span></a>
+              <a href="https://github.com/Marc-Industries" target="_blank" rel="noreferrer" class="btn">GitHub <span>↗</span></a>
+              <a href="/recruiter.html" class="btn">Recruiter Brief <span>→</span></a>
+            </div>
+            <div class="contact-stats">
+              <div class="contact-stat">
+                <div class="mono" style="font-size:9px; letter-spacing:0.28em; color:var(--text-3);">EMAIL</div>
+                <div class="contact-stat-val">via LinkedIn</div>
+              </div>
+              <div class="contact-stat">
+                <div class="mono" style="font-size:9px; letter-spacing:0.28em; color:var(--text-3);">TIMEZONE</div>
+                <div class="contact-stat-val">CET · UTC+1</div>
+              </div>
+              <div class="contact-stat">
+                <div class="mono" style="font-size:9px; letter-spacing:0.28em; color:var(--text-3);">RESPONSE</div>
+                <div class="contact-stat-val">~24h</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card corner-brackets">
+            <div class="card-label mono" style="color:var(--accent-crimson);">SYSTEM STATUS</div>
+            <div class="status-list">
+              <div class="status-row"><span class="mono">AVAILABILITY</span><span class="status-v">Open to opportunities <span class="dot fire"></span></span></div>
+              <div class="status-row"><span class="mono">RELOCATION</span><span class="status-v">Open <span class="dot ember"></span></span></div>
+              <div class="status-row"><span class="mono">REMOTE</span><span class="status-v">Yes <span class="dot amber"></span></span></div>
+              <div class="status-row"><span class="mono">LOCATION</span><span class="status-v">Padova, IT <span class="dot fire"></span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-bottom mono">
+          <div>END OF TRANSMISSION · 10 SECTIONS</div>
+          <div>UTC <span id="utc-clock-bottom">--:--:--</span></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand">
+            <img src="/assets/img/logo.jfif" alt="Matteo Marcon" class="brand-img" />
+            <span class="brand-text">M·M</span>
+          </div>
+          <p class="footer-tagline">
+            Aerospace &amp; systems engineer building software, MBSE platforms and AI-driven automation.
+          </p>
+        </div>
+        <div>
+          <div class="footer-label mono">NAVIGATE</div>
+          <ul class="footer-list">
+            <li><a href="#projects">→ Projects</a></li>
+            <li><a href="#experience">→ Experience</a></li>
+            <li><a href="#education">→ Education</a></li>
+            <li><a href="#contact">→ Contact</a></li>
+            <li><a href="/recruiter.html">→ Recruiter Brief</a></li>
+            <li><a href="/engineering.html">→ Engineering Notes</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-label mono">CHANNELS</div>
+          <ul class="footer-list">
+            <li><a href="https://www.linkedin.com/in/matteo-marcon-287999368/" target="_blank" rel="noreferrer">↗ LinkedIn</a></li>
+            <li><a href="https://github.com/Marc-Industries" target="_blank" rel="noreferrer">↗ GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-hairline"></div>
+      <div class="footer-bottom mono">
+        <div>© <span id="footer-year">2026</span> Matteo Marcon · All rights reserved.</div>
+        <div class="footer-meta">
+          <span>Imagery generated with AI.</span>
+          <span class="footer-status"><span class="dot fire"></span> SYSTEMS NOMINAL</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/assets/app.js"></script>
+
+</body>
+</html>

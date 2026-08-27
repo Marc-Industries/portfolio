@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>Mission Take 02 · Matteo Marcon</title>
+  <meta name="description" content="Alternate scrub view · satellite over the red orbital trail." />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050000'/%3E%3Crect x='12' y='12' width='8' height='8' fill='%23D43F3F' transform='rotate(45 16 16)'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+
+  <link rel="stylesheet" href="/assets/site.css" />
+  <link rel="stylesheet" href="/assets/scrub.css" />
+</head>
+<body data-theme="dark">
+
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="scan-line-global" aria-hidden="true"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-text">M·M</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#hero">MAIN MISSION</a></li>
+        <li><a href="/scrub.html" class="nav-link active">TAKE 02</a></li>
+        <li><a href="/#projects">PROJECTS</a></li>
+        <li><a href="/#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="scrub-stage">
+    <div class="scrub-load" id="scrub-load">
+      <div class="scrub-load-ring"></div>
+      <div class="scrub-load-label mono">INITIALISING TAKE 02</div>
+    </div>
+
+    <div class="scrub-poster" id="scrub-poster" hidden>
+      <img src="/assets/img/alt-hero-poster.jpg" alt="" />
+    </div>
+
+    <video id="scrub-video" muted playsinline preload="auto" loop poster="/assets/img/alt-hero-poster.jpg" hidden>
+      <source src="/assets/video/hero1-clean.mp4" type="video/mp4" />
+    </video>
+
+    <div class="scrub-overlay"></div>
+
+    <div class="scrub-captions">
+      <div class="scrub-caption" data-beat="1">Orbital trail already drawn.</div>
+      <div class="scrub-caption" data-beat="2">Satellite arcing along the path.</div>
+      <div class="scrub-caption" data-beat="3">Limb glow thickens.</div>
+      <div class="scrub-caption scrub-caption-final" data-beat="4">Take 02 — alternate framing.</div>
+    </div>
+
+    <div class="scrub-meta mono">
+      <div>TAKE 02 · ALT COMPOSITION</div>
+      <div class="scrub-meta-em">SCROLL TO SCRUB</div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <div class="block-head">
+        <span class="block-num mono">02</span>
+        <span class="block-hairline"></span>
+        <span class="block-eyebrow mono">// TAKE 02 · NOTES</span>
+      </div>
+      <h2 class="block-title">The second take.</h2>
+      <p class="block-lede">
+        Same satellite, different stage direction. The red orbital trail is drawn from
+        the first frame. The bus sits lower-right throughout, never crossing the
+        caption lane. The limb glow thickens as the push-in completes.
+      </p>
+
+      <div class="card corner-brackets">
+        <div class="card-label mono">CAPTION MAP</div>
+        <ul class="list">
+          <li><span class="dot fire"></span><span class="mono">00.0s to 01.5s</span> Orbital trail already drawn.</span></li>
+          <li><span class="dot fire"></span><span class="mono">01.5s to 03.0s</span> Satellite arcing along the path.</span></li>
+          <li><span class="dot fire"></span><span class="mono">03.0s to 04.5s</span> Limb glow thickens.</span></li>
+          <li><span class="dot fire"></span><span class="mono">04.5s to 06.0s</span> Take 02 — alternate framing.</span></li>
+        </ul>
+      </div>
+
+      <div class="card corner-brackets">
+        <div class="card-label mono">WHY A SECOND TAKE</div>
+        <p class="flagship-body">
+          The first take on the main page is the canonical mission-control frame: clean
+          composition, satellite bisecting right-of-center, push-in along the orbital
+          plane. This take trades that for an immediate hit of red — the trail is
+          already drawn. Useful for deeper cuts, recaps, and any moment where the
+          message is the energy, not the build.
+        </p>
+        <div style="margin-top:1.5rem;">
+          <a href="/" class="btn btn-primary">Back to main mission <span>→</span></a>
+          <a href="/#contact" class="btn">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-hairline"></div>
+      <div class="footer-bottom mono">
+        <div>© <span id="footer-year">2026</span> Matteo Marcon · All rights reserved.</div>
+        <div class="footer-meta">
+          <span>Imagery generated with AI.</span>
+          <span class="footer-status"><span class="dot fire"></span> TAKE 02 NOMINAL</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Standalone scrub page — minimal, no full app.js boot.
+    (function() {
+      const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const video = document.getElementById('scrub-video');
+      const stage = document.querySelector('.scrub-stage');
+      const poster = document.getElementById('scrub-poster');
+      const load = document.getElementById('scrub-load');
+      const captions = document.querySelectorAll('.scrub-caption');
+      const BEAT_MAP = [
+        { from: 0.00, to: 0.25, beat: 1 },
+        { from: 0.25, to: 0.50, beat: 2 },
+        { from: 0.50, to: 0.75, beat: 3 },
+        { from: 0.75, to: 1.00, beat: 4 },
+      ];
+
+      function startScrub() {
+        let target = 0, current = 0;
+        const setTarget = () => {
+          if (!stage) return;
+          const rect = stage.getBoundingClientRect();
+          const scrolled = Math.min(Math.max(-rect.top, 0), innerHeight);
+          target = (scrolled / innerHeight) * (video.duration || 6);
+        };
+        addEventListener('scroll', setTarget, { passive: true });
+        setTarget();
+
+        const tick = () => {
+          current += (target - current) * 0.18;
+          if (Math.abs(current - target) > 0.005 && video.duration) {
+            try { video.currentTime = current; } catch {}
+          }
+          requestAnimationFrame(tick);
+        };
+        tick();
+      }
+
+      function driveCaptions() {
+        if (!stage) return;
+        const rect = stage.getBoundingClientRect();
+        const scrolled = Math.min(Math.max(-rect.top, 0), innerHeight);
+        const t = scrolled / innerHeight;
+        let active = 1;
+        for (const beat of BEAT_MAP) {
+          if (t >= beat.from && t < beat.to) { active = beat.beat; break; }
+          if (t >= 0.75) active = 4;
+        }
+        captions.forEach(c => c.classList.toggle('show', Number(c.dataset.beat) === active));
+      }
+
+      const onLoaded = () => {
+        video.hidden = false;
+        video.play().catch(() => {});
+        setTimeout(() => load && load.classList.add('hidden'), 400);
+        startScrub();
+        driveCaptions();
+      };
+      const usePoster = () => {
+        if (load) load.classList.add('hidden');
+        if (poster) poster.hidden = false;
+      };
+
+      video.addEventListener('loadeddata', onLoaded);
+      video.addEventListener('error', usePoster);
+      video.load();
+
+      addEventListener('scroll', driveCaptions, { passive: true });
+      driveCaptions();
+
+      const year = document.getElementById('footer-year');
+      if (year) year.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

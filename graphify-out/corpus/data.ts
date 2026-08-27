@@ -1,0 +1,451 @@
+// =============================================================================
+// Matteo Marcon — Portfolio data
+// Single source of truth for projects, experience, education, certifications.
+// Sourced from: LinkedIn, GitHub (Marc-Industries), PROJECT_OVERVIEW.md, prompt.
+// All entries are PUBLIC or HIGH-LEVEL per IP guidelines.
+// =============================================================================
+
+export type ProjectVisibility = 'PUBLIC' | 'HIGH-LEVEL ONLY' | 'PRIVATE / REDACTED';
+
+export interface Project {
+  id: string;
+  slug: string;
+  name: string;
+  tagline: string;
+  category: 'aerospace' | 'mbse' | 'simulation' | 'software' | 'ai' | 'integration';
+  visibility: ProjectVisibility;
+  problem: string;
+  role: string;
+  stack: string[];
+  architecture: string;
+  result: string;
+  metrics?: { label: string; value: string }[];
+  repo?: string;
+  demo?: string;
+  year: string;
+  featured: boolean;
+  visual: 'satellite' | 'orbit' | 'language' | 'finance' | 'workflow' | 'cloud' | 'shipping' | 'timezone' | 'automation';
+}
+
+export interface Experience {
+  id: string;
+  company: string;
+  role: string;
+  start: string;        // ISO yyyy-mm
+  end: string | null;   // null = current
+  location?: string;
+  domain: 'aerospace' | 'software' | 'integration' | 'industrial';
+  summary: string;
+  bullets: string[];
+  visibility: ProjectVisibility;
+}
+
+export interface Education {
+  id: string;
+  institution: string;
+  degree: string;
+  field: string;
+  start: string;
+  end: string | null;
+  status: 'ongoing' | 'completed';
+  notes?: string;
+}
+
+export interface Certification {
+  id: string;
+  name: string;
+  issuer: string;
+  year?: string;
+  status: 'completed' | 'in-progress' | 'planned';
+}
+
+// =============================================================================
+// PROJECTS
+// =============================================================================
+export const data = {
+  owner: {
+    name: 'Matteo Marcon',
+    role: 'Aerospace & Systems Engineer',
+    email: 'matteo.marcon.dev@gmail.com',  // contact via form
+    linkedin: 'https://www.linkedin.com/in/matteo-marcon-287999368/',
+    github:   'https://github.com/Marc-Industries',
+    location: 'Padova, Italy',
+  },
+
+  hero: {
+    badge: 'AEROSPACE × SYSTEMS × SOFTWARE × AI',
+    title: 'Matteo Marcon',
+    subtitle:
+      'Aerospace Engineering · Systems Engineering · Software · AI Automation',
+    statement:
+      'Building engineering systems where aerospace, software and intelligent automation meet.',
+    ctas: [
+      { label: 'View Projects', href: '#projects' },
+      { label: 'Contact',       href: '#contact' },
+    ],
+  },
+
+  domains: [
+    { key: 'aerospace',  label: 'Aerospace',     color: 'cyan'    },
+    { key: 'systems',    label: 'Systems Eng.',  color: 'blue'    },
+    { key: 'software',   label: 'Software',      color: 'emerald' },
+    { key: 'ai',         label: 'AI',            color: 'amber'   },
+    { key: 'automation', label: 'Automation',    color: 'cyan'    },
+    { key: 'sim',        label: 'Simulation',    color: 'blue'    },
+    { key: 'twin',       label: 'Digital Twin',  color: 'emerald' },
+  ],
+
+  // ---------------------------------------------------------------------------
+  projects: [
+    {
+      id: 'bepi',
+      slug: 'bepi',
+      name: 'BEPI',
+      tagline: 'Budget, Engineering & Project Integration for CubeSat missions',
+      category: 'mbse',
+      visibility: 'HIGH-LEVEL ONLY' as ProjectVisibility,
+      year: '2024 — present',
+      featured: true,
+      problem:
+        'Small-sat teams track mass budgets, power-per-mode, requirements, risks, schedules and ECSS deliverables across scattered spreadsheets. BEPI centralizes all of that into one multi-mission system-engineering platform with ECSS-aware calculations.',
+      role: 'Full-stack contributor — frontend/Streamlit maintenance, Operating-Modes feature, security & cache-invalidation fixes, deployment pipeline.',
+      stack: ['Python 3.11', 'Streamlit', 'Supabase', 'PostgreSQL', 'FastAPI', 'Plotly', 'Pydantic'],
+      architecture:
+        'Streamlit frontend · Supabase PostgreSQL with Row Level Security (multi-tenant, mission-scoped) · FastAPI for non-Streamlit clients · Edge Functions for trust boundaries (e.g. email invites) · Service client for migrations, user client for all RLS-aware writes.',
+      result:
+        'Production multi-mission platform serving real CubeSat teams. Operating-Modes feature lets each equipment carry an N×mode power matrix; ECSS compliance checker; FMECA, CPM/Gantt, requirements traceability and PDR/CDR deliverable generation.',
+      metrics: [
+        { label: 'DB tables',      value: '22' },
+        { label: 'RLS policies',   value: '79' },
+        { label: 'Triggers',       value: '18' },
+        { label: 'Streamlit pgs',  value: '11' },
+        { label: 'Integrations',   value: '9'  },
+        { label: 'RBAC roles',     value: '8'  },
+      ],
+      demo: 'https://bepi-space.streamlit.app/',
+      visual: 'workflow' as const,
+    },
+    {
+      id: 'space-mission-sim',
+      slug: 'space-mission-sim',
+      name: 'Space Mission Simulator',
+      tagline: 'End-to-end mission analysis — orbit, delta-v, ground passes, timeline',
+      category: 'simulation',
+      visibility: 'PUBLIC' as ProjectVisibility,
+      year: '2024',
+      featured: true,
+      problem:
+        'Educational / pre-phase-A mission design needs a fast, browser-friendly way to play with orbital parameters, propellant budgets and timeline events without installing a full STK / GMAT stack.',
+      role: 'Designer and full-stack developer.',
+      stack: ['React', 'Vite', 'Tailwind', 'FastAPI', 'Python', 'GitHub Pages', 'Render'],
+      architecture:
+        'Split frontend (React + Tailwind, deployed on GitHub Pages) and backend (FastAPI on Render). Configurable via .env. Frontend handles visualization and timeline scrubbing; backend runs propagators and returns structured mission events.',
+      result:
+        'A browser-based mission sandbox with a public landing page, live backend, and a clear separation between visualization and orbital math.',
+      repo: 'https://github.com/Marc-Industries/space-mission-sim',
+      visual: 'orbit' as const,
+    },
+    {
+      id: 'albasat',
+      slug: 'albasat',
+      name: 'AlbaSat — CubeSat Platform',
+      tagline: 'Structural engineering, FEM correlation, vibration test campaign',
+      category: 'aerospace',
+      visibility: 'PUBLIC' as ProjectVisibility,
+      year: '2023 — present',
+      featured: true,
+      problem:
+        'A 1U-class educational CubeSat developed within the University of Padova / Alta Scuola Politecnica framework. Required structural qualification, FEM analysis, modal correlation against vibration test data, and an ECSS-oriented development flow.',
+      role: 'Structural & systems contributor — FEM modelling, vibration test correlation, ECSS deliverable support.',
+      stack: ['SolidWorks', 'ANSYS', 'FEM', 'ECSS', 'MATLAB'],
+      architecture:
+        'Mechanical CAD model (SolidWorks) → FEM (ANSYS) for modal / static analysis → vibration test campaign → correlation of FE modal parameters vs measured data → system-level documentation aligned with ECSS review gates.',
+      result:
+        'STM-level qualification data and a publication at the 4S Symposium 2026 ("Simulations and Vibration Test Results for the AlbaSat STM").',
+      visual: 'satellite' as const,
+    },
+    {
+      id: 'vsl-visualizer',
+      slug: 'vsl-visualizer',
+      name: 'VSL Visualizer',
+      tagline: 'Asynchronous content pipeline & workflow graph',
+      category: 'ai',
+      visibility: 'PUBLIC' as ProjectVisibility,
+      year: '2024',
+      featured: false,
+      problem:
+        'Visualising how content moves through an async, multi-step AI pipeline — useful for both debugging and stakeholder demos.',
+      role: 'Designer and developer.',
+      stack: ['React', 'D3', 'WebSockets', 'Node.js'],
+      architecture:
+        'Realtime event stream rendered as a 3D / 2D node graph; each node shows live throughput, error rate and stage latency.',
+      result: 'Internal tool used for pipeline demos and ops visibility.',
+      visual: 'workflow' as const,
+    },
+    {
+      id: 'drivegen',
+      slug: 'drivegen',
+      name: 'DriveGen',
+      tagline: 'AI-driven document generation → Google Drive',
+      category: 'ai',
+      visibility: 'PUBLIC' as ProjectVisibility,
+      year: '2024',
+      featured: false,
+      problem:
+        'A team of consultants needed an automated way to turn structured inputs (briefs, templates) into polished Google Docs / Slides without copy-paste.',
+      role: 'Designer and developer.',
+      stack: ['Node.js', 'OpenAI API', 'Google Drive API', 'OAuth2'],
+      architecture:
+        'Cloud function ingests a template + payload, asks the LLM to fill structured sections, and pushes the rendered file into a user-authorized Google Drive folder via the Drive API.',
+      result: 'Used in production by a small consultancy to produce client deliverables in seconds instead of hours.',
+      visual: 'cloud' as const,
+    },
+    {
+      id: 'instant-translate',
+      slug: 'instant-translate',
+      name: 'Instant-Translate',
+      tagline: 'Lightweight multilingual UI helper',
+      category: 'software',
+      visibility: 'PUBLIC' as ProjectVisibility,
+      year: '2023',
+      featured: false,
+      problem:
+        'Internal tools kept shipping with copy-pasted translation JSON files. Building a tiny library that swaps strings at runtime based on user locale and a context-aware fallback.',
+      role: 'Designer and developer.',
+      stack: ['JavaScript', 'TypeScript', 'Vite'],
+      architecture:
+        'Static key → nested JSON lookup with plural / gender / context variants; zero runtime dependencies; < 2 KB minified.',
+      result: 'Used as a helper across several side projects.',
+      visual: 'language' as const,
+    },
+    {
+      id: 'spese-smart',
+      slug: 'spese-smart',
+      name: 'Spese Smart',
+      tagline: 'Personal-finance tracking with categorization insights',
+      category: 'software',
+      visibility: 'PUBLIC' as ProjectVisibility,
+      year: '2024',
+      featured: false,
+      problem:
+        'Wanted a fast, private, on-device way to log and categorize personal expenses without a SaaS subscription.',
+      role: 'Designer and developer.',
+      stack: ['React', 'IndexedDB', 'Chart.js'],
+      architecture:
+        'Local-first SPA: CSV import, rule-based categorization, monthly trend visualisation. All data stays in the browser.',
+      result: 'Personal tool, occasionally shared.',
+      visual: 'finance' as const,
+    },
+    {
+      id: 'neurolex',
+      slug: 'neurolex',
+      name: 'NeuroLex',
+      tagline: 'Vocabulary trainer with spaced repetition',
+      category: 'software',
+      visibility: 'PUBLIC' as ProjectVisibility,
+      year: '2023',
+      featured: false,
+      problem:
+        'Learning a technical vocabulary benefits from spaced repetition, but most apps are too heavy or too generic for engineering jargon.',
+      role: 'Designer and developer.',
+      stack: ['React', 'JavaScript'],
+      architecture:
+        'CRA-based SPA; localStorage for decks; SM-2 inspired scheduling.',
+      result: 'Open-source on GitHub.',
+      repo: 'https://github.com/Marc-Industries/NeuroLex',
+      visual: 'language' as const,
+    },
+    {
+      id: 'fullship',
+      slug: 'fullship',
+      name: 'Fullship Scraper',
+      tagline: 'Shipping / logistics data pipeline',
+      category: 'integration',
+      visibility: 'PUBLIC' as ProjectVisibility,
+      year: '2024',
+      featured: false,
+      problem:
+        'Pulling shipping data from carrier portals into a single structured feed for downstream analytics.',
+      role: 'Designer and developer.',
+      stack: ['Python', 'Playwright', 'PostgreSQL', 'FastAPI'],
+      architecture:
+        'Headless browser collectors push normalized events into Postgres; FastAPI exposes a query layer for the dashboard.',
+      result: 'Replaced manual spreadsheet pulls.',
+      visual: 'shipping' as const,
+    },
+    {
+      id: 'poodl',
+      slug: 'poodl-meeting',
+      name: 'Poodl Meeting Schedule',
+      tagline: 'Cross-timezone meeting planner',
+      category: 'software',
+      visibility: 'PUBLIC' as ProjectVisibility,
+      year: '2024',
+      featured: false,
+      problem:
+        'Distributed teams keep mis-booking across time zones. Wanted a small tool that visualizes overlap directly on a globe.',
+      role: 'Designer and developer.',
+      stack: ['HTML', 'CSS', 'JavaScript', 'Three.js'],
+      architecture:
+        'Static page with a 3D globe; users click their cities to see live working-hour overlap and copy an ICS file.',
+      result: 'Open-source on GitHub.',
+      repo: 'https://github.com/Marc-Industries/poodl-meeting',
+      visual: 'timezone' as const,
+    },
+    {
+      id: 'ghl-orchestrator',
+      slug: 'ghl-orchestrator',
+      name: 'Lead Distribution & Sync Orchestrator',
+      tagline: 'Event-driven lead distribution with bidirectional operational sync',
+      category: 'integration',
+      visibility: 'HIGH-LEVEL ONLY' as ProjectVisibility,
+      year: '2024 — 2025',
+      featured: false,
+      problem:
+        'A client needed inbound leads captured in GoHighLevel to be distributed to vendors via round-robin, then mirrored back to an internal ops sheet, with anti-loop and race-condition safety.',
+      role: 'Architect & lead integrator. Designed the event topology, idempotency strategy and observability; the production client stack is owned by the client team.',
+      stack: ['GoHighLevel', 'Make', 'Google Apps Script', 'REST', 'Webhooks', 'Google Sheets API'],
+      architecture:
+        'Event-driven lead-distribution and bidirectional operational synchronization architecture. Incoming GHL events fan out to a routing layer that applies idempotency keys and round-robin assignment; operational state mirrors back to the ops sheet with anti-loop guard rails.',
+      result:
+        'Stable lead distribution in production. Internal demo only — no public link by design.',
+      visual: 'automation' as const,
+    },
+  ] as Project[],
+
+  // ---------------------------------------------------------------------------
+  experience: [
+    {
+      id: 'bepi-role',
+      company: 'BEPI — multi-mission CubeSat SE platform',
+      role: 'Full-stack contributor / Frontend engineer',
+      start: '2024-06',
+      end: null,
+      location: 'Padova, Italy (remote-friendly)',
+      domain: 'software',
+      visibility: 'PUBLIC',
+      summary:
+        'Active contributor to a production multi-tenant platform for CubeSat and SmallSat system engineering.',
+      bullets: [
+        'Designed and shipped the Operating-Modes feature: per-equipment power × mode matrix, settings UI with hard caps, schema migration, cache invalidation across save points.',
+        'Hardened Supabase RLS: fixed a privilege-escalation vector via user metadata, tightened DELETE/UPDATE policies on operating_modes.',
+        'Pinned dependencies after a Plotly/Streamlit Cloud regression broke the deploy; introduced pre-deploy import checks.',
+        'Set up the dual-remote git workflow (origin + backup) and rebase-based collaboration with co-contributors.',
+      ],
+    },
+    {
+      id: 'albasat-role',
+      company: 'AlbaSat — University of Padova CubeSat team',
+      role: 'Structural & systems contributor',
+      start: '2023-09',
+      end: null,
+      location: 'Padova, Italy',
+      domain: 'aerospace',
+      visibility: 'PUBLIC',
+      summary:
+        'Structural engineering, FEM analysis and vibration test correlation for a 1U-class CubeSat STM.',
+      bullets: [
+        'Built the SolidWorks mechanical model and ran FEM (ANSYS) modal / static analyses.',
+        'Coordinated the vibration test campaign and correlated FE modal parameters against measured data.',
+        'Contributed to ECSS-aligned documentation for PDR/CDR gates.',
+        'Co-author of the 4S Symposium 2026 paper: "Simulations and Vibration Test Results for the AlbaSat STM".',
+      ],
+    },
+    {
+      id: 'it-automation',
+      company: 'Professional services — IT, automation & integration',
+      role: 'IT Specialist / Systems Architect',
+      start: '2021-01',
+      end: null,
+      location: 'Italy',
+      domain: 'integration',
+      visibility: 'HIGH-LEVEL ONLY',
+      summary:
+        'Designed and delivered operational systems, integrations and automations for SMEs and agencies.',
+      bullets: [
+        'Architect of event-driven lead-distribution and bidirectional operational-sync pipelines (GoHighLevel · Make · Google Apps Script).',
+        'Built internal dashboards, CRM integrations and customer-support automations with anti-loop and race-condition mitigations.',
+        'Owned deployment, monitoring and handover documentation for each client.',
+      ],
+    },
+    {
+      id: 'mech-prev',
+      company: 'Mechanical / industrial experience',
+      role: 'Mechanical contributor',
+      start: '2019-09',
+      end: '2021-01',
+      location: 'Italy',
+      domain: 'industrial',
+      visibility: 'HIGH-LEVEL ONLY',
+      summary:
+        'Earlier mechanical engineering experience, prior to specialising in systems and software.',
+      bullets: [
+        'Hands-on CAD/CAM, drawing review and small-batch production support.',
+        'First exposure to structured engineering documentation, tolerances and verification flows.',
+      ],
+    },
+  ] as Experience[],
+
+  // ---------------------------------------------------------------------------
+  education: [
+    {
+      id: 'unipd-aero',
+      institution: 'Università degli Studi di Padova',
+      degree: 'M.Sc. Aerospace Engineering',
+      field: 'Aerospace Engineering',
+      start: '2023-09',
+      end: null,
+      status: 'ongoing',
+      notes: 'Final-year specialisation; focus on space systems, MBSE and simulation.',
+    },
+    {
+      id: 'unipd-bsc',
+      institution: 'Università degli Studi di Padova',
+      degree: 'B.Sc. Aerospace Engineering',
+      field: 'Aerospace Engineering',
+      start: '2020-09',
+      end: '2023-07',
+      status: 'completed',
+    },
+    {
+      id: 'itis',
+      institution: 'ITIS — Istituto Tecnico Industriale Statale',
+      degree: 'Diploma',
+      field: 'Computer Science, Telecommunications & Systems Administration',
+      start: '2015-09',
+      end: '2020-06',
+      status: 'completed',
+    },
+  ] as Education[],
+
+  certifications: [
+    { id: 'eng-b2',   name: 'English — B2 (FCE)',                    issuer: 'Cambridge',         status: 'completed' },
+    { id: 'tm',       name: 'Team Management training',             issuer: 'Internal / External', status: 'completed' },
+    { id: 'ibm-ai',   name: 'IBM SkillsBuild — AI Fundamentals',     issuer: 'IBM',               status: 'completed' },
+    { id: 'ibm-fs',   name: 'IBM Full Stack Developer',              issuer: 'IBM',               status: 'in-progress' },
+  ] as Certification[],
+
+  publication: {
+    title: 'Simulations and Vibration Test Results for the AlbaSat STM',
+    venue: '4S Symposium 2026 — Small Satellites, Systems & Services',
+    year: 2026,
+    authors: ['AlbaSat Team', 'M. Marcon'],
+    note: 'Correlation between FEM modal analysis (ANSYS) and vibration test campaign data for the AlbaSat Structural Thermal Model.',
+  },
+
+  // ---------------------------------------------------------------------------
+  // Skills grouped by domain (for the Software / Aerospace / AI sections)
+  // ---------------------------------------------------------------------------
+  skills: {
+    aerospace: ['CubeSat engineering', 'System engineering', 'Requirements & traceability', 'Structural / FEM', 'Vibration testing', 'ECSS-oriented workflow'],
+    simulation: ['MATLAB', 'GMAT', 'FreeFlyer', 'SPENVIS', 'DRAMA', 'SPICE', 'Plotly 3D'],
+    systems: ['MBSE', 'Digital Twin', 'FMECA', 'CPM / critical path', 'PDR/CDR deliverables', 'Product tree'],
+    frontend: ['React', 'Vite', 'Tailwind', 'HTML', 'CSS', 'JavaScript', 'TypeScript'],
+    backend:  ['Python', 'FastAPI', 'Node.js', 'Express', 'REST APIs'],
+    data:     ['SQL', 'PostgreSQL', 'Supabase', 'Row Level Security', 'SQLite', 'Google Sheets API'],
+    integration: ['REST', 'Webhooks', 'OAuth', 'Google APIs', 'Shopify APIs', 'Telegram APIs'],
+    automation: ['n8n', 'Make', 'Google Apps Script'],
+    ai:       ['OpenAI', 'Gemini', 'Hugging Face', 'Prompt engineering'],
+    cad:      ['SolidWorks', 'ANSYS (FEM)'],
+  },
+};

@@ -1,0 +1,124 @@
+{
+  "nodes": [
+    {
+      "id": "data",
+      "label": "data.ts",
+      "file_type": "code",
+      "source_file": "data.ts",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "data_projectvisibility",
+      "label": "ProjectVisibility",
+      "file_type": "code",
+      "source_file": "data.ts",
+      "source_location": "L8",
+      "_origin": "ast"
+    },
+    {
+      "id": "data_project",
+      "label": "Project",
+      "file_type": "code",
+      "source_file": "data.ts",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "data_experience",
+      "label": "Experience",
+      "file_type": "code",
+      "source_file": "data.ts",
+      "source_location": "L30",
+      "_origin": "ast"
+    },
+    {
+      "id": "data_education",
+      "label": "Education",
+      "file_type": "code",
+      "source_file": "data.ts",
+      "source_location": "L43",
+      "_origin": "ast"
+    },
+    {
+      "id": "data_certification",
+      "label": "Certification",
+      "file_type": "code",
+      "source_file": "data.ts",
+      "source_location": "L54",
+      "_origin": "ast"
+    },
+    {
+      "id": "data_data",
+      "label": "data",
+      "file_type": "code",
+      "source_file": "data.ts",
+      "source_location": "L65",
+      "_origin": "ast"
+    }
+  ],
+  "edges": [
+    {
+      "source": "data",
+      "target": "data_projectvisibility",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "data",
+      "target": "data_project",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "data",
+      "target": "data_experience",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "data",
+      "target": "data_education",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "data",
+      "target": "data_certification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "data",
+      "target": "data_data",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data.ts",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

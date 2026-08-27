@@ -1,0 +1,1985 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "be:bepi_stack",
+        "relation": "FLAGSHIP_STACK",
+        "source_file": "corpus/PROJECT_OVERVIEW.md",
+        "nodes": [
+          "project:bepi",
+          "tech:python",
+          "tech:streamlit",
+          "tech:supabase",
+          "tech:fastapi",
+          "tech:postgresql",
+          "tech:rls",
+          "concept:rbac"
+        ]
+      },
+      {
+        "id": "be:portfolio_sections",
+        "relation": "PORTFOLIO_SECTIONS",
+        "source_file": "corpus/prompt.txt",
+        "nodes": [
+          "section:hero",
+          "section:about",
+          "section:aerospace",
+          "section:mbse",
+          "section:software",
+          "section:ai_automation",
+          "section:projects",
+          "section:experience",
+          "section:education",
+          "section:contact"
+        ]
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "data.ts",
+      "file_type": "code",
+      "source_file": "data.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data",
+      "community": 5,
+      "norm_label": "data.ts"
+    },
+    {
+      "label": "ProjectVisibility",
+      "file_type": "code",
+      "source_file": "data.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "data_projectvisibility",
+      "community": 5,
+      "norm_label": "projectvisibility"
+    },
+    {
+      "label": "Project",
+      "file_type": "code",
+      "source_file": "data.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "data_project",
+      "community": 5,
+      "norm_label": "project"
+    },
+    {
+      "label": "Experience",
+      "file_type": "code",
+      "source_file": "data.ts",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "data_experience",
+      "community": 5,
+      "norm_label": "experience"
+    },
+    {
+      "label": "Education",
+      "file_type": "code",
+      "source_file": "data.ts",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "data_education",
+      "community": 5,
+      "norm_label": "education"
+    },
+    {
+      "label": "Certification",
+      "file_type": "code",
+      "source_file": "data.ts",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "data_certification",
+      "community": 5,
+      "norm_label": "certification"
+    },
+    {
+      "label": "data",
+      "file_type": "code",
+      "source_file": "data.ts",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "data_data",
+      "community": 5,
+      "norm_label": "data"
+    },
+    {
+      "label": "Matteo Marcon",
+      "type": "PERSON",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:11-23",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "role": "Aerospace & Systems Engineer",
+        "location": "Padova, Italy",
+        "github": "Marc-Industries",
+        "linkedin": "matteo-marcon-287999368"
+      },
+      "file_type": "concept",
+      "id": "person:matteo_marcon",
+      "community": 0,
+      "norm_label": "matteo marcon"
+    },
+    {
+      "label": "University of Padua",
+      "type": "ORG",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "type": "University",
+        "country": "Italy"
+      },
+      "file_type": "concept",
+      "id": "institution:unipd",
+      "community": 0,
+      "norm_label": "university of padua"
+    },
+    {
+      "label": "M.Sc. Aerospace Engineering (UniPD)",
+      "type": "PROGRAM",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:226-234",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "status": "ongoing",
+        "focus": "space systems, MBSE, simulation"
+      },
+      "file_type": "concept",
+      "id": "program:aerospace_eng_unipd",
+      "community": 0,
+      "norm_label": "m.sc. aerospace engineering (unipd)"
+    },
+    {
+      "label": "B.Sc. Aerospace Engineering (UniPD)",
+      "type": "PROGRAM",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:235-241",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "status": "completed"
+      },
+      "file_type": "concept",
+      "id": "program:aerospace_bsc_unipd",
+      "community": 0,
+      "norm_label": "b.sc. aerospace engineering (unipd)"
+    },
+    {
+      "label": "ITIS Diploma \u2014 CS, Telecom & Sysadmin",
+      "type": "PROGRAM",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:242-248",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "status": "completed"
+      },
+      "file_type": "concept",
+      "id": "program:itis_diploma",
+      "community": 0,
+      "norm_label": "itis diploma \u2014 cs, telecom & sysadmin"
+    },
+    {
+      "label": "BEPI team",
+      "type": "TEAM",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:172",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "contributors": [
+          "Federico Toson",
+          "Matteo Marcon",
+          "Jacopo Coccimiglio"
+        ]
+      },
+      "file_type": "concept",
+      "id": "company:bepi_team",
+      "community": 1,
+      "norm_label": "bepi team"
+    },
+    {
+      "label": "AlbaSat team (UniPD)",
+      "type": "TEAM",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:325-330",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "framework": "Alta Scuola Politecnica"
+      },
+      "file_type": "concept",
+      "id": "company:albasat_team",
+      "community": 0,
+      "norm_label": "albasat team (unipd)"
+    },
+    {
+      "label": "Simulations and Vibration Test Results for the AlbaSat STM",
+      "type": "PUBLICATION",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:795-800",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "venue": "4S Symposium 2026",
+        "year": 2026
+      },
+      "file_type": "concept",
+      "id": "publication:albasat_4s_2026",
+      "community": 4,
+      "norm_label": "simulations and vibration test results for the albasat stm"
+    },
+    {
+      "label": "BEPI",
+      "type": "PROJECT",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:11",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "visibility": "HIGH-LEVEL ONLY",
+        "category": "mbse",
+        "year_start": 2024
+      },
+      "file_type": "concept",
+      "id": "project:bepi",
+      "community": 1,
+      "norm_label": "bepi"
+    },
+    {
+      "label": "Space Mission Simulator",
+      "type": "PROJECT",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:138-167",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "visibility": "PUBLIC",
+        "category": "simulation",
+        "stack": [
+          "React",
+          "Vite",
+          "Tailwind",
+          "FastAPI"
+        ]
+      },
+      "file_type": "concept",
+      "id": "project:space_mission_sim",
+      "community": 2,
+      "norm_label": "space mission simulator"
+    },
+    {
+      "label": "AlbaSat CubeSat",
+      "type": "PROJECT",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:168-189",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "visibility": "PUBLIC",
+        "category": "aerospace"
+      },
+      "file_type": "concept",
+      "id": "project:albasat",
+      "community": 4,
+      "norm_label": "albasat cubesat"
+    },
+    {
+      "label": "VSL Visualizer",
+      "type": "PROJECT",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:190-201",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "visibility": "PUBLIC",
+        "category": "ai"
+      },
+      "file_type": "concept",
+      "id": "project:vsl_visualizer",
+      "community": 0,
+      "norm_label": "vsl visualizer"
+    },
+    {
+      "label": "DriveGen",
+      "type": "PROJECT",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:202-216",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "visibility": "PUBLIC",
+        "category": "ai"
+      },
+      "file_type": "concept",
+      "id": "project:drivegen",
+      "community": 3,
+      "norm_label": "drivegen"
+    },
+    {
+      "label": "Instant-Translate",
+      "type": "PROJECT",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:217-228",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "visibility": "PUBLIC",
+        "category": "software"
+      },
+      "file_type": "concept",
+      "id": "project:instant_translate",
+      "community": 0,
+      "norm_label": "instant-translate"
+    },
+    {
+      "label": "Spese Smart",
+      "type": "PROJECT",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:229-240",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "visibility": "PUBLIC",
+        "category": "software"
+      },
+      "file_type": "concept",
+      "id": "project:spese_smart",
+      "community": 0,
+      "norm_label": "spese smart"
+    },
+    {
+      "label": "NeuroLex",
+      "type": "PROJECT",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:241-251",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "visibility": "PUBLIC",
+        "category": "software"
+      },
+      "file_type": "concept",
+      "id": "project:neurolex",
+      "community": 0,
+      "norm_label": "neurolex"
+    },
+    {
+      "label": "Fullship Scraper",
+      "type": "PROJECT",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:252-261",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "visibility": "PUBLIC",
+        "category": "integration"
+      },
+      "file_type": "concept",
+      "id": "project:fullship",
+      "community": 0,
+      "norm_label": "fullship scraper"
+    },
+    {
+      "label": "Poodl Meeting Schedule",
+      "type": "PROJECT",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:262-274",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "visibility": "PUBLIC",
+        "category": "software"
+      },
+      "file_type": "concept",
+      "id": "project:poodl",
+      "community": 0,
+      "norm_label": "poodl meeting schedule"
+    },
+    {
+      "label": "Lead Distribution & Sync Orchestrator",
+      "type": "PROJECT",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:275-291",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "visibility": "HIGH-LEVEL ONLY",
+        "category": "integration"
+      },
+      "file_type": "concept",
+      "id": "project:ghl_orchestrator",
+      "community": 3,
+      "norm_label": "lead distribution & sync orchestrator"
+    },
+    {
+      "label": "Python 3.11+",
+      "type": "TECH",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:45",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:python",
+      "community": 2,
+      "norm_label": "python 3.11+"
+    },
+    {
+      "label": "Streamlit 1.59",
+      "type": "TECH",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:46",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:streamlit",
+      "community": 1,
+      "norm_label": "streamlit 1.59"
+    },
+    {
+      "label": "Supabase PostgreSQL",
+      "type": "TECH",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:48",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "features": [
+          "RLS",
+          "Auth",
+          "Edge Functions",
+          "PostgREST"
+        ]
+      },
+      "file_type": "concept",
+      "id": "tech:supabase",
+      "community": 6,
+      "norm_label": "supabase postgresql"
+    },
+    {
+      "label": "FastAPI",
+      "type": "TECH",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:47",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:fastapi",
+      "community": 2,
+      "norm_label": "fastapi"
+    },
+    {
+      "label": "Plotly",
+      "type": "TECH",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:116",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "use": "3D orbit viz, gauge, Gantt"
+      },
+      "file_type": "concept",
+      "id": "tech:plotly",
+      "community": 1,
+      "norm_label": "plotly"
+    },
+    {
+      "label": "PostgreSQL 15",
+      "type": "TECH",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:114",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:postgresql",
+      "community": 6,
+      "norm_label": "postgresql 15"
+    },
+    {
+      "label": "Row Level Security",
+      "type": "TECH",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:71-72",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "policies": 79
+      },
+      "file_type": "concept",
+      "id": "tech:rls",
+      "community": 6,
+      "norm_label": "row level security"
+    },
+    {
+      "label": "SolidWorks",
+      "type": "TECH",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:280",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "category": "CAD"
+      },
+      "file_type": "concept",
+      "id": "tech:solidworks",
+      "community": 4,
+      "norm_label": "solidworks"
+    },
+    {
+      "label": "ANSYS (FEM)",
+      "type": "TECH",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:280",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "category": "FEM"
+      },
+      "file_type": "concept",
+      "id": "tech:ansys",
+      "community": 4,
+      "norm_label": "ansys (fem)"
+    },
+    {
+      "label": "MATLAB",
+      "type": "TECH",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:152",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:matlab",
+      "community": 1,
+      "norm_label": "matlab"
+    },
+    {
+      "label": "GMAT",
+      "type": "TECH",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:150",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "use": "orbit propagation, \u0394V"
+      },
+      "file_type": "concept",
+      "id": "tech:gmat",
+      "community": 1,
+      "norm_label": "gmat"
+    },
+    {
+      "label": "FreeFlyer",
+      "type": "TECH",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:151",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "use": "mission plan export"
+      },
+      "file_type": "concept",
+      "id": "tech:freeflyer",
+      "community": 1,
+      "norm_label": "freeflyer"
+    },
+    {
+      "label": "SPICE kernels",
+      "type": "TECH",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:153",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:spice",
+      "community": 1,
+      "norm_label": "spice kernels"
+    },
+    {
+      "label": "SPENVIS",
+      "type": "TECH",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:155",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "provider": "ESA",
+        "use": "radiation analysis"
+      },
+      "file_type": "concept",
+      "id": "tech:spenvis",
+      "community": 1,
+      "norm_label": "spenvis"
+    },
+    {
+      "label": "DRAMA",
+      "type": "TECH",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:156",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "provider": "ESA",
+        "use": "orbital debris"
+      },
+      "file_type": "concept",
+      "id": "tech:drama",
+      "community": 1,
+      "norm_label": "drama"
+    },
+    {
+      "label": "openLCA",
+      "type": "TECH",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:154",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "use": "LCA export"
+      },
+      "file_type": "concept",
+      "id": "tech:openlca",
+      "community": 1,
+      "norm_label": "openlca"
+    },
+    {
+      "label": "React",
+      "type": "TECH",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:263",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:react",
+      "community": 2,
+      "norm_label": "react"
+    },
+    {
+      "label": "Tailwind CSS",
+      "type": "TECH",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:264",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:tailwind",
+      "community": 2,
+      "norm_label": "tailwind css"
+    },
+    {
+      "label": "Next.js",
+      "type": "TECH",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:160-165",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "use": "portfolio site"
+      },
+      "file_type": "concept",
+      "id": "tech:nextjs",
+      "community": 11,
+      "norm_label": "next.js"
+    },
+    {
+      "label": "React Three Fiber",
+      "type": "TECH",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:170-175",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:r3f",
+      "community": 12,
+      "norm_label": "react three fiber"
+    },
+    {
+      "label": "GSAP",
+      "type": "TECH",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:175",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:gsap",
+      "community": 10,
+      "norm_label": "gsap"
+    },
+    {
+      "label": "Make (automation)",
+      "type": "TECH",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:268",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:make",
+      "community": 3,
+      "norm_label": "make (automation)"
+    },
+    {
+      "label": "n8n",
+      "type": "TECH",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:268",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:n8n",
+      "community": 3,
+      "norm_label": "n8n"
+    },
+    {
+      "label": "Google Apps Script",
+      "type": "TECH",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:269",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:gas",
+      "community": 3,
+      "norm_label": "google apps script"
+    },
+    {
+      "label": "OpenAI API",
+      "type": "TECH",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:272",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:openai",
+      "community": 3,
+      "norm_label": "openai api"
+    },
+    {
+      "label": "Gemini API",
+      "type": "TECH",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:272",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:gemini",
+      "community": 3,
+      "norm_label": "gemini api"
+    },
+    {
+      "label": "GoHighLevel",
+      "type": "TECH",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:286",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "tech:ghl",
+      "community": 3,
+      "norm_label": "gohighlevel"
+    },
+    {
+      "label": "Aerospace Engineering",
+      "type": "DOMAIN",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:84-100",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "domain:aerospace",
+      "community": 2,
+      "norm_label": "aerospace engineering"
+    },
+    {
+      "label": "Systems Engineering",
+      "type": "DOMAIN",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:84-100",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "domain:systems_eng",
+      "community": 2,
+      "norm_label": "systems engineering"
+    },
+    {
+      "label": "MBSE / Digital Engineering",
+      "type": "DOMAIN",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:88",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "domain:mbse",
+      "community": 7,
+      "norm_label": "mbse / digital engineering"
+    },
+    {
+      "label": "Software Engineering",
+      "type": "DOMAIN",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:91",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "domain:software",
+      "community": 2,
+      "norm_label": "software engineering"
+    },
+    {
+      "label": "AI / Automation",
+      "type": "DOMAIN",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:93-97",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "domain:ai",
+      "community": 3,
+      "norm_label": "ai / automation"
+    },
+    {
+      "label": "Digital Twin",
+      "type": "DOMAIN",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:97",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "domain:digital_twin",
+      "community": 7,
+      "norm_label": "digital twin"
+    },
+    {
+      "label": "ECSS standards",
+      "type": "CONCEPT",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:30",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "standard": "ECSS-E-ST-10-12C"
+      },
+      "file_type": "concept",
+      "id": "concept:ecss",
+      "community": 4,
+      "norm_label": "ecss standards"
+    },
+    {
+      "label": "FMECA",
+      "type": "CONCEPT",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:90",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "concept:fmeca",
+      "community": 1,
+      "norm_label": "fmeca"
+    },
+    {
+      "label": "CPM / Critical Path",
+      "type": "CONCEPT",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:91",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "concept:cpm",
+      "community": 1,
+      "norm_label": "cpm / critical path"
+    },
+    {
+      "label": "PDR / CDR deliverable gates",
+      "type": "CONCEPT",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:102",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "concept:pdr_cdr",
+      "community": 4,
+      "norm_label": "pdr / cdr deliverable gates"
+    },
+    {
+      "label": "Operating Modes (per-equipment)",
+      "type": "CONCEPT",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:100",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "modes": [
+          "Commissioning",
+          "Recovery",
+          "Operation"
+        ],
+        "hard_cap": 10
+      },
+      "file_type": "concept",
+      "id": "concept:operating_modes",
+      "community": 6,
+      "norm_label": "operating modes (per-equipment)"
+    },
+    {
+      "label": "RBAC (8 roles)",
+      "type": "CONCEPT",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:73",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "roles": [
+          "ADMIN",
+          "PM",
+          "SE",
+          "SSL",
+          "QA",
+          "CM",
+          "AIT",
+          "USER"
+        ]
+      },
+      "file_type": "concept",
+      "id": "concept:rbac",
+      "community": 1,
+      "norm_label": "rbac (8 roles)"
+    },
+    {
+      "label": "Product tree (WBS)",
+      "type": "CONCEPT",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "source_location": "PROJECT_OVERVIEW.md:58",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "concept:product_tree",
+      "community": 1,
+      "norm_label": "product tree (wbs)"
+    },
+    {
+      "label": "FEM \u2194 vibration test correlation",
+      "type": "CONCEPT",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:337-345",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "concept:vibration_test_correlation",
+      "community": 4,
+      "norm_label": "fem \u2194 vibration test correlation"
+    },
+    {
+      "label": "English B2 (Cambridge)",
+      "type": "CERT",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:296",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "status": "completed"
+      },
+      "file_type": "concept",
+      "id": "cert:english_b2",
+      "community": 0,
+      "norm_label": "english b2 (cambridge)"
+    },
+    {
+      "label": "Team Management training",
+      "type": "CERT",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:297",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "status": "completed"
+      },
+      "file_type": "concept",
+      "id": "cert:team_mgmt",
+      "community": 0,
+      "norm_label": "team management training"
+    },
+    {
+      "label": "IBM SkillsBuild \u2014 AI Fundamentals",
+      "type": "CERT",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:298",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "status": "completed"
+      },
+      "file_type": "concept",
+      "id": "cert:ibm_ai",
+      "community": 0,
+      "norm_label": "ibm skillsbuild \u2014 ai fundamentals"
+    },
+    {
+      "label": "IBM Full Stack Developer",
+      "type": "CERT",
+      "source_file": "corpus/data.ts",
+      "source_location": "data.ts:299",
+      "confidence": "EXTRACTED",
+      "attributes": {
+        "status": "in-progress"
+      },
+      "file_type": "concept",
+      "id": "cert:ibm_fullstack",
+      "community": 0,
+      "norm_label": "ibm full stack developer"
+    },
+    {
+      "label": "Hero section",
+      "type": "SECTION",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:215-260",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "section:hero",
+      "community": 0,
+      "norm_label": "hero section"
+    },
+    {
+      "label": "About / Identity",
+      "type": "SECTION",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:265-295",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "section:about",
+      "community": 2,
+      "norm_label": "about / identity"
+    },
+    {
+      "label": "Aerospace / Space Systems section",
+      "type": "SECTION",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:295-350",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "section:aerospace",
+      "community": 4,
+      "norm_label": "aerospace / space systems section"
+    },
+    {
+      "label": "MBSE / Digital Engineering section",
+      "type": "SECTION",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:352-420",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "section:mbse",
+      "community": 7,
+      "norm_label": "mbse / digital engineering section"
+    },
+    {
+      "label": "Software / IT Systems section",
+      "type": "SECTION",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:422-495",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "section:software",
+      "community": 2,
+      "norm_label": "software / it systems section"
+    },
+    {
+      "label": "AI / Automation section",
+      "type": "SECTION",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:497-555",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "section:ai_automation",
+      "community": 3,
+      "norm_label": "ai / automation section"
+    },
+    {
+      "label": "Projects section",
+      "type": "SECTION",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:557-590",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "section:projects",
+      "community": 2,
+      "norm_label": "projects section"
+    },
+    {
+      "label": "Experience timeline section",
+      "type": "SECTION",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:750-770",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "section:experience",
+      "community": 9,
+      "norm_label": "experience timeline section"
+    },
+    {
+      "label": "Education / Certifications section",
+      "type": "SECTION",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:770-790",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "section:education",
+      "community": 0,
+      "norm_label": "education / certifications section"
+    },
+    {
+      "label": "Contact / CTA section",
+      "type": "SECTION",
+      "source_file": "corpus/prompt.txt",
+      "source_location": "prompt.txt:835-845",
+      "confidence": "EXTRACTED",
+      "attributes": {},
+      "file_type": "concept",
+      "id": "section:contact",
+      "community": 8,
+      "norm_label": "contact / cta section"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "data",
+      "target": "data_certification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data.ts",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "data",
+      "target": "data_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data.ts",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "data",
+      "target": "data_education",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "data",
+      "target": "data_experience",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "data",
+      "target": "data_project",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "data.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "data",
+      "target": "data_projectvisibility",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "HOLDS",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "cert:english_b2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "HOLDS",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "cert:ibm_ai",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "PURSUING",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "cert:ibm_fullstack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "HOLDS",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "cert:team_mgmt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "PRACTICES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "domain:aerospace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "PRACTICES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "domain:ai",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "PRACTICES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "domain:digital_twin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "PRACTICES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "domain:mbse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "PRACTICES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "domain:software",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "PRACTICES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "domain:systems_eng",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "STUDIED_AT",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "institution:unipd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "COMPLETED",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "program:aerospace_bsc_unipd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "ENROLLED_IN",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "program:aerospace_eng_unipd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "COMPLETED",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "program:itis_diploma",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "CONTRIBUTES_TO",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "project:albasat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "CONTRIBUTES_TO",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "project:bepi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "BUILT",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "project:drivegen",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "BUILT",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "project:fullship",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "ARCHITECTED",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "project:ghl_orchestrator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "BUILT",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "project:instant_translate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "BUILT",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "project:neurolex",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "BUILT",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "project:poodl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "BUILT",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "project:space_mission_sim",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "BUILT",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "project:spese_smart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "BUILT",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "project:vsl_visualizer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "CO_AUTHOR",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "person:matteo_marcon",
+      "target": "publication:albasat_4s_2026",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "INTRODUCES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:hero",
+      "target": "person:matteo_marcon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "AFFILIATED_WITH",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "company:albasat_team",
+      "target": "institution:unipd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "OFFERS",
+      "source_file": "corpus/data.ts",
+      "confidence": "INFERRED",
+      "source": "institution:unipd",
+      "target": "program:aerospace_eng_unipd",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:education",
+      "target": "program:aerospace_eng_unipd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "OWNED_BY",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "company:bepi_team",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "OWNED_BY",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "project:albasat",
+      "target": "company:albasat_team",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "PUBLISHED",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "project:albasat",
+      "target": "publication:albasat_4s_2026",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "EXEMPLIFIED_BY",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "domain:digital_twin",
+      "target": "project:bepi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "EXEMPLIFIED_BY",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "domain:mbse",
+      "target": "project:bepi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "IMPLEMENTS",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "concept:cpm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "IMPLEMENTS",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "concept:ecss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "IMPLEMENTS",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "concept:fmeca",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "concept:operating_modes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "GENERATES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "concept:pdr_cdr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "MODELS",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "concept:product_tree",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "IMPLEMENTS",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "concept:rbac",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "INTEGRATES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "tech:drama",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "tech:fastapi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "INTEGRATES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "tech:freeflyer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "INTEGRATES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "tech:gmat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "INTEGRATES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "tech:matlab",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "INTEGRATES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "tech:openlca",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "tech:plotly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "tech:postgresql",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "tech:python",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "ENFORCES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "tech:rls",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "INTEGRATES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "tech:spenvis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "INTEGRATES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "tech:spice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "tech:streamlit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "project:bepi",
+      "target": "tech:supabase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:mbse",
+      "target": "project:bepi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:projects",
+      "target": "project:bepi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "project:space_mission_sim",
+      "target": "tech:fastapi",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "project:space_mission_sim",
+      "target": "tech:react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "project:space_mission_sim",
+      "target": "tech:tailwind",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:projects",
+      "target": "project:space_mission_sim",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "DEMONSTRATES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "project:albasat",
+      "target": "concept:vibration_test_correlation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "project:albasat",
+      "target": "tech:ansys",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "project:albasat",
+      "target": "tech:solidworks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:aerospace",
+      "target": "project:albasat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:projects",
+      "target": "project:albasat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "project:drivegen",
+      "target": "tech:gemini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "project:drivegen",
+      "target": "tech:openai",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "project:ghl_orchestrator",
+      "target": "tech:gas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "project:ghl_orchestrator",
+      "target": "tech:ghl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "USES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "project:ghl_orchestrator",
+      "target": "tech:make",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "INCLUDES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "domain:software",
+      "target": "tech:python",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "BUILT_ON",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "INFERRED",
+      "source": "tech:supabase",
+      "target": "tech:postgresql",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "PROVIDES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "INFERRED",
+      "source": "tech:supabase",
+      "target": "tech:rls",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "PERSISTED_IN",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "concept:operating_modes",
+      "target": "tech:postgresql",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "SUPPORTS",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "INFERRED",
+      "source": "tech:postgresql",
+      "target": "tech:rls",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:aerospace",
+      "target": "tech:solidworks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:aerospace",
+      "target": "tech:ansys",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "INCLUDES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "domain:software",
+      "target": "tech:react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "INCLUDES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "domain:ai",
+      "target": "tech:make",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "INCLUDES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "domain:ai",
+      "target": "tech:n8n",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "INCLUDES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "domain:ai",
+      "target": "tech:openai",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "INCLUDES",
+      "source_file": "corpus/data.ts",
+      "confidence": "EXTRACTED",
+      "source": "domain:ai",
+      "target": "tech:gemini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:about",
+      "target": "domain:aerospace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:about",
+      "target": "domain:systems_eng",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:mbse",
+      "target": "domain:mbse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:about",
+      "target": "domain:software",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:software",
+      "target": "domain:software",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:about",
+      "target": "domain:ai",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:ai_automation",
+      "target": "domain:ai",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:mbse",
+      "target": "domain:digital_twin",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "DEFINES",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "confidence": "EXTRACTED",
+      "source": "concept:ecss",
+      "target": "concept:pdr_cdr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:aerospace",
+      "target": "concept:ecss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "FEATURES",
+      "source_file": "corpus/prompt.txt",
+      "confidence": "EXTRACTED",
+      "source": "section:education",
+      "target": "cert:english_b2",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "be:bepi_stack",
+      "relation": "FLAGSHIP_STACK",
+      "source_file": "corpus/PROJECT_OVERVIEW.md",
+      "nodes": [
+        "project:bepi",
+        "tech:python",
+        "tech:streamlit",
+        "tech:supabase",
+        "tech:fastapi",
+        "tech:postgresql",
+        "tech:rls",
+        "concept:rbac"
+      ]
+    },
+    {
+      "id": "be:portfolio_sections",
+      "relation": "PORTFOLIO_SECTIONS",
+      "source_file": "corpus/prompt.txt",
+      "nodes": [
+        "section:hero",
+        "section:about",
+        "section:aerospace",
+        "section:mbse",
+        "section:software",
+        "section:ai_automation",
+        "section:projects",
+        "section:experience",
+        "section:education",
+        "section:contact"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>Engineering Notes · Matteo Marcon</title>
+  <meta name="description" content="Engineering notes: CubeSat STM, ECSS-aligned qualification, FEM / test correlation, MBSE platform internals." />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050000'/%3E%3Crect x='12' y='12' width='8' height='8' fill='%23D43F3F' transform='rotate(45 16 16)'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/assets/site.css" />
+</head>
+<body data-theme="dark">
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="scan-line-global" aria-hidden="true"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="brand">
+        <img src="/assets/img/logo.jfif" alt="Matteo Marcon" class="brand-img" />
+        <span class="brand-text">M·M</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">MAIN</a></li>
+        <li><a href="/scrub.html">TAKE 02</a></li>
+        <li><a href="/recruiter.html">RECRUITER</a></li>
+        <li><a href="/engineering.html" class="nav-link active">ENGINEERING</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="block" style="padding-top: 7rem;">
+    <div class="container">
+      <div class="block-head">
+        <span class="block-num mono">EN</span>
+        <span class="block-hairline"></span>
+        <span class="block-eyebrow mono">// ENGINEERING NOTES</span>
+      </div>
+      <h1 class="block-title">Engineering notes.</h1>
+      <p class="block-lede">
+        Long-form writing on the work: CubeSat STM, FEM / test correlation, ECSS-aligned
+        qualification flows, and the architecture behind the MBSE platform.
+      </p>
+
+      <div class="card corner-brackets">
+        <div class="card-label mono" style="color:var(--accent-crimson);">AlbaSat · STM qualification</div>
+        <h3 style="margin-top: 0.5rem;">Simulations and Vibration Test Results for the AlbaSat STM</h3>
+        <p class="flagship-body" style="margin-top: 0.5rem;">
+          Paper accepted at 4S Symposium 2026. Structural dynamics FEM predictions
+          correlated with measured vibration test data on the AlbaSat Structural
+          Thermal Model. Modal parameters, mode shapes, and test-to-analysis
+          agreement presented within an ECSS-aligned qualification flow.
+        </p>
+        <div class="publication-chips" style="margin-top: 1rem;">
+          <span class="chip mono">4S SYMPOSIUM 2026</span>
+          <span class="chip mono">SMALL SATELLITES</span>
+          <span class="chip mono">ESA · ASI · UNIPD</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <h2 class="block-title" style="font-size: clamp(1.5rem, 3vw, 2.25rem);">MBSE · BEPI platform (high level)</h2>
+      <p class="block-lede">
+        The platform is a multi-tenant system-engineering tool built around a Postgres
+        schema with row-level security. The numbers below are published because they
+        describe the surface area of the system. Specific implementation details and
+        proprietary data structures remain confidential.
+      </p>
+
+      <div class="metric-grid">
+        <div class="metric"><div class="metric-val">22</div><div class="metric-key mono">DB TABLES</div><div class="metric-desc">Reusable schema across all subsystems.</div></div>
+        <div class="metric"><div class="metric-val">79</div><div class="metric-key mono">RLS POLICIES</div><div class="metric-desc">Row-level security, end-to-end.</div></div>
+        <div class="metric"><div class="metric-val">18</div><div class="metric-key mono">TRIGGERS</div><div class="metric-desc">Event-driven automation across the platform.</div></div>
+        <div class="metric"><div class="metric-val">11</div><div class="metric-key mono">PAGES</div><div class="metric-desc">Operational views for every engineering role.</div></div>
+        <div class="metric"><div class="metric-val">9</div><div class="metric-key mono">INTEGRATIONS</div><div class="metric-desc">External systems connected via webhooks.</div></div>
+        <div class="metric"><div class="metric-val">8</div><div class="metric-key mono">RBAC ROLES</div><div class="metric-desc">Granular permissions and audit trails.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <h2 class="block-title" style="font-size: clamp(1.5rem, 3vw, 2.25rem);">ECSS-aligned workflow.</h2>
+      <p class="block-lede">Phase A through E, with explicit gates and review artefacts.</p>
+
+      <div class="ecss-strip">
+        <div class="ecss-line"></div>
+        <div class="ecss-phases">
+          <div class="ecss-phase">
+            <div class="ecss-dot">A</div>
+            <div class="ecss-label">Concept</div>
+            <div class="ecss-desc">Mission analysis, feasibility, concept-of-operations.</div>
+          </div>
+          <div class="ecss-phase">
+            <div class="ecss-dot">B</div>
+            <div class="ecss-label">Preliminary</div>
+            <div class="ecss-desc">Requirements baseline, breadboards, trade studies.</div>
+          </div>
+          <div class="ecss-phase">
+            <div class="ecss-dot">C</div>
+            <div class="ecss-label">Detailed</div>
+            <div class="ecss-desc">Design, FMECA, qualification, integration testing.</div>
+          </div>
+          <div class="ecss-phase">
+            <div class="ecss-dot">D</div>
+            <div class="ecss-label">Qualification</div>
+            <div class="ecss-desc">Qualification &amp; acceptance reviews (QR / AR).</div>
+          </div>
+          <div class="ecss-phase">
+            <div class="ecss-dot">E</div>
+            <div class="ecss-label">Operations</div>
+            <div class="ecss-desc">Launch, commissioning, in-orbit ops, end-of-life.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
+      <a href="/" class="btn">Back to main <span>→</span></a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-hairline"></div>
+      <div class="footer-bottom mono">
+        <div>© <span id="footer-year">2026</span> Matteo Marcon · All rights reserved.</div>
+        <div class="footer-meta">
+          <span>Imagery generated with AI.</span>
+          <span class="footer-status"><span class="dot fire"></span> SYSTEMS NOMINAL</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

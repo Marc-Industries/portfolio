@@ -1,0 +1,267 @@
+{
+  "communities": {
+    "0": [
+      "cert:english_b2",
+      "cert:ibm_ai",
+      "cert:ibm_fullstack",
+      "cert:team_mgmt",
+      "company:albasat_team",
+      "institution:unipd",
+      "person:matteo_marcon",
+      "program:aerospace_bsc_unipd",
+      "program:aerospace_eng_unipd",
+      "program:itis_diploma",
+      "project:fullship",
+      "project:instant_translate",
+      "project:neurolex",
+      "project:poodl",
+      "project:spese_smart",
+      "project:vsl_visualizer",
+      "section:education",
+      "section:hero"
+    ],
+    "1": [
+      "company:bepi_team",
+      "concept:cpm",
+      "concept:fmeca",
+      "concept:product_tree",
+      "concept:rbac",
+      "project:bepi",
+      "tech:drama",
+      "tech:freeflyer",
+      "tech:gmat",
+      "tech:matlab",
+      "tech:openlca",
+      "tech:plotly",
+      "tech:spenvis",
+      "tech:spice",
+      "tech:streamlit"
+    ],
+    "2": [
+      "domain:aerospace",
+      "domain:software",
+      "domain:systems_eng",
+      "project:space_mission_sim",
+      "section:about",
+      "section:projects",
+      "section:software",
+      "tech:fastapi",
+      "tech:python",
+      "tech:react",
+      "tech:tailwind"
+    ],
+    "3": [
+      "domain:ai",
+      "project:drivegen",
+      "project:ghl_orchestrator",
+      "section:ai_automation",
+      "tech:gas",
+      "tech:gemini",
+      "tech:ghl",
+      "tech:make",
+      "tech:n8n",
+      "tech:openai"
+    ],
+    "4": [
+      "concept:ecss",
+      "concept:pdr_cdr",
+      "concept:vibration_test_correlation",
+      "project:albasat",
+      "publication:albasat_4s_2026",
+      "section:aerospace",
+      "tech:ansys",
+      "tech:solidworks"
+    ],
+    "5": [
+      "data",
+      "data_certification",
+      "data_data",
+      "data_education",
+      "data_experience",
+      "data_project",
+      "data_projectvisibility"
+    ],
+    "6": [
+      "concept:operating_modes",
+      "tech:postgresql",
+      "tech:rls",
+      "tech:supabase"
+    ],
+    "7": [
+      "domain:digital_twin",
+      "domain:mbse",
+      "section:mbse"
+    ],
+    "8": [
+      "section:contact"
+    ],
+    "9": [
+      "section:experience"
+    ],
+    "10": [
+      "tech:gsap"
+    ],
+    "11": [
+      "tech:nextjs"
+    ],
+    "12": [
+      "tech:r3f"
+    ]
+  },
+  "cohesion": {
+    "0": 0.12418300653594772,
+    "1": 0.13333333333333333,
+    "2": 0.18181818181818182,
+    "3": 0.2222222222222222,
+    "4": 0.32142857142857145,
+    "5": 0.2857142857142857,
+    "6": 0.6666666666666666,
+    "7": 0.6666666666666666,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0
+  },
+  "gods": [
+    {
+      "id": "person:matteo_marcon",
+      "label": "Matteo Marcon",
+      "degree": 27
+    },
+    {
+      "id": "project:bepi",
+      "label": "BEPI",
+      "degree": 27
+    },
+    {
+      "id": "project:albasat",
+      "label": "AlbaSat CubeSat",
+      "degree": 8
+    },
+    {
+      "id": "domain:ai",
+      "label": "AI / Automation",
+      "degree": 7
+    },
+    {
+      "id": "project:space_mission_sim",
+      "label": "Space Mission Simulator",
+      "degree": 5
+    },
+    {
+      "id": "domain:software",
+      "label": "Software Engineering",
+      "degree": 5
+    },
+    {
+      "id": "project:ghl_orchestrator",
+      "label": "Lead Distribution & Sync Orchestrator",
+      "degree": 4
+    },
+    {
+      "id": "tech:postgresql",
+      "label": "PostgreSQL 15",
+      "degree": 4
+    },
+    {
+      "id": "section:about",
+      "label": "About / Identity",
+      "degree": 4
+    },
+    {
+      "id": "section:aerospace",
+      "label": "Aerospace / Space Systems section",
+      "degree": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Matteo Marcon",
+      "target": "Aerospace Engineering",
+      "source_files": [
+        "corpus/data.ts",
+        "corpus/prompt.txt"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "PRACTICES",
+      "why": "crosses file types (code ↔ doc); bridges separate communities; peripheral node `Aerospace Engineering` unexpectedly reaches hub `Matteo Marcon`"
+    },
+    {
+      "source": "Matteo Marcon",
+      "target": "Systems Engineering",
+      "source_files": [
+        "corpus/data.ts",
+        "corpus/prompt.txt"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "PRACTICES",
+      "why": "crosses file types (code ↔ doc); bridges separate communities; peripheral node `Systems Engineering` unexpectedly reaches hub `Matteo Marcon`"
+    },
+    {
+      "source": "Matteo Marcon",
+      "target": "Simulations and Vibration Test Results for the AlbaSat STM",
+      "source_files": [
+        "corpus/data.ts",
+        "corpus/prompt.txt"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "CO_AUTHOR",
+      "why": "crosses file types (code ↔ doc); bridges separate communities; peripheral node `Simulations and Vibration Test Results for the AlbaSat STM` unexpectedly reaches hub `Matteo Marcon`"
+    },
+    {
+      "source": "AlbaSat CubeSat",
+      "target": "AlbaSat team (UniPD)",
+      "source_files": [
+        "corpus/data.ts",
+        "corpus/prompt.txt"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "OWNED_BY",
+      "why": "crosses file types (doc ↔ code); bridges separate communities; peripheral node `AlbaSat team (UniPD)` unexpectedly reaches hub `AlbaSat CubeSat`"
+    },
+    {
+      "source": "Matteo Marcon",
+      "target": "AI / Automation",
+      "source_files": [
+        "corpus/data.ts",
+        "corpus/prompt.txt"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "PRACTICES",
+      "why": "crosses file types (code ↔ doc); bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `Matteo Marcon` connect `Community 0` to `Community 1`, `Community 2`, `Community 3`, `Community 4`, `Community 7`?",
+      "why": "High betweenness centrality (0.519) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `BEPI` connect `Community 1` to `Community 0`, `Community 2`, `Community 4`, `Community 6`, `Community 7`?",
+      "why": "High betweenness centrality (0.384) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `AlbaSat CubeSat` connect `Community 4` to `Community 0`, `Community 2`?",
+      "why": "High betweenness centrality (0.084) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `ProjectVisibility`, `Project`, `Experience` to the rest of the system?",
+      "why": "44 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.12418300653594772 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
