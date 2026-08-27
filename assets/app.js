@@ -216,6 +216,19 @@ const EXPERIENCE = [
     ],
   },
   {
+    role: 'IT Specialist',
+    company: 'Spartan Health',
+    domain: 'IT · SYSTEMS ARCHITECTURE',
+    location: 'Hybrid',
+    dates: 'Aug 2025 to Present',
+    summary: 'Supporting the digital transformation of the IT ecosystem with scalable automation, operational tooling and customer-support integrations.',
+    bullets: [
+      'DriveGen document and report automation with Google Apps Script and Node.js logic',
+      'CRM and GrooveHQ support-ticket integration with metadata-based routing',
+      'Shipment-data monitoring and Telegram tooling for operational visibility',
+    ],
+  },
+  {
     role: 'IT Manager & Systems Architect',
     company: 'Probiz Consulting LLC',
     domain: 'AUTOMATION · INTEGRATION',
@@ -519,7 +532,27 @@ function renderFlow() {
   const svg = $('#flow-svg');
   if (!svg) return;
 
-  const nodes = [
+  const mobile = innerWidth < 768;
+  if (mobile) {
+    svg.setAttribute('viewBox', '0 0 320 660');
+    const legendLeft = $('#flow-legend-l', svg);
+    const legendValue = $('#flow-legend-v', svg);
+    if (legendLeft) { legendLeft.setAttribute('x', '16'); legendLeft.setAttribute('y', '24'); }
+    if (legendValue) { legendValue.setAttribute('x', '16'); legendValue.setAttribute('y', '46'); }
+    const labels = $$('text', svg).filter(text => text.textContent === 'NODES' || text.textContent === '5 / 5 ONLINE');
+    labels.forEach((label, index) => {
+      label.setAttribute('x', '304');
+      label.setAttribute('y', index === 0 ? '24' : '46');
+    });
+  }
+
+  const nodes = mobile ? [
+    { id: 'trigger',  label: 'TRIGGER',  x: 160, y: 150 },
+    { id: 'agent',    label: 'AGENT',    x: 160, y: 250 },
+    { id: 'rules',    label: 'RULES',    x: 160, y: 350 },
+    { id: 'notify',   label: 'NOTIFY',   x: 160, y: 450 },
+    { id: 'audit',    label: 'AUDIT',    x: 160, y: 550 },
+  ] : [
     { id: 'trigger',  label: 'TRIGGER',  x: 100, y: 160 },
     { id: 'agent',    label: 'AGENT',    x: 250, y: 80  },
     { id: 'rules',    label: 'RULES',    x: 400, y: 160 },
@@ -534,7 +567,7 @@ function renderFlow() {
     const b = nodes[(i + 1) % nodes.length];
     const path = document.createElementNS(svg.namespaceURI, 'path');
     const mx = (a.x + b.x) / 2;
-    const my = (a.y + b.y) / 2 - 40;
+    const my = (a.y + b.y) / 2 - (mobile ? 0 : 40);
     path.setAttribute('d', `M ${a.x} ${a.y} Q ${mx} ${my} ${b.x} ${b.y}`);
     path.setAttribute('stroke', '#D43F3F');
     path.setAttribute('stroke-width', '1');

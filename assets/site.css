@@ -1483,6 +1483,9 @@ body {
   .timeline-bullets li { font-size: 0.8rem; }
   .contact-ctas .btn { width: 100%; justify-content: space-between; }
   .footer-meta { align-items: flex-start; flex-direction: column; }
+  #hero-video, .hero-poster img { object-position: 62% center; }
+  #automation .card:has(.flow-svg) { overflow: hidden !important; padding: 1rem 0.75rem; }
+  #automation .flow-svg { min-width: 0; width: 100%; height: auto; }
 }
 
 @media (max-width: 420px) {
