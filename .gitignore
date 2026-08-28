@@ -1,8 +1,10 @@
 node_modules
 .next
-out
 .env*.local
 .DS_Store
 *.log
 .vercel
 .netlify
+.agent
+.claude
+10k-websites-skill
