@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>AlbaSat · Case Study · Matteo Marcon</title>
+  <meta name="description" content="AlbaSat — 1U CubeSat platform: structural engineering, FEM correlation, vibration test campaign, ECSS-aligned development, 4S Symposium 2026 publication." />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050000'/%3E%3Crect x='12' y='12' width='8' height='8' fill='%23D43F3F' transform='rotate(45 16 16)'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/assets/site.css" />
+  <link rel="stylesheet" href="/assets/projects.css" />
+</head>
+<body class="project-page" data-theme="dark">
+
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="scan-line-global" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       VIDEO LOADER
+       ============================================================ -->
+  <div class="loader" id="loader" aria-hidden="false">
+    <video id="loader-video" muted playsinline preload="auto" poster="/assets/img/alt-hero-poster.jpg">
+      <source src="/assets/video/hero1-clean.mp4" type="video/mp4" />
+    </video>
+    <div class="loader-overlay">
+      <div class="loader-meta mono">
+        <span class="dot fire"></span>
+        <span>LOADING CASE STUDY · ALBASAT</span>
+      </div>
+      <div class="loader-progress mono">
+        <span class="loader-bar"><span class="loader-bar-fill" id="loader-bar-fill"></span></span>
+        <span class="loader-time" id="loader-time">00:00</span>
+      </div>
+      <button class="loader-skip mono" id="loader-skip" type="button">SKIP · ESC</button>
+    </div>
+  </div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="brand">
+        <img src="/assets/img/logo.jfif" alt="Matteo Marcon" class="brand-img" />
+        <span class="brand-text">M·M</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">MAIN</a></li>
+        <li><a href="/scrub.html">TAKE 02</a></li>
+        <li><a href="/recruiter.html">RECRUITER</a></li>
+        <li><a href="/engineering.html">ENGINEERING</a></li>
+        <li><a href="/projects/bepi.html" class="nav-link active">PROJECTS</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="case-study" id="case">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="cs-hero">
+      <div class="container">
+        <div class="cs-back mono">
+          <a href="/">← BACK TO PORTFOLIO</a>
+        </div>
+
+        <div class="cs-head">
+          <div class="cs-eyebrow mono">
+            <span class="dot amber"></span>
+            <span>PUBLIC · 2023 to present</span>
+          </div>
+          <h1 class="cs-title">AlbaSat</h1>
+          <p class="cs-tagline">
+            Structural engineering, FEM correlation, vibration test campaign.
+          </p>
+        </div>
+
+        <div class="cs-metrics">
+          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">1U</div><div class="cs-metric-key mono">FORM FACTOR</div></div>
+          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">ECSS</div><div class="cs-metric-key mono">STANDARD</div></div>
+          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">STM</div><div class="cs-metric-key mono">PHASE</div></div>
+          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">4S</div><div class="cs-metric-key mono">SYMPOSIUM 2026</div></div>
+        </div>
+
+        <div class="cs-tilt-wrap">
+          <div class="tilt-card" id="albasat-tilt">
+            <div class="tilt-inner">
+              <img src="/assets/img/still-aerospace.jpg" alt="AlbaSat 1U CubeSat STM" />
+              <div class="tilt-vignette"></div>
+              <div class="tilt-meta mono">
+                <span class="dot fire"></span>
+                <span>1U CUBESAT · STM QUALIFICATION</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num">
+          <div class="cs-num-mark">01</div>
+          <div class="cs-num-hairline"></div>
+          <div class="cs-num-key mono">CONTEXT</div>
+        </div>
+        <div class="cs-body">
+          A 1U-class educational CubeSat developed within the University of
+          Padova / Alta Scuola Politecnica framework. Required structural
+          qualification, FEM analysis, modal correlation against vibration test
+          data, and an ECSS-oriented development flow.
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num">
+          <div class="cs-num-mark">02</div>
+          <div class="cs-num-hairline"></div>
+          <div class="cs-num-key mono">ARCHITECTURE</div>
+        </div>
+        <div class="cs-body">
+          Mechanical CAD model (SolidWorks) → FEM (ANSYS) for modal / static
+          analysis → vibration test campaign → correlation of FE modal
+          parameters vs measured data → system-level documentation aligned with
+          ECSS review gates.
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num">
+          <div class="cs-num-mark">03</div>
+          <div class="cs-num-hairline"></div>
+          <div class="cs-num-key mono">TECHNOLOGIES</div>
+        </div>
+        <div class="cs-body">
+          <div class="tag-wall">
+            <span class="tag">SolidWorks</span>
+            <span class="tag">ANSYS</span>
+            <span class="tag">FEM</span>
+            <span class="tag">ECSS</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">Vibration testing</span>
+            <span class="tag">Requirements</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num">
+          <div class="cs-num-mark">04</div>
+          <div class="cs-num-hairline"></div>
+          <div class="cs-num-key mono">MY ROLE</div>
+        </div>
+        <div class="cs-body">
+          Structural &amp; systems contributor — FEM modelling, vibration test
+          correlation, ECSS deliverable support. Co-author of the 4S Symposium
+          2026 paper.
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num">
+          <div class="cs-num-mark">05</div>
+          <div class="cs-num-hairline"></div>
+          <div class="cs-num-key mono">PUBLICATION</div>
+        </div>
+        <div class="cs-body">
+          <div class="publication-card" style="margin: 0;">
+            <div class="publication-stripe" aria-hidden="true"></div>
+            <div class="publication-body">
+              <div class="card-label mono" style="color: var(--accent-crimson);">CONFERENCE PAPER · ACCEPTED</div>
+              <h3 class="publication-title">Simulations and Vibration Test Results for the AlbaSat STM</h3>
+              <p class="publication-lede">
+                Correlation between FEM modal analysis (ANSYS) and vibration
+                test campaign data for the AlbaSat Structural Thermal Model.
+                Modal parameters, mode shapes, and test-to-analysis agreement
+                are presented within an ECSS-aligned qualification flow.
+              </p>
+              <div class="publication-chips">
+                <span class="chip mono">4S SYMPOSIUM 2026</span>
+                <span class="chip mono">SMALL SATELLITES</span>
+                <span class="chip mono">ESA · ASI · UNIPD</span>
+              </div>
+            </div>
+            <div class="publication-stamp">
+              <span class="mono publication-stamp-label">PAPER</span>
+              <span class="publication-stamp-year">2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num">
+          <div class="cs-num-mark">06</div>
+          <div class="cs-num-hairline"></div>
+          <div class="cs-num-key mono">RESULT</div>
+        </div>
+        <div class="cs-body">
+          STM-level qualification data and a publication at the 4S Symposium
+          2026 — "Simulations and Vibration Test Results for the AlbaSat STM".
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num">
+          <div class="cs-num-mark">07</div>
+          <div class="cs-num-hairline"></div>
+          <div class="cs-num-key mono">LESSONS LEARNED</div>
+        </div>
+        <div class="cs-body">
+          <ul class="cs-list">
+            <li>
+              <span class="cs-bullet accent-amber">›</span>
+              <span>Test-to-analysis correlation is only as good as the boundary conditions. Small shifts in fixture stiffness move the first modes by percent.</span>
+            </li>
+            <li>
+              <span class="cs-bullet accent-amber">›</span>
+              <span>ECSS review gates force you to write things down early — a feature, not a cost, when results don't match expectations.</span>
+            </li>
+            <li>
+              <span class="cs-bullet accent-amber">›</span>
+              <span>MATLAB post-processing on top of ANSYS exports is the most efficient way to produce the figures the paper committee expects.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-end">
+      <div class="container cs-end-grid">
+        <div class="cs-end-eyebrow mono">END OF CASE STUDY</div>
+        <div class="cs-end-actions">
+          <a class="btn" href="/projects/bepi.html">← Prev · BEPI</a>
+          <a class="btn btn-primary" href="/">Back to main <span>→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-hairline"></div>
+      <div class="footer-bottom mono">
+        <div>© <span id="footer-year">2026</span> Matteo Marcon · All rights reserved.</div>
+        <div class="footer-meta">
+          <span>Imagery generated with AI.</span>
+          <span class="footer-status"><span class="dot fire"></span> SYSTEMS NOMINAL</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/assets/project.js"></script>
+</body>
+</html>

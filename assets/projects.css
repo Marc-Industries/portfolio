@@ -1,0 +1,281 @@
+/* =============================================================================
+   Project pages — shared styles
+   /projects/bepi.html
+   /projects/albasat.html
+   ============================================================================= */
+
+/* While the loader is on-screen the page itself starts hidden */
+body.project-page .case-study { opacity: 0; transition: opacity 0.7s ease; }
+body.project-page.is-ready .case-study { opacity: 1; }
+body.project-page.is-ready .footer { opacity: 1; }
+body.project-page .footer { opacity: 0; transition: opacity 0.7s ease 0.2s; }
+
+/* =============================================================================
+   LOADER
+   ============================================================================= */
+.loader {
+  position: fixed; inset: 0; z-index: 1000;
+  background: var(--bg-0);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  transition: opacity 0.6s ease, visibility 0s linear 0.6s;
+  overflow: hidden;
+}
+.loader.is-gone { opacity: 0; visibility: hidden; pointer-events: none; }
+.loader video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: contrast(1.04) saturate(1.06) brightness(0.7);
+}
+.loader-overlay {
+  position: relative; z-index: 2;
+  width: min(720px, 90vw);
+  padding: 1rem 1.25rem;
+  display: flex; flex-direction: column; gap: 0.75rem;
+  background: linear-gradient(180deg, rgba(5,0,0,0.0), rgba(5,0,0,0.55) 50%, rgba(5,0,0,0.0));
+}
+.loader-meta {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 10px; letter-spacing: 0.28em;
+  color: var(--text-0);
+}
+.loader-progress {
+  display: flex; align-items: center; gap: 0.75rem;
+  font-size: 11px;
+  color: var(--text-1);
+}
+.loader-bar {
+  position: relative; flex: 1;
+  height: 2px;
+  background: rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+.loader-bar-fill {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-crimson), #ff8585);
+  box-shadow: 0 0 8px rgba(212,63,63,0.55);
+}
+.loader-time { font-variant-numeric: tabular-nums; min-width: 4ch; }
+.loader-skip {
+  align-self: flex-end;
+  background: transparent;
+  color: var(--text-2);
+  border: 1px solid var(--line-strong);
+  padding: 0.45rem 0.85rem;
+  font-size: 9px; letter-spacing: 0.28em;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.loader-skip:hover { color: var(--accent-crimson); border-color: var(--accent-crimson); }
+
+/* =============================================================================
+   CASE-STUDY LAYOUT
+   ============================================================================= */
+.case-study { padding-top: 6.5rem; padding-bottom: 4rem; }
+
+.cs-hero {
+  position: relative;
+  padding: 2rem 0 3rem;
+}
+.cs-back a {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 10px; letter-spacing: 0.28em;
+  color: var(--text-2);
+  text-decoration: none;
+}
+.cs-back a:hover { color: var(--accent-crimson); }
+
+.cs-head { margin-bottom: 2rem; }
+.cs-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-size: 10px; letter-spacing: 0.28em;
+  color: var(--text-2);
+  margin-bottom: 0.75rem;
+}
+.cs-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--text-0);
+}
+.cs-tagline {
+  margin-top: 0.75rem;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  line-height: 1.5;
+  color: var(--text-1);
+  max-width: 48ch;
+}
+
+.cs-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0 2rem;
+}
+@media (min-width: 700px) {
+  .cs-metrics { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+.cs-metric { padding: 1rem 0.75rem; text-align: center; }
+.cs-metric-val {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  color: var(--accent-crimson);
+  line-height: 1;
+}
+.cs-metric-key {
+  margin-top: 0.4rem;
+  font-size: 9px; letter-spacing: 0.28em;
+  color: var(--text-2);
+}
+
+/* =============================================================================
+   TILT CARD — inclines to follow the mouse pointer
+   ============================================================================= */
+.cs-tilt-wrap {
+  margin-top: 1rem;
+  perspective: 1200px;
+}
+.tilt-card {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 220ms ease;
+  will-change: transform;
+}
+.tilt-inner {
+  position: absolute; inset: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--bg-2);
+  border: 1px solid var(--line-strong);
+  box-shadow:
+    0 12px 60px rgba(0,0,0,0.55),
+    inset 0 0 0 1px rgba(212,63,63,0.06);
+}
+.tilt-inner img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 240ms ease;
+  transform: scale(1.02);
+}
+.tilt-vignette {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(5,0,0,0.0) 30%, rgba(5,0,0,0.55) 100%);
+  pointer-events: none;
+}
+.tilt-meta {
+  position: absolute; left: 0.85rem; top: 0.75rem;
+  z-index: 2;
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 9px; letter-spacing: 0.28em;
+  color: var(--text-0);
+  background: rgba(5,0,0,0.55);
+  padding: 0.4rem 0.6rem;
+  border-left: 2px solid var(--accent-crimson);
+}
+.tilt-meta .dot { animation: none; }
+
+/* =============================================================================
+   SECTION ROWS — alternating numbered strips
+   ============================================================================= */
+.cs-section {
+  position: relative;
+  padding: 3rem 0;
+  border-top: 1px solid var(--line);
+}
+.cs-section:first-of-type { border-top: none; }
+
+.cs-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 800px) {
+  .cs-grid {
+    grid-template-columns: 3fr 9fr;
+    gap: 3rem;
+  }
+}
+.cs-num {
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+.cs-num-mark {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  color: var(--accent-crimson);
+  letter-spacing: -0.01em;
+}
+.cs-num-hairline {
+  width: 2rem; height: 1px;
+  background: var(--accent-crimson);
+  opacity: 0.5;
+}
+.cs-num-key {
+  font-size: 10px; letter-spacing: 0.28em;
+  color: var(--text-2);
+}
+.cs-body {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-1);
+  max-width: 70ch;
+}
+.cs-body code {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.875rem;
+  color: var(--accent-ember);
+  background: rgba(255, 138, 92, 0.08);
+  padding: 0.05rem 0.35rem;
+  border-radius: 2px;
+  border: 1px solid rgba(255,138,92,0.18);
+}
+.cs-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 0.75rem;
+}
+.cs-list li {
+  display: flex; gap: 0.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-1);
+}
+.cs-bullet { flex-shrink: 0; font-family: 'JetBrains Mono', monospace; }
+.cs-bullet.accent-crimson { color: var(--accent-crimson); }
+.cs-bullet.accent-amber   { color: var(--accent-amber); }
+
+/* =============================================================================
+   END NAV
+   ============================================================================= */
+.cs-end {
+  padding: 4rem 0 0;
+  border-top: 1px solid var(--line-strong);
+}
+.cs-end-grid {
+  display: flex; flex-direction: column; gap: 1rem;
+  align-items: flex-start;
+}
+.cs-end-eyebrow {
+  font-size: 10px; letter-spacing: 0.28em;
+  color: var(--text-2);
+}
+.cs-end-actions {
+  display: flex; flex-wrap: wrap; gap: 0.75rem;
+}
+
+/* Hide some site-wide clutter on project pages */
+body.project-page .telemetry,
+body.project-page #hero-load { display: none !important; }
