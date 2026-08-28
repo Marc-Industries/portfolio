@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <title>Fullship Scraper · Case Study · Matteo Marcon</title>
-  <meta name="description" content="Fullship Scraper — Shipping/logistics data pipeline. Pulling shipping data from carrier portals into a single structured feed." />
+  <title>Fullship · Case Study · Matteo Marcon</title>
+  <meta name="description" content="Fullship — Shipping / logistics data pipeline. Headless browser collectors push normalized events into Postgres." />
   
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050000'/%3E%3Crect x='12' y='12' width='8' height='8' fill='%23D43F3F' transform='rotate(45 16 16)'/%3E%3C/svg%3E" />
   
@@ -19,6 +19,9 @@
   <div class="page-bg" aria-hidden="true"></div>
   <div class="scan-line-global" aria-hidden="true"></div>
 
+  <!-- ============================================================
+       VIDEO LOADER
+       ============================================================ -->
   <div class="loader" id="loader" aria-hidden="false">
     <video id="loader-video" muted playsinline preload="auto" poster="/assets/img/alt-hero-poster.jpg">
       <source src="/assets/video/hero1-clean.mp4" type="video/mp4" />
@@ -54,6 +57,9 @@
   
   <main class="case-study" id="case">
 
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
     <section class="cs-hero">
       <div class="container">
         <div class="cs-back mono">
@@ -72,16 +78,16 @@
         </div>
 
         <div class="cs-metrics">
-          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">FastAPI</div><div class="cs-metric-key mono">BACKEND</div></div>
-          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">Postgres</div><div class="cs-metric-key mono">DATABASE</div></div>
-          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">Headless</div><div class="cs-metric-key mono">BROWSER</div></div>
+          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">Python</div><div class="cs-metric-key mono">PLAYWRIGHT</div></div>
+          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">PostgreSQL</div><div class="cs-metric-key mono">DATABASE</div></div>
+          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">FastAPI</div><div class="cs-metric-key mono">QUERY LAYER</div></div>
           <div class="cs-metric card corner-brackets"><div class="cs-metric-val">ETL</div><div class="cs-metric-key mono">PIPELINE</div></div>
         </div>
 
         <div class="cs-tilt-wrap">
           <div class="tilt-card" id="fullship-tilt">
             <div class="tilt-inner">
-              <img src="/out/projects/fullship/output.png" alt="Fullship shipping data dashboard" />
+              <img src="/projects/fullship/output.png" alt="Fullship shipping data pipeline dashboard" />
               <div class="tilt-vignette"></div>
               <div class="tilt-meta mono">
                 <span class="dot fire"></span>
@@ -95,28 +101,43 @@
     
     <section class="cs-section">
       <div class="container cs-grid">
-        <div class="cs-num"><div class="cs-num-mark">01</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">PROBLEM</div></div>
-        <div class="cs-body">Pulling shipping data from carrier portals into a single structured feed for downstream analytics.</div>
+        <div class="cs-num">
+          <div class="cs-num-mark">01</div>
+          <div class="cs-num-hairline"></div>
+          <div class="cs-num-key mono">PROBLEM</div>
+        </div>
+        <div class="cs-body">
+          Pulling shipping data from carrier portals into a single structured feed for downstream analytics. Manual spreadsheet pulls were time-consuming and error-prone.
+        </div>
       </div>
     </section>
 
     <section class="cs-section">
       <div class="container cs-grid">
-        <div class="cs-num"><div class="cs-num-mark">02</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">ARCHITECTURE</div></div>
-        <div class="cs-body">Headless browser collectors push normalized events into Postgres; FastAPI exposes a query layer for the dashboard.</div>
+        <div class="cs-num">
+          <div class="cs-num-mark">02</div>
+          <div class="cs-num-hairline"></div>
+          <div class="cs-num-key mono">ARCHITECTURE</div>
+        </div>
+        <div class="cs-body">
+          Headless browser collectors push normalized events into Postgres; FastAPI exposes a query layer for the dashboard. The system tolerates carrier-portal UI changes through robust selectors.
+        </div>
       </div>
     </section>
 
     <section class="cs-section">
       <div class="container cs-grid">
-        <div class="cs-num"><div class="cs-num-mark">03</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">TECHNOLOGIES</div></div>
+        <div class="cs-num">
+          <div class="cs-num-mark">03</div>
+          <div class="cs-num-hairline"></div>
+          <div class="cs-num-key mono">TECHNOLOGIES</div>
+        </div>
         <div class="cs-body">
           <div class="tag-wall">
             <span class="tag">Python</span>
-            <span class="tag">FastAPI</span>
-            <span class="tag">PostgreSQL</span>
             <span class="tag">Playwright</span>
-            <span class="tag">Selenium</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">FastAPI</span>
           </div>
         </div>
       </div>
@@ -124,18 +145,34 @@
 
     <section class="cs-section">
       <div class="container cs-grid">
-        <div class="cs-num"><div class="cs-num-mark">04</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">MY ROLE</div></div>
-        <div class="cs-body">Designer and developer — built the full data pipeline from scraping to API exposure.</div>
+        <div class="cs-num">
+          <div class="cs-num-mark">04</div>
+          <div class="cs-num-hairline"></div>
+          <div class="cs-num-key mono">MY ROLE</div>
+        </div>
+        <div class="cs-body">
+          Designer and developer — built the full pipeline from headless browser collectors through database normalization to API exposure.
+        </div>
       </div>
     </section>
 
     <section class="cs-section">
       <div class="container cs-grid">
-        <div class="cs-num"><div class="cs-num-mark">05</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">CHALLENGES</div></div>
+        <div class="cs-num">
+          <div class="cs-num-mark">05</div>
+          <div class="cs-num-hairline"></div>
+          <div class="cs-num-key mono">CHALLENGES</div>
+        </div>
         <div class="cs-body">
           <ul class="cs-list">
-            <li><span class="cs-bullet accent-crimson">›</span><span>Carrier portals have anti-bot measures requiring careful headless browser configuration.</span></li>
-            <li><span class="cs-bullet accent-crimson">›</span><span>Normalizing inconsistent data formats across different carriers.</span></li>
+            <li>
+              <span class="cs-bullet accent-crimson">›</span>
+              <span>Tolerating carrier-portal UI changes with headless browser collectors.</span>
+            </li>
+            <li>
+              <span class="cs-bullet accent-crimson">›</span>
+              <span>Normalizing events from multiple carriers into a single feed.</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -143,15 +180,49 @@
 
     <section class="cs-section">
       <div class="container cs-grid">
-        <div class="cs-num"><div class="cs-num-mark">06</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">SOLUTION</div></div>
-        <div class="cs-body">Headless browser collectors that push normalized events into Postgres; FastAPI exposes a query layer for the dashboard.</div>
+        <div class="cs-num">
+          <div class="cs-num-mark">06</div>
+          <div class="cs-num-hairline"></div>
+          <div class="cs-num-key mono">SOLUTION</div>
+        </div>
+        <div class="cs-body">
+          Headless browser collectors that push normalized events into Postgres; FastAPI exposes a query layer for the dashboard. Robust error handling and retry logic ensure data consistency.
+        </div>
       </div>
     </section>
 
     <section class="cs-section">
       <div class="container cs-grid">
-        <div class="cs-num"><div class="cs-num-mark">07</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">RESULT</div></div>
-        <div class="cs-body">Replaced manual spreadsheet pulls with automated data collection.</div>
+        <div class="cs-num">
+          <div class="cs-num-mark">07</div>
+          <div class="cs-num-hairline"></div>
+          <div class="cs-num-key mono">RESULT</div>
+        </div>
+        <div class="cs-body">
+          Replaced manual spreadsheet pulls with automated data collection. Shipping data is now available in real-time for analytics and decision-making.
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num">
+          <div class="cs-num-mark">08</div>
+          <div class="cs-num-hairline"></div>
+          <div class="cs-num-key mono">LESSONS LEARNED</div>
+        </div>
+        <div class="cs-body">
+          <ul class="cs-list">
+            <li>
+              <span class="cs-bullet accent-amber">›</span>
+              <span>Headless browser collectors are brittle — invest in observability and alerting.</span>
+            </li>
+            <li>
+              <span class="cs-bullet accent-amber">›</span>
+              <span>Carrier portals change frequently; build flexible selectors and monitoring.</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -159,7 +230,7 @@
       <div class="container cs-end-grid">
         <div class="cs-end-eyebrow mono">END OF CASE STUDY</div>
         <div class="cs-end-actions">
-          <a class="btn" href="/projects/ghl-orchestrator.html">← Prev · GHL Orchestrator</a>
+          <a class="btn" href="/projects/drivegen.html">← Prev · DriveGen</a>
           <a class="btn btn-primary" href="/">Back to main <span>→</span></a>
         </div>
       </div>

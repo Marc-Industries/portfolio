@@ -1,44 +1,28 @@
 ```
-# Build artifacts
+# Build artifacts and distributions
 dist/
 build/
 *.pyc
 __pycache__/
 
-# Dependencies
-node_modules/
-venv/
-.venv/
-.env
-.env.local
-
-# Editors
-.vscode/
-.idea/
-
-# Logs and temp files
+# Logs
 *.log
+
+# Temporary files
 *.tmp
 *.swp
 
-# OS
-.DS_Store
-Thumbs.db
+# Environment files
+.env
+.env.local
+*.env.*
 
-# Coverage
+# Coverage reports
 coverage/
 htmlcov/
 .coverage
 
-# Python specific
-*.py[cod]
-*$py.class
-*.so
-.Python
-*.egg-info/
-.eggs/
-
-# Compressed files
+# Compression files
 *.zip
 *.gz
 *.tar
