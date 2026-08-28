@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>Space Mission Sim · Case Study · Matteo Marcon</title>
+  <meta name="description" content="Space Mission Simulator — End-to-end mission analysis." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050000'/%3E%3Crect x='12' y='12' width='8' height='8' fill='%23D43F3F' transform='rotate(45 16 16)'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/assets/site.css" />
+  <link rel="stylesheet" href="/assets/projects.css" />
+</head>
+<body class="project-page" data-theme="dark">
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="scan-line-global" aria-hidden="true"></div>
+  <div class="loader" id="loader" aria-hidden="false">
+    <video id="loader-video" muted playsinline preload="auto" poster="/assets/img/alt-hero-poster.jpg">
+      <source src="/assets/video/hero1-clean.mp4" type="video/mp4" />
+    </video>
+    <div class="loader-overlay">
+      <div class="loader-meta mono">
+        <span class="dot fire"></span>
+        <span>LOADING CASE STUDY · SPACE MISSION SIM</span>
+      </div>
+      <div class="loader-progress mono">
+        <span class="loader-bar"><span class="loader-bar-fill" id="loader-bar-fill"></span></span>
+        <span class="loader-time" id="loader-time">00:00</span>
+      </div>
+      <button class="loader-skip mono" id="loader-skip" type="button">SKIP · ESC</button>
+    </div>
+  </div>
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="brand">
+        <img src="/assets/img/logo.jfif" alt="Matteo Marcon" class="brand-img" />
+        <span class="brand-text">M·M</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">MAIN</a></li>
+        <li><a href="/scrub.html">TAKE 02</a></li>
+        <li><a href="/recruiter.html">RECRUITER</a></li>
+        <li><a href="/engineering.html">ENGINEERING</a></li>
+        <li><a href="/projects/bepi.html" class="nav-link active">PROJECTS</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="case-study" id="case">
+    <section class="cs-hero">
+      <div class="container">
+        <div class="cs-back mono"><a href="/">← BACK TO PORTFOLIO</a></div>
+        <div class="cs-head">
+          <div class="cs-eyebrow mono"><span class="dot amber"></span><span>PUBLIC · 2024</span></div>
+          <h1 class="cs-title">Space Mission Sim</h1>
+          <p class="cs-tagline">End-to-end mission analysis — orbit, delta-v, ground passes, timeline.</p>
+        </div>
+        <div class="cs-metrics">
+          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">Orbit</div><div class="cs-metric-key mono">MECHANICS</div></div>
+          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">Delta-V</div><div class="cs-metric-key mono">BUDGET</div></div>
+          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">FastAPI</div><div class="cs-metric-key mono">BACKEND</div></div>
+          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">React</div><div class="cs-metric-key mono">FRONTEND</div></div>
+        </div>
+        <div class="cs-tilt-wrap">
+          <div class="tilt-card" id="mission-sim-tilt">
+            <div class="tilt-inner">
+              <img src="/assets/img/still-aerospace.jpg" alt="Space Mission Simulator orbital visualization" />
+              <div class="tilt-vignette"></div>
+              <div class="tilt-meta mono">
+                <span class="dot fire"></span>
+                <span>MISSION SIM · ORBITAL ANALYSIS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">01</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">PROBLEM</div></div>
+        <div class="cs-body">Educational / pre-phase-A mission design needs a fast, browser-friendly way to play with orbital parameters, propellant budgets and timeline events without installing a full STK / GMAT stack.</div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">02</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">ARCHITECTURE</div></div>
+        <div class="cs-body">Split frontend (React + Tailwind, deployed on GitHub Pages) and backend (FastAPI on Render). Configurable via .env. Frontend handles visualization and timeline scrubbing; backend runs propagators and returns structured mission events.</div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">03</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">TECHNOLOGIES</div></div>
+        <div class="cs-body"><div class="tag-wall"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Tailwind</span><span class="tag">FastAPI</span><span class="tag">Python</span><span class="tag">GitHub Pages</span><span class="tag">Render</span></div></div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">04</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">MY ROLE</div></div>
+        <div class="cs-body">Designer and full-stack developer.</div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">05</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">CHALLENGES</div></div>
+        <div class="cs-body">
+          <ul class="cs-list">
+            <li><span class="cs-bullet accent-crimson">›</span><span>Decoupling orbital math from the UI so the same backend can serve a web UI today and other clients later.</span></li>
+            <li><span class="cs-bullet accent-crimson">›</span><span>Keeping the bundle small and deployable on GitHub Pages while the backend runs on Render.</span></li>
+            <li><span class="cs-bullet accent-crimson">›</span><span>Designing a clean API surface for mission events, propagators and timeline scrubbing.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">06</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">SOLUTION</div></div>
+        <div class="cs-body">A clean split: a React + Tailwind frontend on GitHub Pages for visualization and timeline scrubbing, and a FastAPI backend on Render that runs propagators and returns structured mission events. Configurable via .env, deployable with the included start.sh.</div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">07</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">RESULT</div></div>
+        <div class="cs-body">A browser-based mission sandbox with a public landing page, live backend, and a clear separation between visualization and orbital math.</div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">08</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">LESSONS LEARNED</div></div>
+        <div class="cs-body">
+          <ul class="cs-list">
+            <li><span class="cs-bullet accent-amber">›</span><span>Decoupling visualization from math lets you swap either side independently — useful for future mission types.</span></li>
+            <li><span class="cs-bullet accent-amber">›</span><span>Tiny .env-driven deploys are easier to hand off than Dockerized monoliths.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="cs-end">
+      <div class="container cs-end-grid">
+        <div class="cs-end-eyebrow mono">END OF CASE STUDY</div>
+        <div class="cs-end-actions">
+          <a class="btn" href="/projects/poodl-meeting.html">← Prev · Poodl</a>
+          <a class="btn btn-primary" href="/">Back to main <span>→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-hairline"></div>
+      <div class="footer-bottom mono">
+        <div>© <span id="footer-year">2026</span> Matteo Marcon · All rights reserved.</div>
+        <div class="footer-meta">
+          <span>Imagery generated with AI.</span>
+          <span class="footer-status"><span class="dot fire"></span> SYSTEMS NOMINAL</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="/assets/project.js"></script>
+</body>
+</html>

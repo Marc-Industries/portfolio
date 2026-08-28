@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>Poodl Meeting · Case Study · Matteo Marcon</title>
+  <meta name="description" content="Poodl Meeting — Cross-timezone meeting planner." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050000'/%3E%3Crect x='12' y='12' width='8' height='8' fill='%23D43F3F' transform='rotate(45 16 16)'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/assets/site.css" />
+  <link rel="stylesheet" href="/assets/projects.css" />
+</head>
+<body class="project-page" data-theme="dark">
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="scan-line-global" aria-hidden="true"></div>
+  <div class="loader" id="loader" aria-hidden="false">
+    <video id="loader-video" muted playsinline preload="auto" poster="/assets/img/alt-hero-poster.jpg">
+      <source src="/assets/video/hero1-clean.mp4" type="video/mp4" />
+    </video>
+    <div class="loader-overlay">
+      <div class="loader-meta mono">
+        <span class="dot fire"></span>
+        <span>LOADING CASE STUDY · POODL MEETING</span>
+      </div>
+      <div class="loader-progress mono">
+        <span class="loader-bar"><span class="loader-bar-fill" id="loader-bar-fill"></span></span>
+        <span class="loader-time" id="loader-time">00:00</span>
+      </div>
+      <button class="loader-skip mono" id="loader-skip" type="button">SKIP · ESC</button>
+    </div>
+  </div>
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="brand">
+        <img src="/assets/img/logo.jfif" alt="Matteo Marcon" class="brand-img" />
+        <span class="brand-text">M·M</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">MAIN</a></li>
+        <li><a href="/scrub.html">TAKE 02</a></li>
+        <li><a href="/recruiter.html">RECRUITER</a></li>
+        <li><a href="/engineering.html">ENGINEERING</a></li>
+        <li><a href="/projects/bepi.html" class="nav-link active">PROJECTS</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="case-study" id="case">
+    <section class="cs-hero">
+      <div class="container">
+        <div class="cs-back mono"><a href="/">← BACK TO PORTFOLIO</a></div>
+        <div class="cs-head">
+          <div class="cs-eyebrow mono"><span class="dot amber"></span><span>PUBLIC · 2024</span></div>
+          <h1 class="cs-title">Poodl Meeting</h1>
+          <p class="cs-tagline">Cross-timezone meeting planner.</p>
+        </div>
+        <div class="cs-metrics">
+          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">3D</div><div class="cs-metric-key mono">GLOBE</div></div>
+          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">Time</div><div class="cs-metric-key mono">ZONE</div></div>
+          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">ICS</div><div class="cs-metric-key mono">EXPORT</div></div>
+          <div class="cs-metric card corner-brackets"><div class="cs-metric-val">Three.js</div><div class="cs-metric-key mono">WEBGL</div></div>
+        </div>
+        <div class="cs-tilt-wrap">
+          <div class="tilt-card" id="poodl-tilt">
+            <div class="tilt-inner">
+              <img src="/projects/poodl-meeting/first.png" alt="Poodl Meeting timezone visualization" />
+              <div class="tilt-vignette"></div>
+              <div class="tilt-meta mono">
+                <span class="dot fire"></span>
+                <span>POODL · TIMEZONE PLANNER</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">01</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">PROBLEM</div></div>
+        <div class="cs-body">Distributed teams keep mis-booking across time zones. Wanted a small tool that visualizes overlap directly on a globe.</div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">02</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">ARCHITECTURE</div></div>
+        <div class="cs-body">Static page with a 3D globe; users click their cities to see live working-hour overlap and copy an ICS file.</div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">03</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">TECHNOLOGIES</div></div>
+        <div class="cs-body"><div class="tag-wall"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Three.js</span></div></div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">04</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">MY ROLE</div></div>
+        <div class="cs-body">Designer and developer.</div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">05</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">CHALLENGES</div></div>
+        <div class="cs-body"><ul class="cs-list"><li><span class="cs-bullet accent-crimson">›</span><span>Rendering a readable timezone overlay on a 3D globe.</span></li><li><span class="cs-bullet accent-crimson">›</span><span>Accurate working hours calculation across DST boundaries.</span></li></ul></div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">06</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">SOLUTION</div></div>
+        <div class="cs-body">Interactive 3D globe with city markers showing real-time working hour overlaps. One-click ICS export for scheduling.</div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">07</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">RESULT</div></div>
+        <div class="cs-body">Open-source on GitHub.</div>
+      </div>
+    </section>
+    <section class="cs-section">
+      <div class="container cs-grid">
+        <div class="cs-num"><div class="cs-num-mark">08</div><div class="cs-num-hairline"></div><div class="cs-num-key mono">LESSONS LEARNED</div></div>
+        <div class="cs-body"><ul class="cs-list"><li><span class="cs-bullet accent-amber">›</span><span>Timezone math is harder than it looks — use established libraries.</span></li><li><span class="cs-bullet accent-amber">›</span><span>Visual feedback on a globe is more intuitive than a list of times.</span></li></ul></div>
+      </div>
+    </section>
+    <section class="cs-end">
+      <div class="container cs-end-grid">
+        <div class="cs-end-eyebrow mono">END OF CASE STUDY</div>
+        <div class="cs-end-actions">
+          <a class="btn" href="/projects/help-desk-automation.html">← Prev · Help Desk</a>
+          <a class="btn btn-primary" href="/">Back to main <span>→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-hairline"></div>
+      <div class="footer-bottom mono">
+        <div>© <span id="footer-year">2026</span> Matteo Marcon · All rights reserved.</div>
+        <div class="footer-meta">
+          <span>Imagery generated with AI.</span>
+          <span class="footer-status"><span class="dot fire"></span> SYSTEMS NOMINAL</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="/assets/project.js"></script>
+</body>
+</html>
