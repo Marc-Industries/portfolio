@@ -62,118 +62,6 @@ const PROJECTS = [
     image: '/assets/img/still-mbse.jpg',
   },
   {
-    id: 'autoworkflow',
-    name: 'AutoWorkflow',
-    year: '2024',
-    domain: 'automation',
-    domainLabel: 'AUTOMATION',
-    headline: 'AI-driven engineering workflows',
-    body: 'Network of n8n + Make + webhook pipelines for engineering review automation, scheduling, and observability.',
-    tags: ['n8n', 'Webhooks', 'OpenAI', 'Make'],
-    featured: true,
-    image: '/assets/img/still-automation.jpg',
-  },
-  {
-    id: 'voxlink',
-    name: 'VoxLink',
-    year: '2026',
-    domain: 'ai',
-    domainLabel: 'AI',
-    headline: 'Real-time Speech-to-Speech Translator',
-    body: 'Continuous audio processing translator using Gemini AI and React, enabling real-time linguistic assistance.',
-    tags: ['React', 'Node.js', 'Gemini AI'],
-    featured: false,
-    image: '/assets/img/still-automation.jpg',
-  },
-  {
-    id: 'satviz',
-    name: 'SatViz',
-    year: '2025',
-    domain: 'frontend',
-    domainLabel: '3D / WEB',
-    headline: 'Orbital visualisation engine',
-    body: 'Real-time Three.js scene for satellite tracking with shader-driven atmosphere and procedural Earth.',
-    tags: ['Three.js', 'R3F', 'WebGL'],
-    featured: false,
-  },
-  {
-    id: 'cubeops',
-    name: 'CubeOps',
-    year: '2025',
-    domain: 'backend',
-    domainLabel: 'BACKEND',
-    headline: 'Mission-ops scheduling service',
-    body: 'FastAPI service that schedules CubeSat passes against TLE-derived visibility windows and emits webhooks for ground segment.',
-    tags: ['FastAPI', 'Python', 'TLE', 'SGP4'],
-    featured: false,
-  },
-  {
-    id: 'traceforge',
-    name: 'TraceForge',
-    year: '2025',
-    domain: 'systems',
-    domainLabel: 'MBSE',
-    headline: 'Requirements traceability tool',
-    body: 'Requirements graph with verification matrix and impact analysis. Lightweight, exportable, version-controlled.',
-    tags: ['MBSE', 'Graph', 'Verification'],
-    featured: false,
-  },
-  {
-    id: 'cadops',
-    name: 'CADOps',
-    year: '2023',
-    domain: 'aerospace',
-    domainLabel: 'AEROSPACE',
-    headline: 'SolidWorks + ANSYS automation',
-    body: 'Scripts that turn manual CAD/CAE iteration into reproducible pipelines. Parametric sweeps, automatic meshing.',
-    tags: ['SolidWorks', 'ANSYS', 'Python'],
-    featured: false,
-  },
-  {
-    id: 'learnpad',
-    name: 'LearnPad',
-    year: '2024',
-    domain: 'frontend',
-    domainLabel: 'FRONTEND',
-    headline: 'React study app',
-    body: 'Personal learning tool with spaced repetition. React, TypeScript, Tailwind, local-first storage.',
-    tags: ['React', 'TypeScript', 'Tailwind'],
-    featured: false,
-  },
-  {
-    id: 'pulseloop',
-    name: 'PulseLoop',
-    year: '2024',
-    domain: 'ai',
-    domainLabel: 'AI',
-    headline: 'Streamlit observability dashboard',
-    body: 'Internal AI service health dashboard. Token use, latency, error rates, model-version drift.',
-    tags: ['Streamlit', 'Python', 'AI Ops'],
-    featured: false,
-  },
-  {
-    id: 'firmgen',
-    name: 'FirmwareGen',
-    year: '2023',
-    domain: 'integration',
-    domainLabel: 'EMBEDDED',
-    headline: 'CubeSat firmware skeleton',
-    body: 'Bare-metal C skeleton for the AlbaSat on-board computer. Watchdog, command pipeline, telemetry formatter.',
-    tags: ['Embedded C', 'STM32', 'Watchdog'],
-    featured: false,
-  },
-  {
-    id: 'reqsync',
-    name: 'ReqSync',
-    year: '2023',
-    domain: 'data',
-    domainLabel: 'DATA',
-    headline: 'Requirements sync engine',
-    body: 'Two-way sync between Jama Connect and a Postgres mirror with conflict resolution and audit log.',
-    tags: ['Postgres', 'REST', 'Sync'],
-    featured: false,
-  },
-  {
     id: 'drivegen',
     name: 'DriveGen',
     year: '2024',
@@ -250,19 +138,6 @@ const PROJECTS = [
     featured: false,
     image: '/projects/help-desk-automation/Automation.png',
     link: '/projects/help-desk-automation.html',
-  },
-  {
-    id: 'poodl-meeting',
-    name: 'Poodl Meeting',
-    year: '2025',
-    domain: 'frontend',
-    domainLabel: 'FRONTEND',
-    headline: 'Cross-timezone meeting planner',
-    body: 'Interactive 3D globe visualization for identifying working-hour overlaps across distributed teams, with automated ICS export for scheduling.',
-    tags: ['Three.js', 'WebGL', 'JavaScript', 'Timezone API'],
-    featured: false,
-    image: '/projects/poodl-meeting/first.png',
-    link: '/projects/poodl-meeting.html',
   },
   {
     id: 'space-mission-sim',
@@ -381,17 +256,6 @@ const EXPERIENCE = [
       'Round Robin distribution and webhook-based lead routing',
       'One-way Google Sheets to GoHighLevel profiling synchronisation',
       'Technical documentation covering flows, constraints and maintenance',
-    ],
-  },
-  {
-    role: 'IT Resource & Member Investor',
-    company: 'Poodl Blockchain',
-    domain: 'BLOCKCHAIN · CONSULTING',
-    location: 'Remote',
-    dates: 'May 2025 to Present',
-    summary: 'Consulting on decentralized technology and IT outsourcing for blockchain startup.',
-    bullets: [
-      'Developed Poodl Meeting Schedule and Geo-IP-less time zone management system',
     ],
   },
 ];
@@ -774,7 +638,6 @@ function renderFlow() {
     text.setAttribute('letter-spacing', '0.18em');
     text.textContent = n.label;
     g.appendChild(text);
-
     nodeGroup.appendChild(g);
   }
 
@@ -959,7 +822,7 @@ function renderEducation() {
       const row = el('div', { class: 'cert-row' });
       row.appendChild(el('div', {},
         el('div', { class: 'cert-name' }, c.name),
-        el('div', { class: 'cert-issuer' }, c.issuer)
+        el('div', { class: 'cert-issuer', c.issuer })
       ));
       row.appendChild(el('div', { class: 'cert-status' },
         el('span', { class: `dot ${c.dot}` }),
@@ -972,12 +835,6 @@ function renderEducation() {
 
 // =============================================================================
 // HERO — normal autoplay video + auto-cycling captions + poster fallback
-//
-// The hero satellite video plays normally (autoplay, muted, loop). The four
-// hero captions ("Aerospace engineer.", "Software, too.", "MBSE, AI, automation.",
-// "Matteo Marcon.") cycle automatically every 2.4s so the user reads the whole
-// identity statement even without touching the scroll. When the user scrolls
-// past the hero, the auto-cycle pauses; when they scroll back, it resumes.
 // =============================================================================
 function setupHero() {
   const video = $('#hero-video');
@@ -1053,12 +910,6 @@ function setupHero() {
 
 // =============================================================================
 // PLANET STAGE — scroll-scrubbed video behind section 01 (Identity).
-//
-// The planet video lives inside the #about section. Its `currentTime` is
-// lerped toward a target derived from the section's scroll progress:
-// 0 when the top of the section is at the top of the viewport, full
-// duration when the bottom of the section has scrolled out. The video is
-// kept paused to give the scrub loop exclusive control over playback.
 // =============================================================================
 function setupPlanetScrub() {
   const video = $('#planet-video');
