@@ -58,10 +58,13 @@ function setupLoader() {
   };
 
   const onTimeUpdate = () => tickProgress();
-  const onEnded      = () => finishLoader();
+
+  // Force loader duration to 4 seconds.
+  // We loop the video and use a timer to ensure consistency across all pages.
+  video.loop = true;
+  setTimeout(finishLoader, 4000);
 
   video.addEventListener('timeupdate', onTimeUpdate);
-  video.addEventListener('ended',      onEnded);
 
   // Autoplay the loader video. It's muted + playsinline so this works
   // in every modern browser without a user gesture.
