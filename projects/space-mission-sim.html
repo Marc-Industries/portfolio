@@ -15,6 +15,23 @@
 <body class="project-page" data-theme="dark">
   <div class="page-bg" aria-hidden="true"></div>
   <div class="scan-line-global" aria-hidden="true"></div>
+
+  <div class="loader" id="loader" aria-hidden="false">
+    <video id="loader-video" muted playsinline preload="auto" poster="/assets/img/alt-hero-poster.jpg">
+      <source src="/assets/video/hero1-clean.mp4" type="video/mp4" />
+    </video>
+    <div class="loader-overlay">
+      <div class="loader-meta mono">
+        <span class="dot fire"></span>
+        <span>LOADING CASE STUDY · SPACE MISSION SIM</span>
+      </div>
+      <div class="loader-progress mono">
+        <span class="loader-bar"><span class="loader-bar-fill" id="loader-bar-fill"></span></span>
+        <span class="loader-time" id="loader-time">00:00</span>
+      </div>
+      <button class="loader-skip mono" id="loader-skip" type="button">SKIP · ESC</button>
+    </div>
+  </div>
   <div class="loader" id="loader" aria-hidden="false">
     <video id="loader-video" muted playsinline preload="auto" poster="/assets/img/alt-hero-poster.jpg">
       <source src="/assets/video/hero1-clean.mp4" type="video/mp4" />

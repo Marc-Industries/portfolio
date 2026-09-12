@@ -14,6 +14,23 @@
   <div class="page-bg" aria-hidden="true"></div>
   <div class="scan-line-global" aria-hidden="true"></div>
 
+  <div class="loader" id="loader" aria-hidden="false">
+    <video id="loader-video" muted playsinline preload="auto" poster="/assets/img/alt-hero-poster.jpg">
+      <source src="/assets/video/hero1-clean.mp4" type="video/mp4" />
+    </video>
+    <div class="loader-overlay">
+      <div class="loader-meta mono">
+        <span class="dot fire"></span>
+        <span>LOADING CASE STUDY · INSTANT TRANSLATE</span>
+      </div>
+      <div class="loader-progress mono">
+        <span class="loader-bar"><span class="loader-bar-fill" id="loader-bar-fill"></span></span>
+        <span class="loader-time" id="loader-time">00:00</span>
+      </div>
+      <button class="loader-skip mono" id="loader-skip" type="button">SKIP · ESC</button>
+    </div>
+  </div>
+
   <nav class="nav scrolled" id="nav">
     <div class="nav-inner">
       <a href="/" class="brand">
@@ -119,17 +136,17 @@
 
     <section class="cs-section">
       <div class="container">
-        <div class="cs-head" style="margin-bottom: 1.5rem;">
-          <div class="cs-eyebrow mono">
-            <span class="dot fire"></span>
-            <span>SYSTEM VISUALS</span>
-          </div>
-          <h3 class="cs-title" style="font-size: 1.5rem;">Technical Implementation</h3>
+        <div class="block-head">
+          <span class="block-num mono">04</span>
+          <span class="block-hairline"></span>
+          <span class="block-eyebrow mono">// GALLERY</span>
         </div>
         <div class="cs-gallery">
-          <div class="gallery-item">
+          <div class="cs-gallery-item">
+            <img src="/projects/instant-translate/app.png" alt="Instant Translate App" />
+          </div>
+          <div class="cs-gallery-item">
             <img src="/projects/instant-translate/Function.png" alt="Instant Translate Function" />
-            <div class="gallery-label">Semantic Analysis Logic</div>
           </div>
         </div>
       </div>

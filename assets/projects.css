@@ -4,6 +4,37 @@
    /projects/albasat.html
    ============================================================================= */
 
+/* Gallery styles */
+.cs-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.cs-gallery-item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+  transition: border-color 0.3s ease;
+}
+.cs-gallery-item:hover {
+  border-color: var(--accent-crimson);
+}
+.cs-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0.3) contrast(1.05) brightness(0.8);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+.cs-gallery-item:hover img {
+  transform: scale(1.05);
+  filter: grayscale(0) contrast(1.05) brightness(1);
+}
+
 /* While the loader is on-screen the page itself starts hidden */
 body.project-page .case-study { opacity: 0; transition: opacity 0.7s ease; }
 body.project-page.is-ready .case-study { opacity: 1; }
