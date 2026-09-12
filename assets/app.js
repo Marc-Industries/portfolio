@@ -859,6 +859,11 @@ function projectCard(p, featured) {
   for (const t of p.tags) tags.appendChild(el('span', { class: 'tag' }, t));
   card.appendChild(tags);
 
+  const link = p.link || `/projects/${p.id}.html`;
+  card.appendChild(el('div', { class: 'project-card-footer', style: 'margin-top: 1.5rem;' },
+    el('a', { href: link, class: 'btn' + (featured ? ' btn-primary' : ''), text: 'View Project ' + '→' })
+  ));
+
   return card;
 }
 
