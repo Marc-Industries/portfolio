@@ -175,14 +175,13 @@ body.project-page .footer { opacity: 0; transition: opacity 0.7s ease 0.2s; }
   width: 100%;
   max-width: 720px;
   margin: 0 auto;
-  aspect-ratio: 16 / 9;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(0deg);
   transition: transform 220ms ease;
   will-change: transform;
 }
 .tilt-inner {
-  position: absolute; inset: 0;
+  position: relative;
   border-radius: 4px;
   overflow: hidden;
   background: var(--bg-2);
@@ -192,8 +191,8 @@ body.project-page .footer { opacity: 0; transition: opacity 0.7s ease 0.2s; }
     inset 0 0 0 1px rgba(212,63,63,0.06);
 }
 .tilt-inner img {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
+  position: relative;
+  width: 100%; height: auto;
   object-fit: contain;
   display: block;
   transition: transform 240ms ease;
