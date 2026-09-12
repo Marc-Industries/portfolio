@@ -319,12 +319,12 @@ const DOMAINS = [
 
 const EXPERIENCE = [
   {
-    role: 'Software Development & Management',
+    role: 'IT Software Development & Management',
     company: 'Space Research Group · University of Padua',
     domain: 'SYSTEMS ENGINEERING · MBSE',
     location: 'Padova, IT',
     dates: 'Mar 2026 to Present',
-    summary: 'Developing an MBSE-based systems-engineering platform and digital-twin ecosystem for mission requirements and complex aerospace-system data.',
+    summary: 'Developing an MBSE-based systems-engineering platform (BEPI) and digital-twin ecosystem for satellite mission requirements, replacing fragmented legacy workflows.',
     bullets: [
       'Supabase SQL backend for requirements traceability and mission data',
       'Python reporting workflows aligned with ESA and NASA frameworks',
@@ -337,11 +337,24 @@ const EXPERIENCE = [
     domain: 'AEROSPACE · STRUCTURES',
     location: 'Padova, IT',
     dates: 'Nov 2025 to Present',
-    summary: 'Structural modelling and FEM-to-test correlation for the AlbaSat 2U CubeSat STM, including vibration-test analysis documented for 4S Symposium 2026.',
+    summary: 'Performing FEM simulations and structural design for the AlbaSat Structural and Thermal Model (STM) and correlating vibration data for 4S Symposium 2026.',
     bullets: [
       'ECSS-oriented structural modelling and launcher constraints',
       'Modal parameter extraction and test-to-analysis correlation',
       'STM mass verification and vibration-test campaign support',
+    ],
+  },
+  {
+    role: 'IT Specialist & Systems Architect',
+    company: 'Spartan Health',
+    domain: 'IT · SYSTEMS ARCHITECTURE',
+    location: 'Hybrid',
+    dates: 'Aug 2025 to Present',
+    summary: 'Driving digital transformation with scalable automation and customer-support integrations, including the "DriveGen" and "Fullship" tools.',
+    bullets: [
+      'DriveGen document and report automation with Google Apps Script and Node.js logic',
+      'CRM and GrooveHQ support-ticket integration with metadata-based routing',
+      'Shipment-data monitoring and Telegram tooling for operational visibility',
     ],
   },
   {
@@ -350,7 +363,7 @@ const EXPERIENCE = [
     domain: 'IT · AUTOMATION',
     location: 'Hybrid',
     dates: 'Jan 2026 to Present',
-    summary: 'Building lightweight, secure operational tools for client communication, Video Sales Letter analytics and data-driven workflow improvement.',
+    summary: 'Building lightweight, secure operational tools for client communication and Video Sales Letter (VSL) analytics.',
     bullets: [
       'IMAP/SMTP communication bridge without a third-party helpdesk',
       'VSL Visualizer for performance tracking and engagement analysis',
@@ -358,16 +371,16 @@ const EXPERIENCE = [
     ],
   },
   {
-    role: 'IT Specialist',
-    company: 'Spartan Health',
-    domain: 'IT · SYSTEMS ARCHITECTURE',
-    location: 'Hybrid',
-    dates: 'Aug 2025 to Present',
-    summary: 'Supporting the digital transformation of the IT ecosystem with scalable automation, operational tooling and customer-support integrations.',
+    role: 'IT Manager & Systems Architect',
+    company: 'ProBiz Consulting LLC',
+    domain: 'AUTOMATION · INTEGRATION',
+    location: 'Remote',
+    dates: 'Aug 2025 to Feb 2026',
+    summary: 'Designed the data architecture linking GoHighLevel, Make and Google Sheets for lead distribution and controlled synchronisation.',
     bullets: [
-      'DriveGen document and report automation with Google Apps Script and Node.js logic',
-      'CRM and GrooveHQ support-ticket integration with metadata-based routing',
-      'Shipment-data monitoring and Telegram tooling for operational visibility',
+      'Round Robin distribution and webhook-based lead routing',
+      'One-way Google Sheets to GoHighLevel profiling synchronisation',
+      'Technical documentation covering flows, constraints and maintenance',
     ],
   },
   {
@@ -379,19 +392,6 @@ const EXPERIENCE = [
     summary: 'Consulting on decentralized technology and IT outsourcing for blockchain startup.',
     bullets: [
       'Developed Poodl Meeting Schedule and Geo-IP-less time zone management system',
-    ],
-  },
-  {
-    role: 'IT Manager & Systems Architect',
-    company: 'Probiz Consulting LLC',
-    domain: 'AUTOMATION · INTEGRATION',
-    location: 'Remote',
-    dates: 'Aug 2025 to Feb 2026',
-    summary: 'Designed the data architecture linking GoHighLevel, Make and Google Sheets for lead distribution and controlled synchronisation.',
-    bullets: [
-      'Round Robin distribution and webhook-based lead routing',
-      'One-way Google Sheets to GoHighLevel profiling synchronisation',
-      'Technical documentation covering flows, constraints and maintenance',
     ],
   },
 ];
