@@ -400,24 +400,26 @@ const EDUCATION = [
   {
     degree: 'B.Sc. Aerospace Engineering',
     field: 'Aerospace Engineering',
-    inst: 'University of Padua',
-    dates: '2023 to Present',
+    inst: 'Università Degli Studi Di Padova',
+    dates: 'Oct 2023 to 2027',
     status: 'in-progress',
-    notes: 'Active Alba CubeSat ST&M team member and Space Research Group IT developer.',
+    notes: 'Active Alba CubeSat team member (ST&M subsystem) and Space Research Group IT developer.',
   },
   {
     degree: 'Technical Diploma',
     field: 'Computer Science, Telecommunications & Systems Administration',
     inst: 'ITIS Meucci',
-    dates: '2018 to 2023',
+    dates: 'Sep 2018 to Jun 2023',
     status: 'completed',
     notes: 'Final grade: 87/100. Focus on IT infrastructure, programming, electronics and network administration.',
   },
 ];
 
 const CERTIFICATIONS = [
-  { name: 'English B2: Reading & Listening', issuer: 'UNIVERSITY OF PADUA', status: 'COMPLETED', dot: 'fire' },
-  { name: 'Team Management: Managerial Training', issuer: 'UNIVERSITY OF BUSINESS IN WROCLAW', status: 'COMPLETED', dot: 'fire' },
+  { name: 'Artificial Intelligence Fundamentals', issuer: 'IBM', status: 'COMPLETED', dot: 'fire' },
+  { name: 'Team Management: Managerial Training', issuer: 'University of Business in Wrocław', status: 'COMPLETED', dot: 'fire' },
+  { name: 'English B2: Reading & Listening', issuer: 'Università Degli Studi Di Padova', status: 'COMPLETED', dot: 'fire' },
+  { name: 'Cisco Certified Network Associate (CCNA)', issuer: 'Cisco Networking Academy', status: 'COMPLETED', dot: 'fire' },
 ];
 
 const TICKER_ITEMS = [
