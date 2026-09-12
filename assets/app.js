@@ -56,7 +56,7 @@ const PROJECTS = [
     domain: 'systems',
     domainLabel: 'MBSE',
     headline: 'System Engineering Platform',
-    body: 'Multi-tenant MBSE platform: 22 tables, 79 RLS policies, 18 triggers, 11 pages, 9 integrations, 8 RBAC roles. High-level case study only.',
+    body: 'Full-stack MBSE platform for aerospace project management. 22 tables, 79 RLS policies, 11 pages, 9 integrations. High-level case study only.',
     tags: ['Supabase', 'Postgres', 'RLS', 'Digital Twin', 'FMECA'],
     featured: true,
     image: '/assets/img/still-mbse.jpg',
@@ -71,6 +71,18 @@ const PROJECTS = [
     body: 'Network of n8n + Make + webhook pipelines for engineering review automation, scheduling, and observability.',
     tags: ['n8n', 'Webhooks', 'OpenAI', 'Make'],
     featured: true,
+    image: '/assets/img/still-automation.jpg',
+  },
+  {
+    id: 'voxlink',
+    name: 'VoxLink',
+    year: '2026',
+    domain: 'ai',
+    domainLabel: 'AI',
+    headline: 'Real-time Speech-to-Speech Translator',
+    body: 'Continuous audio processing translator using Gemini AI and React, enabling real-time linguistic assistance.',
+    tags: ['React', 'Node.js', 'Gemini AI'],
+    featured: false,
     image: '/assets/img/still-automation.jpg',
   },
   {
@@ -207,7 +219,7 @@ const PROJECTS = [
     domain: 'frontend',
     domainLabel: 'FRONTEND',
     headline: 'Vocabulary trainer with spaced repetition',
-    body: 'CRA-based SPA with localStorage for decks and SM-2 inspired scheduling. Open-source on GitHub for engineering students.',
+    body: 'Linguistic consultation interface using Transformer models (RoBERTa) for contextual definitions. CRA-based SPA with localStorage for decks and SM-2 inspired scheduling.',
     tags: ['React', 'JavaScript', 'SM-2 Algorithm'],
     featured: false,
     image: '/projects/neurolex/App.png',
@@ -220,7 +232,7 @@ const PROJECTS = [
     domain: 'frontend',
     domainLabel: 'FRONTEND',
     headline: 'Lightweight multilingual UI helper',
-    body: 'Browser extension and web app for instant translation of UI elements. Supports multiple languages with cached translations.',
+    body: 'AI-driven Chrome extension for predictive linguistic assistance using Gemini 1.5 Flash and React 19.',
     tags: ['JavaScript', 'Chrome Extension', 'i18n'],
     featured: false,
     image: '/projects/instant-translate/app.png',
@@ -242,12 +254,12 @@ const PROJECTS = [
   {
     id: 'poodl-meeting',
     name: 'Poodl Meeting',
-    year: '2023',
+    year: '2025',
     domain: 'frontend',
     domainLabel: 'FRONTEND',
-    headline: 'Video conferencing interface',
-    body: 'Clean, accessible meeting interface with screen sharing, chat, and participant management. Built for enterprise collaboration.',
-    tags: ['React', 'WebRTC', 'Socket.io'],
+    headline: 'Cross-timezone meeting planner',
+    body: 'Interactive 3D globe visualization for identifying working-hour overlaps across distributed teams, with automated ICS export for scheduling.',
+    tags: ['Three.js', 'WebGL', 'JavaScript', 'Timezone API'],
     featured: false,
     image: '/projects/poodl-meeting/first.png',
     link: '/projects/poodl-meeting.html',
@@ -259,7 +271,7 @@ const PROJECTS = [
     domain: 'aerospace',
     domainLabel: 'AEROSPACE',
     headline: 'Orbital mechanics simulator',
-    body: 'Interactive simulation of spacecraft trajectories, orbital transfers, and mission planning. Educational tool for aerospace students.',
+    body: 'Full-stack simulation tool for Delta-V and orbital transfer calculations using FastAPI and React.',
     tags: ['Python', 'Physics', 'Visualization'],
     featured: false,
     image: '/assets/img/still-aerospace.jpg',
@@ -272,7 +284,7 @@ const PROJECTS = [
     domain: 'frontend',
     domainLabel: 'FRONTEND',
     headline: 'Expense tracking dashboard',
-    body: 'Personal finance tracker with receipt scanning, category analysis, and budget alerts. Mobile-first responsive design.',
+    body: 'AI-powered Personal Finance Manager with Telegram Bridge for natural language expense entry. Mobile-first responsive design.',
     tags: ['React', 'Firebase', 'OCR'],
     featured: false,
     image: '/projects/spese-smart/Dashboard.png',
@@ -356,6 +368,17 @@ const EXPERIENCE = [
       'DriveGen document and report automation with Google Apps Script and Node.js logic',
       'CRM and GrooveHQ support-ticket integration with metadata-based routing',
       'Shipment-data monitoring and Telegram tooling for operational visibility',
+    ],
+  },
+  {
+    role: 'IT Resource & Member Investor',
+    company: 'Poodl Blockchain',
+    domain: 'BLOCKCHAIN · CONSULTING',
+    location: 'Remote',
+    dates: 'May 2025 to Present',
+    summary: 'Consulting on decentralized technology and IT outsourcing for blockchain startup.',
+    bullets: [
+      'Developed Poodl Meeting Schedule and Geo-IP-less time zone management system',
     ],
   },
   {
@@ -1136,51 +1159,6 @@ function setupFooter() {
 }
 
 // =============================================================================
-// LANGUAGE SWITCHER
-// =============================================================================
-function setupTranslation() {
-  const buttons = $$('.language-button');
-  if (!buttons.length) return;
-
-  const match = document.cookie.match(/(?:^|;\s*)googtrans=\/en\/([^;]+)/);
-  const activeLanguage = match?.[1] === 'it' ? 'it' : 'en';
-  const setActive = (language) => {
-    buttons.forEach(button => {
-      const active = button.dataset.language === language;
-      button.classList.toggle('active', active);
-      button.setAttribute('aria-pressed', String(active));
-    });
-  };
-  setActive(activeLanguage);
-
-  buttons.forEach(button => button.addEventListener('click', () => {
-    const language = button.dataset.language;
-    if (language === activeLanguage) return;
-    if (language === 'en') {
-      document.cookie = 'googtrans=;path=/;max-age=0';
-      document.cookie = `googtrans=;path=/;domain=${location.hostname};max-age=0`;
-    } else {
-      document.cookie = `googtrans=/en/${language};path=/`;
-      document.cookie = `googtrans=/en/${language};path=/;domain=${location.hostname}`;
-    }
-    location.reload();
-  }));
-
-  window.googleTranslateElementInit = () => {
-    if (!window.google?.translate) return;
-    new window.google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'en,it',
-      autoDisplay: false,
-    }, 'google-translate-anchor');
-  };
-  const script = document.createElement('script');
-  script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  script.async = true;
-  document.head.appendChild(script);
-}
-
-// =============================================================================
 // BOOT
 // =============================================================================
 function boot() {
@@ -1196,7 +1174,6 @@ function boot() {
   setupPlanetScrub();
   setupInView();
   setupFooter();
-  setupTranslation();
 }
 
 if (document.readyState === 'loading') {
