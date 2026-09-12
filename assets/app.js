@@ -822,7 +822,7 @@ function renderEducation() {
       const row = el('div', { class: 'cert-row' });
       row.appendChild(el('div', {},
         el('div', { class: 'cert-name' }, c.name),
-        el('div', { class: 'cert-issuer', c.issuer })
+        el('div', { class: 'cert-issuer' }, c.issuer)
       ));
       row.appendChild(el('div', { class: 'cert-status' },
         el('span', { class: `dot ${c.dot}` }),
@@ -862,6 +862,9 @@ function setupHero() {
 
   video.addEventListener('loadeddata', onLoaded);
   video.addEventListener('error', usePoster);
+
+  // Failsafe: if video doesn't load in 4s, show poster and hide loader.
+  setTimeout(usePoster, 4000);
 
   video.load();
 
@@ -1015,18 +1018,33 @@ function setupFooter() {
 // BOOT
 // =============================================================================
 function boot() {
-  renderNav();
-  renderTelemetry();
-  animateCounters();
-  renderAboutGraph();
-  renderFlow();
-  renderProjects();
-  renderTimeline();
-  renderEducation();
-  setupHero();
-  setupPlanetScrub();
-  setupInView();
-  setupFooter();
+  // 1. Immediate fail-safe: remove loader before anything else
+  const loader = $('#hero-load');
+  if (loader) loader.style.display = 'none';
+
+  // 2. Wrap renderers in try-catch to prevent one failure from blocking the whole site
+  const tasks = [
+    renderNav,
+    renderTelemetry,
+    animateCounters,
+    renderAboutGraph,
+    renderFlow,
+    renderProjects,
+    renderTimeline,
+    renderEducation,
+    setupHero,
+    setupPlanetScrub,
+    setupInView,
+    setupFooter
+  ];
+
+  tasks.forEach(task => {
+    try {
+      task();
+    } catch (e) {
+      console.error(`Portfolio Boot Error in ${task.name}:`, e);
+    }
+  });
 }
 
 if (document.readyState === 'loading') {
