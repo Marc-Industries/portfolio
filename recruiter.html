@@ -45,8 +45,8 @@
         Skills matrix, availability, location, and how to reach me.
       </p>
 
-      <div class="card corner-brackets">
-        <div class="card-label mono" style="color:var(--accent-crimson);">STATUS</div>
+      <div class="card corner-brackets" style="background: linear-gradient(135deg, var(--bg-2), var(--bg-1));">
+        <div class="card-label mono" style="color:var(--accent-crimson); font-weight: 700;">PERSONNEL STATUS / CLEARANCE</div>
         <div class="status-list">
           <div class="status-row"><span class="mono">AVAILABILITY</span><span class="status-v">Open to opportunities <span class="dot fire"></span></span></div>
           <div class="status-row"><span class="mono">RELOCATION</span><span class="status-v">Open <span class="dot ember"></span></span></div>
@@ -61,33 +61,43 @@
 
   <section class="block">
     <div class="container">
-      <h2 class="block-title" style="font-size: clamp(1.5rem, 3vw, 2.25rem);">Roles I fit.</h2>
-      <div class="flag-card-grid" style="margin-top: 1.5rem;">
-        <div class="card corner-brackets">
-          <div class="card-label mono" style="color:var(--accent-crimson);">AEROSPACE · SYSTEMS</div>
-          <ul class="list" style="margin-top: 0.75rem;">
-            <li><span class="dot fire"></span><span>Systems Engineer</span></li>
-            <li><span class="dot fire"></span><span>MBSE / Digital Engineering</span></li>
-            <li><span class="dot fire"></span><span>Structural / FEM engineer</span></li>
-            <li><span class="dot fire"></span><span>CubeSat / small-sat AIT</span></li>
-          </ul>
+      <div class="cs-grid" style="grid-template-columns: 1fr; gap: 2rem;">
+        <div>
+          <h2 class="block-title" style="font-size: clamp(1.5rem, 3vw, 2.25rem);">The Value Proposition.</h2>
+          <p class="block-lede" style="color: var(--text-1); max-width: 65ch; margin-bottom: 2rem;">
+            I bridge the gap between <strong>rigorous aerospace systems engineering</strong> and <strong>modern AI-driven software automation</strong>.
+            Whether it's designing a CubeSat structural model or architecting a multi-tenant MBSE platform, I focus on
+            scalability, ECSS compliance, and operational efficiency.
+          </p>
         </div>
-        <div class="card corner-brackets">
-          <div class="card-label mono" style="color:var(--accent-crimson);">SOFTWARE</div>
-          <ul class="list" style="margin-top: 0.75rem;">
-            <li><span class="dot fire"></span><span>Full-stack engineer</span></li>
-            <li><span class="dot fire"></span><span>Frontend / React / Next.js</span></li>
-            <li><span class="dot fire"></span><span>Backend / FastAPI / Python</span></li>
-            <li><span class="dot fire"></span><span>Three.js / R3F</span></li>
-          </ul>
-        </div>
-        <div class="card corner-brackets">
-          <div class="card-label mono" style="color:var(--accent-crimson);">AI · AUTOMATION</div>
-          <ul class="list" style="margin-top: 0.75rem;">
-            <li><span class="dot fire"></span><span>AI Automation Engineer</span></li>
-            <li><span class="dot fire"></span><span>Prompt + workflow engineer</span></li>
-            <li><span class="dot fire"></span><span>Internal tools / ops engineer</span></li>
-          </ul>
+
+        <div class="flag-card-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <div class="card corner-brackets">
+            <div class="card-label mono" style="color:var(--accent-crimson);">AEROSPACE · SYSTEMS</div>
+            <ul class="list" style="margin-top: 0.75rem;">
+              <li><span class="dot fire"></span><span class="mono">Systems Engineer</span></li>
+              <li><span class="dot fire"></span><span class="mono">MBSE / Digital Engineering</span></li>
+              <li><span class="dot fire"></span><span class="mono">Structural / FEM engineer</span></li>
+              <li><span class="dot fire"></span><span class="mono">CubeSat / small-sat AIT</span></li>
+            </ul>
+          </div>
+          <div class="card corner-brackets">
+            <div class="card-label mono" style="color:var(--accent-crimson);">SOFTWARE</div>
+            <ul class="list" style="margin-top: 0.75rem;">
+              <li><span class="dot fire"></span><span class="mono">Full-stack engineer</span></li>
+              <li><span class="dot fire"></span><span class="mono">Frontend / React / Next.js</span></li>
+              <li><span class="dot fire"></span><span class="mono">Backend / FastAPI / Python</span></li>
+              <li><span class="dot fire"></span><span class="mono">Three.js / R3F</span></li>
+            </ul>
+          </div>
+          <div class="card corner-brackets">
+            <div class="card-label mono" style="color:var(--accent-crimson);">AI · AUTOMATION</div>
+            <ul class="list" style="margin-top: 0.75rem;">
+              <li><span class="dot fire"></span><span class="mono">AI Automation Engineer</span></li>
+              <li><span class="dot fire"></span><span class="mono">Prompt + workflow engineer</span></li>
+              <li><span class="dot fire"></span><span class="mono">Internal tools / ops engineer</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -143,10 +153,34 @@
 
   <section class="block">
     <div class="container">
+      <div class="cs-grid" style="grid-template-columns: 1fr; gap: 2rem;">
+        <div>
+          <h2 class="block-title" style="font-size: clamp(1.5rem, 3vw, 2.25rem);">Education & Languages.</h2>
+          <div class="card corner-brackets" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; padding: 1.5rem;">
+            <div>
+              <div class="card-label mono" style="margin-bottom: 0.5rem;">DEGREE</div>
+              <div class="mono" style="font-size: 14px; color: var(--text-0);">B.Sc. Aerospace Engineering</div>
+              <div class="mono" style="font-size: 12px; color: var(--text-2);">University of Padua · In Progress</div>
+            </div>
+            <div>
+              <div class="card-label mono" style="margin-bottom: 0.5rem;">LANGUAGES</div>
+              <div class="mono" style="font-size: 14px; color: var(--text-0);">Italian (Native)</div>
+              <div class="mono" style="font-size: 14px; color: var(--text-0);">English (B2 / Professional)</div>
+              <div class="mono" style="font-size: 14px; color: var(--text-0);">Spanish (B1 / Conversational)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="container">
       <h2 class="block-title" style="font-size: clamp(1.5rem, 3vw, 2.25rem);">How to reach me.</h2>
-      <div class="contact-ctas" style="margin-top: 1.5rem;">
+      <div class="contact-ctas" style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem;">
         <a href="https://www.linkedin.com/in/matteo-marcon-287999368/" target="_blank" rel="noreferrer" class="btn btn-primary">LinkedIn <span>↗</span></a>
         <a href="https://github.com/Marc-Industries" target="_blank" rel="noreferrer" class="btn">GitHub <span>↗</span></a>
+        <a href="/cv.html" class="btn">View Personnel File <span>↗</span></a>
         <a href="/" class="btn">Back to main <span>→</span></a>
       </div>
     </div>
