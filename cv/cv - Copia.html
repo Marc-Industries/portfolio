@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', Arial, sans-serif;
+    color: #222;
+    font-size: 8.9pt;
+    line-height: 1.4;
+  }
+
+  /* ===== HEADER ===== */
+  .header {
+    position: relative;
+    background-color: #C0202F;
+    color: #ffffff;
+    padding: 26px 40px 34px 40px;
+    overflow: hidden;
+  }
+  .diagonal-cut {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 26px 900px;
+    border-color: transparent transparent #ffffff transparent;
+  }
+  .header-inner {
+    display: table;
+    width: 100%;
+  }
+  .header-text {
+    display: table-cell;
+    vertical-align: top;
+    width: 82%;
+  }
+  .header-photo {
+    display: table-cell;
+    vertical-align: top;
+    width: 18%;
+    text-align: right;
+  }
+  .header-photo img {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.85);
+    object-fit: cover;
+  }
+  .name {
+    font-size: 25pt;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 0 0 4px 0;
+  }
+  .title {
+    font-size: 10.5pt;
+    font-style: italic;
+    font-weight: 400;
+    margin: 0 0 12px 0;
+  }
+  .contact-line {
+    font-size: 8.7pt;
+    margin: 0 0 3px 0;
+  }
+  .contact-line a, .contact-line {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .dot { margin: 0 6px; }
+
+  /* ===== BODY ===== */
+  .content {
+    padding: 16px 40px 26px 40px;
+  }
+
+  .section {
+    margin-bottom: 13px;
+  }
+  .section-title {
+    color: #A81B29;
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    border-bottom: 1.4px solid #A81B29;
+    padding-bottom: 3px;
+    margin: 0 0 8px 0;
+  }
+
+  p.profile-text {
+    margin: 0;
+    text-align: left;
+  }
+
+  /* Entry rows: date column + content column */
+  .entry {
+    display: table;
+    width: 100%;
+    margin-bottom: 9px;
+  }
+  .entry-date {
+    display: table-cell;
+    width: 21%;
+    vertical-align: top;
+    font-size: 8.6pt;
+    color: #222;
+    padding-right: 8px;
+  }
+  .entry-main {
+    display: table-cell;
+    width: 79%;
+    vertical-align: top;
+  }
+  .entry-role {
+    font-weight: 700;
+    font-size: 9.3pt;
+    color: #111;
+  }
+  .entry-org {
+    font-style: italic;
+    color: #444;
+    font-size: 8.7pt;
+    margin: 0 0 3px 0;
+  }
+  ul.bullets {
+    margin: 3px 0 0 0;
+    padding-left: 14px;
+  }
+  ul.bullets li {
+    margin-bottom: 2.5px;
+  }
+  .contact-person {
+    font-size: 8.5pt;
+    margin-top: 4px;
+    color: #333;
+  }
+
+  /* Interruzione di pagina forzata per Creative Works */
+  .section-creative-works {
+    page-break-before: always;
+    break-before: page;
+    padding-top: 10px;
+  }
+
+  /* Languages */
+  .lang-grid {
+    display: table;
+    width: 100%;
+  }
+  .lang-col {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+  }
+  .lang-row {
+    display: table;
+    width: 100%;
+    margin-bottom: 3px;
+  }
+  .lang-name {
+    display: table-cell;
+    width: 40%;
+  }
+  .lang-level {
+    display: table-cell;
+    width: 60%;
+    text-align: right;
+    padding-right: 40px;
+  }
+
+  /* Skills */
+  .skills-text {
+    line-height: 1.6;
+  }
+
+  .footer-note {
+    font-size: 7pt;
+    color: #888;
+    margin-top: 15px;
+    padding-top: 6px;
+  }
+
+  strong { font-weight: 700; }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-inner">
+      <div class="header-text">
+        <div class="name">MATTEO MARCON</div>
+        <div class="title">Aerospace Engineering Student | Systems Engineer &amp; Software Developer</div>
+        <div class="contact-line">Italy<span class="dot">•</span>(+39) 3409950498<span class="dot">•</span><a href="mailto:matteo_marcon@hotmail.com">matteo_marcon@hotmail.com</a><span class="dot">•</span><a href="https://portfolio-0fp7.onrender.com">portfolio-0fp7.onrender.com</a></div>
+        <div class="contact-line"><a href="#">Linkedin</a><span class="dot">•</span><a href="#">Github</a><span class="dot">•</span>06.09.2004<span class="dot">•</span>Italian</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-title">PROFILE</div>
+      <p class="profile-text">
+        Aerospace Engineering student focused on Space Systems and MBSE, combining structural analysis with advanced IT automation. Lead developer of an MBSE-based Systems Engineering &amp; Digital Twin platform for the Space Research Group at the University of Padua, ensuring ECSS/NASA-compliant mission data management. ST&amp;M Subsystem Engineer for the AlbaSat 2U CubeSat, co-authoring FEM-to-test correlation work presented at the 4S Symposium 2026.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">WORK EXPERIENCE</div>
+
+      <div class="entry">
+        <div class="entry-date">Jul 2026 – Present</div>
+        <div class="entry-main">
+          <div class="entry-role">Scientific Peer Reviewer</div>
+          <div class="entry-org">Bon View Publishing – Archives of Advanced Engineering Science (AAES) (Voluntary)</div>
+          <ul class="bullets">
+            <li><strong>Vetted Space Weather Research:</strong> Benchmarked manuscripts to validate data accuracy and numerical models.</li>
+            <li><strong>Upheld AAES Publication Criteria:</strong> Appraised research methodology, ensuring 100% compliance with journal standards.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Mar 2026 – Present</div>
+        <div class="entry-main">
+          <div class="entry-role">IT Software Development &amp; Management</div>
+          <div class="entry-org">Space Research Group, University of Padua – Digital Twin Platform Voluntary Collaboration</div>
+          <ul class="bullets">
+            <li><strong>Engineered Cloud MBSE Backend:</strong> Built a Supabase SQL platform replacing static spreadsheets, cutting data query times by ~60% across satellite workflows.</li>
+            <li><strong>Automated ESA/NASA Reporting:</strong> Developed Python scripts to process live mass/power budgets into PDF/DOCX reports, reducing compliance efforts by ~40%.</li>
+            <li><strong>Optimized Product Tree &amp; Sync:</strong> Designed dynamic UI sampling and REST APIs to streamline subsystem onboarding and sync external simulation tools.</li>
+          </ul>
+          <div class="contact-person">Contact Person: Dr. Lorenzo Olivieri | lorenzo.olivieri@unipd.it | +39 049 827 6892</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Nov 2025 – Present</div>
+        <div class="entry-main">
+          <div class="entry-role">ST&amp;M Subsystem Engineer</div>
+          <div class="entry-org">University of Padova</div>
+          <ul class="bullets">
+            <li><strong>Simulated ECSS Structural Dynamics:</strong> Analyzed AlbaSat 2U CubeSat STM finite element models to guarantee compliance with launcher mechanical limits.</li>
+            <li><strong>Correlated Hardware Mass Properties:</strong> Disassembled lab prototypes to measure physical components, optimizing FEM accuracy against empirical data.</li>
+            <li><strong>Refined FEM via ESA Test Data:</strong> Processed ESA CSF vibration campaign results to improve model accuracy and co-authored the conference paper.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Aug 2025 – Present</div>
+        <div class="entry-main">
+          <div class="entry-role">IT Specialist</div>
+          <div class="entry-org">Spartan Health</div>
+          <ul class="bullets">
+            <li>Promoted from technical support to lead digital transformation, managing end-to-end IT infrastructure.</li>
+            <li><strong>Engineered "DriveGen" Automation:</strong> Built a Google Apps Script/Node.js document engine via webhooks, reducing manual reporting time by &gt;80%.</li>
+            <li><strong>Architected CRM &amp; Support Middleware:</strong> Integrated CRM with GrooveHQ using custom logic to automatically categorize, route, and manage support tickets.</li>
+            <li><strong>Deployed Logistics Scraper &amp; Web UI:</strong> Created real-time shipping scrapers with Telegram alerts alongside custom responsive frontend web services using HTML/CSS/JS.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Jan 2026 – Present</div>
+        <div class="entry-main">
+          <div class="entry-role">IT Specialist</div>
+          <div class="entry-org">Dog Welfare Ltd</div>
+          <ul class="bullets">
+            <li><strong>Built IMAP/SMTP Communication Bridge:</strong> Developed a lightweight, secure mailing suite, cutting platform operational costs by ~30%.</li>
+            <li><strong>Engineered VSL Analytics Visualizer:</strong> Built a custom tracking tool to parse Video Sales Letter metrics, boosting visual data analysis efficiency.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Aug 2025 – Feb 2026</div>
+        <div class="entry-main">
+          <div class="entry-role">IT Manager &amp; Systems Architect</div>
+          <div class="entry-org">ProBiz Consulting LLC</div>
+          <ul class="bullets">
+            <li><strong>Architected API Data Pipeline:</strong> Integrated GoHighLevel, Make, and Google Sheets via REST APIs/webhooks, reducing data sync latencies by ~50%.</li>
+            <li><strong>Engineered Dynamic Middleware Logic:</strong> Implemented Round Robin workload algorithms and unidirectional sync protocols, eliminating 100% of database version conflicts.</li>
+            <li><strong>Authored Technical System Documentation:</strong> Created comprehensive workflow mappings and integrity constraints, cutting onboarding and system maintenance time by ~30%.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Aug 2025 – Present</div>
+        <div class="entry-main">
+          <div class="entry-role">IT Specialist / Freelance</div>
+          <div class="entry-org">Mega Fitness</div>
+          <ul class="bullets">
+            <li><strong>Automated Shipment Tracking:</strong> Deployed a custom Fullship scraper to ingest carrier data, automating status updates for 500+ equipment orders.</li>
+            <li><strong>Streamlined Internal Workflows:</strong> Replaced manual data entry with automated API bridges, cutting operational processing bottlenecks by ~50%.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">EDUCATION</div>
+
+      <div class="entry">
+        <div class="entry-date">Oct 2023 – 2027</div>
+        <div class="entry-main">
+          <div class="entry-role">Aerospace Engineering</div>
+          <div class="entry-org">Università Degli Studi Di Padova, Padova (EQF level 6)</div>
+          <ul class="bullets">
+            <li>Relevant coursework: Structural Mechanics, Aerospace Systems, Fluid Dynamics, Aerospace Flight Dynamics.</li>
+            <li>Active member of the Alba CubeSat team – ST&amp;M (Structural &amp; Mechanisms) subsystem.</li>
+            <li>Active IT Developer for Research Group.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Sep 2018 – Jun 2023</div>
+        <div class="entry-main">
+          <div class="entry-role">Diploma – Computer Science, Telecommunications &amp; Systems Administration</div>
+          <div class="entry-org">ITIS Meucci, Cittadella (EQF level 4)</div>
+          <ul class="bullets">
+            <li>IT infrastructure, programming, electronics and network administration. Final grade: 87/100.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">LANGUAGES</div>
+      <div class="lang-grid">
+        <div class="lang-col">
+          <div class="lang-row">
+            <div class="lang-name"><strong>Italian:</strong></div>
+            <div class="lang-level">Native speaker</div>
+          </div>
+          <div class="lang-row">
+            <div class="lang-name"><strong>English:</strong></div>
+            <div class="lang-level">B2</div>
+          </div>
+        </div>
+        <div class="lang-col">
+          <div class="lang-row">
+            <div class="lang-name"><strong>Spanish:</strong></div>
+            <div class="lang-level">B1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">AWARDS</div>
+      <div class="entry">
+        <div class="entry-date">2026</div>
+        <div class="entry-main">
+          <div class="entry-role">Simulations and Vibration Test Results for the AlbaSat STM</div>
+          <div class="entry-org">Co-author. Presented structural design and FEM-to-test correlation of the AlbaSat 2U CubeSat. FEM analysis performed in ANSYS Workbench 2025 R1 and SolidWorks; experimental testing at ESA ESEC-Galaxia. Journal/conference: 4S Symposium 2026 – Small Satellites Systems and Services.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">COURSES &amp; CERTIFICATIONS</div>
+
+      <div class="entry">
+        <div class="entry-date">Aug 2026</div>
+        <div class="entry-main">
+          <div class="entry-role">Artificial Intelligence Fundamentals</div>
+          <div class="entry-org">IBM</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Feb 2026</div>
+        <div class="entry-main">
+          <div class="entry-role">Team Management – Managerial Training</div>
+          <div class="entry-org">University of Business in Wrocław</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Jul 2024</div>
+        <div class="entry-main">
+          <div class="entry-role">English B2 – Reading and Listening</div>
+          <div class="entry-org">Università Degli Studi Di Padova</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Jun 2023</div>
+        <div class="entry-main">
+          <div class="entry-role">Cisco Certified Network Associate (CCNA)</div>
+          <div class="entry-org">Cisco Networking Academy</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section-creative-works">
+      <div class="section-title">CREATIVE WORKS</div>
+
+      <div class="entry">
+        <div class="entry-date">Present</div>
+        <div class="entry-main">
+          <div class="entry-role">Instant-Translate</div>
+          <div class="entry-org">Chrome extension providing predictive linguistic assistance through generative AI in chats, emails and forms. Built with React 19, Tailwind CSS and Google Gemini 1.5 Flash, with real-time semantic analysis and suggestion-first UX.</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Present</div>
+        <div class="entry-main">
+          <div class="entry-role">Spese Smart</div>
+          <div class="entry-org">Cross-platform personal finance management application automating expense entry with AI, multi-tenancy, localization, multi-currency conversion, Telegram integration, Gemini NLP, Google Sheets persistence and financial visualizations.</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Present</div>
+        <div class="entry-main">
+          <div class="entry-role">Neuro Lex</div>
+          <div class="entry-org">Linguistic consultation interface using Hugging Face Transformer inference APIs to provide contextual definitions, synonyms and semantic explanations, combined with Pexels imagery.</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-date">Present</div>
+        <div class="entry-main">
+          <div class="entry-role">Space Mission Simulator</div>
+          <div class="entry-org">Full-stack web application for designing, managing and preliminarily simulating space missions. Uses React, FastAPI, Python, SQLAlchemy and simulation modules for Delta-V, fuel mass, launch windows and orbital transfer times.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">SKILLS</div>
+      <div class="skills-text">
+        MBSE &amp; Systems Engineering (ECSS/NASA) (Experienced) • FEM Structural Analysis (ANSYS/SolidWorks) (Experienced) • Vibration Testing &amp; Data Correlation (Proficient) • Orbital Mechanics &amp; Mission Simulation (Experienced) • Python (FastAPI/Data Processing) (Experienced) • JavaScript/TypeScript (React/Node.js) (Experienced) • SQL &amp; Database Architecture (Supabase/PostgreSQL) (Experienced) • REST APIs &amp; Webhooks Integration (Expert) • Business Process Automation (Expert) • AI &amp; LLM Integration (Expert) • Web Scraping &amp; Workflow Automation (Experienced) • Git &amp; Version Control (Proficient) • Cisco CCNA &amp; Network Administration (Proficient) • Industrial Electrical Systems &amp; Wiring (Beginner) • Technical Writing &amp; Reporting (Experienced) • Team Leadership &amp; Operations Management (Experienced) • AI Fundamentals &amp; Concepts (IBM Certified) (Proficient) • Peer Review &amp; Scientific Evaluation (Proficient)
+      </div>
+    </div>
+
+    <div class="footer-note">
+      I authorize the processing of my personal data contained in this CV in accordance with the GDPR (EU Regulation 2016/679) for recruitment and selection purposes.
+    </div>
+
+  </div>
+
+</body>
+</html>

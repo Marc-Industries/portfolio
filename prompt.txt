@@ -1,0 +1,1196 @@
+You are a SENIOR CREATIVE FRONTEND ENGINEER, 3D WEB EXPERIENCE DESIGNER, UI/UX ARCHITECT and INTERACTIVE STORYTELLING SPECIALIST.
+
+Your task is to DESIGN AND BUILD a premium, production-ready, highly interactive 3D portfolio website for:
+
+MATTEO MARCON
+
+Professional positioning:
+
+Aerospace Engineering student / emerging Aerospace & Systems Engineer
+with strong experience across:
+
+* Space Systems Engineering
+* Systems Engineering
+* MBSE / Digital Engineering
+* Digital Twin development
+* Software Engineering
+* Full-Stack Development
+* AI Automation
+* API / Middleware Integration
+* Workflow Automation
+* Aerospace simulation
+* CubeSat engineering
+
+The goal is NOT to create a generic developer portfolio.
+
+The goal is to make a recruiter, engineering manager, CTO, Systems Engineering manager or aerospace hiring manager immediately understand:
+
+“Matteo is an aerospace engineer who can also architect and build software systems.”
+
+The website must communicate technical depth, engineering maturity, curiosity, credibility and originality.
+
+================================================================
+
+1. SOURCE OF TRUTH
+   ================================================================
+
+Use the following sources as the factual source of truth:
+
+1. LinkedIn:
+   https://www.linkedin.com/in/matteo-marcon-287999368/
+
+2. GitHub:
+   https://github.com/Marc-Industries
+
+3. Project documentation uploaded with this request.
+
+4. CV and project information supplied by the user.
+
+You MUST inspect the available public profile information and repository information before deciding how projects and technologies should be presented.
+
+IMPORTANT:
+
+* Never invent employers.
+* Never invent qualifications.
+* Never invent job titles.
+* Never invent certifications.
+* Never claim Matteo has completed a degree if it is still in progress.
+* Never invent project metrics.
+* Never claim ownership of proprietary company work without evidence.
+* Never fabricate technical responsibilities.
+* Never expose confidential/proprietary implementation details from professional projects.
+* Never imply that AI was not used during development.
+* Present project authorship and responsibilities accurately.
+
+For professional/client projects, use high-level case-study descriptions only when the technical documentation indicates confidentiality or intellectual-property restrictions.
+
+================================================================
+2. CORE BRAND POSITIONING
+=========================
+
+Primary professional identity:
+
+“Aerospace / Systems Engineer with a strong software, automation and AI integration background.”
+
+Secondary positioning:
+
+“Engineering systems. Building software. Connecting complex domains.”
+
+Avoid presenting Matteo primarily as:
+
+* generic web developer
+* generic AI enthusiast
+* generic computer science student
+* generic aerospace student
+
+Instead communicate the INTERSECTION:
+
+AEROSPACE
++
+SYSTEMS ENGINEERING
++
+SOFTWARE
++
+AI
++
+AUTOMATION
++
+DIGITAL ENGINEERING
+
+This intersection is the unique selling point.
+
+================================================================
+3. VISUAL DIRECTION
+===================
+
+Create a sophisticated cinematic technical aesthetic.
+
+Design references:
+
+* spacecraft mission-control interfaces
+* NASA / ESA engineering environments
+* advanced aerospace visualization
+* futuristic systems architecture dashboards
+* digital twins
+* scientific simulation software
+* high-end WebGL portfolios
+* premium engineering product websites
+
+Reference style inspirations:
+
+* Space Force satellite interaction experiences
+* OMEGA space sustainability interactive experiences
+* high-end Three.js / WebGL websites
+* technical visualization interfaces
+* cinematic spacecraft interfaces
+
+Do NOT copy any existing website.
+
+Create an original visual identity.
+
+Overall visual character:
+
+Dark.
+Precise.
+Minimal.
+Technical.
+Cinematic.
+Elegant.
+High contrast.
+Not gamer-ish.
+Not cyberpunk cliché.
+Not overloaded with neon.
+
+Recommended visual language:
+
+* deep black / graphite / space navy background
+* white / off-white typography
+* restrained cyan / blue / amber accent colors
+* subtle emissive lighting
+* volumetric atmosphere
+* thin technical lines
+* engineering grid
+* orbital trajectories
+* data particles
+* schematic overlays
+* telemetry-inspired micro elements
+* restrained glassmorphism
+
+The 3D elements must feel like ENGINEERING VISUALIZATION rather than decorative CGI.
+
+================================================================
+4. TECHNOLOGY STACK
+===================
+
+Preferred stack:
+
+* Next.js
+* React
+* TypeScript
+* Three.js
+* React Three Fiber
+* @react-three/drei
+* GSAP
+* Lenis or equivalent smooth scrolling
+* Framer Motion where appropriate
+* Tailwind CSS
+* GLSL shaders where they materially improve the experience
+* GLTF / GLB assets
+* WebGPU/WebGL progressive enhancement if appropriate
+
+Use semantic HTML and accessible React architecture underneath the 3D experience.
+
+Do NOT make every visual effect dependent on an enormous JavaScript bundle.
+
+The website must remain fast.
+
+================================================================
+5. 3D EXPERIENCE
+================
+
+The whole site should feel connected by one continuous 3D world.
+
+Concept:
+
+The visitor is effectively navigating Matteo’s engineering universe.
+
+The main 3D environment should evolve as the user scrolls.
+
+Possible conceptual journey:
+
+EARTH
+→
+ORBIT
+→
+SATELLITE
+→
+SYSTEM ARCHITECTURE
+→
+SOFTWARE NETWORK
+→
+AI / AUTOMATION
+→
+PROJECTS
+→
+CONTACT
+
+Create a subtle narrative.
+
+================================================================
+6. HERO SECTION
+===============
+
+Hero title:
+
+MATTEO MARCON
+
+Subtitle:
+
+Aerospace Engineering × Systems Engineering × Software × AI Automation
+
+Supporting statement:
+
+“Building engineering systems where aerospace, software and intelligent automation meet.”
+
+The hero should feature a premium animated 3D spacecraft / CubeSat.
+
+Preferred behavior:
+
+* satellite slowly rotates
+* solar panels subtly move or stabilize
+* Earth atmosphere visible in background
+* orbital path visible
+* small telemetry points
+* realistic lighting
+* camera parallax controlled by mouse
+* scroll gradually moves camera toward the satellite
+* technical overlays appear subtly
+
+Do not make the hero look like a video game.
+
+Optional dynamic technical overlay:
+
+MISSION / SYSTEM STATUS
+SYSTEM ENGINEERING
+SOFTWARE
+AUTOMATION
+AI
+DIGITAL ENGINEERING
+
+================================================================
+7. ABOUT / IDENTITY
+===================
+
+Create an interactive 3D “system architecture” representation of Matteo’s profile.
+
+Instead of a boring biography card, represent the profile as interconnected engineering domains:
+
+AEROSPACE
+SYSTEMS
+SOFTWARE
+AI
+AUTOMATION
+SIMULATION
+DIGITAL TWIN
+
+Each node expands into a concise explanation.
+
+Use visual relationships between nodes.
+
+The user should immediately understand that Matteo is interdisciplinary.
+
+Include:
+
+* final-year Aerospace Engineering student
+* University of Padua
+* aerospace / CubeSat experience
+* software development experience
+* professional IT automation experience
+* AI integration experience
+
+Do not describe Matteo as already graduated.
+
+================================================================
+8. AEROSPACE / SPACE SYSTEMS SECTION
+====================================
+
+This must be one of the most visually impressive sections.
+
+Create a 3D orbital scene.
+
+Possible assets:
+
+* CubeSat
+* Earth
+* orbital trajectories
+* telemetry particles
+* ground station visualization
+* subsystem markers
+
+Interaction:
+
+User scrolls or clicks through:
+
+MISSION
+SYSTEM
+SUBSYSTEMS
+REQUIREMENTS
+VERIFICATION
+TESTING
+OPERATIONS
+
+Create subtle callouts.
+
+Include AlbaSat experience accurately.
+
+The new professional role should be represented primarily as:
+
+SYSTEMS ENGINEERING / SPACE SYSTEMS ENGINEERING
+
+while preserving the fact that Matteo also has previous structural/mechanical and FEM experience.
+
+Show technical experience such as:
+
+* CubeSat engineering
+* system-level engineering
+* requirements / traceability
+* structural engineering
+* FEM
+* ANSYS
+* SolidWorks
+* vibration test correlation
+* ECSS-oriented engineering
+* ESA environment
+
+Do not exaggerate responsibilities.
+
+================================================================
+9. MBSE / DIGITAL ENGINEERING SECTION
+=====================================
+
+Create a dedicated 3D digital-twin section.
+
+Visual concept:
+
+A spacecraft model in the center.
+
+Surround it with dynamically connected nodes:
+
+Requirements
+Architecture
+Subsystems
+Interfaces
+Verification
+Simulation
+Data
+Reports
+
+When the user hovers over a component, show relationships.
+
+Explain MBSE in simple professional language:
+
+“Model-Based Systems Engineering connects requirements, architecture, interfaces, verification and engineering data through a coherent system model.”
+
+Feature BEPI prominently.
+
+BEPI should be presented as a flagship system-engineering project.
+
+Use real information from its documentation.
+
+Important factual material:
+
+BEPI is a full-stack aerospace project-management/system-engineering platform designed for CubeSat and SmallSat projects.
+
+Relevant technical features include:
+
+* Python
+* Streamlit
+* FastAPI
+* Supabase
+* PostgreSQL
+* Row Level Security
+* RBAC
+* requirements tracking
+* risk management
+* FMECA
+* CPM / critical path
+* Gantt
+* ECSS compliance support
+* PDR/CDR deliverables
+* product tree
+* multiple missions
+* operating modes
+* integrations with GMAT
+* FreeFlyer
+* MATLAB
+* SPICE
+* SPENVIS
+* DRAMA
+* 3D orbit visualization
+
+The uploaded BEPI documentation states 22+ database tables, 79 RLS policies, 18 DB triggers, 11 Streamlit pages and 9 external integrations.
+
+Only expose those details if they are appropriate for public portfolio presentation.
+
+Live application:
+
+https://bepi-space.streamlit.app/
+
+If repository access is unavailable, link to the public demo instead of inventing a repository URL.
+
+================================================================
+10. SOFTWARE / IT SYSTEMS SECTION
+=================================
+
+Transition visually from aerospace systems into software architecture.
+
+Create a giant interactive 3D architecture diagram.
+
+Show:
+
+FRONTEND
+↓
+API
+↓
+BACKEND
+↓
+DATABASE
+↓
+EXTERNAL SERVICES
+
+Then dynamically transform the architecture into:
+
+WEBHOOK
+→
+MIDDLEWARE
+→
+API
+→
+DATABASE
+→
+AUTOMATION
+
+Make it visually clear that Matteo works on SYSTEM INTEGRATION.
+
+Key skill groups:
+
+Frontend:
+React
+Vite
+Tailwind
+HTML
+CSS
+JavaScript
+
+Backend:
+Python
+FastAPI
+Node.js
+Express
+REST APIs
+
+Data:
+SQL
+PostgreSQL
+SQLite
+Supabase
+Google Sheets
+
+Integration:
+REST
+Webhooks
+OAuth
+Google APIs
+Shopify APIs
+Telegram APIs
+
+Automation:
+n8n
+Make
+Google Apps Script
+
+AI:
+Gemini
+OpenAI
+Hugging Face
+
+================================================================
+11. AI / AUTOMATION SECTION
+===========================
+
+Create a 3D workflow visualization.
+
+Concept:
+
+An incoming business event becomes:
+
+INPUT
+→
+AI CLASSIFICATION
+→
+DECISION
+→
+API CALL
+→
+DATA
+→
+ACTION
+→
+HUMAN FALLBACK
+
+Animate the workflow.
+
+Highlight experience in:
+
+* AI automation
+* business process automation
+* middleware
+* integrations
+* ticket automation
+* customer support automation
+* API orchestration
+* asynchronous workflows
+
+Use professional projects only at an appropriate level of abstraction.
+
+For example, describe the GHL / Make / Google Sheets system as:
+
+“Event-driven lead distribution and bidirectional operational synchronization architecture.”
+
+The uploaded documentation shows:
+
+* GoHighLevel
+* Make
+* Google Apps Script
+* REST API
+* webhooks
+* Round Robin lead distribution
+* routing middleware
+* bidirectional synchronization
+* anti-loop / race-condition mitigation
+
+Use these concepts in the portfolio, but do not expose confidential credentials or proprietary implementation details.
+
+================================================================
+12. PROJECTS
+============
+
+Create a 3D project gallery rather than flat cards.
+
+Every project should have:
+
+* 3D icon/model
+* short problem statement
+* role
+* stack
+* architecture
+* result
+* GitHub / live demo where public
+* “technical deep dive” interaction
+
+Prioritize projects in this order:
+
+1. BEPI
+2. Space Mission Simulator
+3. AlbaSat / aerospace systems work
+4. AI Automation / VSL Visualizer
+5. DriveGen
+6. Instant-Translate
+7. Spese Smart
+8. NeuroLex
+9. Fullship Scraper
+10. Poodl Meeting Schedule
+11. selected professional integration systems
+
+Do not give every project equal visual importance.
+
+The strongest projects should dominate.
+
+================================================================
+13. PROJECT VISUAL METAPHORS
+============================
+
+BEPI:
+3D digital twin / satellite system graph / engineering dashboard
+
+Space Mission Simulator:
+3D spacecraft + orbital trajectory + mission timeline
+
+Instant-Translate:
+floating language / semantic network / neural-text visualization
+
+Spese Smart:
+3D financial data visualization / flowing data particles
+
+VSL Visualizer:
+3D content pipeline / asynchronous workflow graph
+
+DriveGen:
+cloud nodes → AI → document generation → Google Drive
+
+Fullship:
+shipping / logistics data pipeline
+
+Poodl Meeting Schedule:
+global time-zone sphere / rotating Earth / timezone arcs
+
+Automation projects:
+nodes and animated data packets moving between APIs
+
+================================================================
+14. ANIMATION RESEARCH AGENT
+============================
+
+You MUST actively research online for suitable animation and 3D references before implementation.
+
+Search for:
+
+* aerospace 3D web experiences
+* CubeSat 3D models
+* satellite GLB / GLTF
+* Earth WebGL models
+* orbital visualization
+* engineering dashboard animation
+* MBSE visualization
+* digital twin visualization
+* AI neural network 3D animation
+* data pipeline 3D animation
+* automation workflow animation
+* technical portfolio WebGL inspiration
+
+Potential research sources include:
+
+* Three.js examples
+* Khronos glTF sample assets
+* Sketchfab
+* Poly Pizza
+* Spline
+* LottieFiles
+* NASA 3D resources
+* ESA visual resources
+* Awwwards
+* CSS Winner
+* Dribbble
+
+For every externally sourced asset:
+
+1. Verify its license.
+2. Verify that commercial portfolio use is allowed.
+3. Save the source URL.
+4. Save the license information.
+5. Create a credits/attribution record.
+6. Never download or embed an asset whose license is unclear.
+
+Prefer:
+GLB / GLTF
+SVG
+Lottie
+procedural WebGL
+self-generated shaders
+open-license assets
+
+Do not use random copyrighted assets simply because they look good.
+
+================================================================
+15. 3D ASSET STRATEGY
+=====================
+
+Use a combination of:
+
+A. custom procedural geometry
+B. licensed GLTF/GLB models
+C. generated shader effects
+D. 2D UI layered over 3D
+E. motion graphics
+
+Do not make the entire website dependent on one large 3D scene.
+
+Use lazy loading.
+
+Use lower-quality fallback assets on mobile.
+
+================================================================
+16. SCROLL EXPERIENCE
+=====================
+
+Scrolling should drive cinematic camera transitions.
+
+Example:
+
+SECTION 1:
+Camera outside Earth
+
+SECTION 2:
+Camera enters orbit
+
+SECTION 3:
+Camera approaches CubeSat
+
+SECTION 4:
+Satellite breaks into system components
+
+SECTION 5:
+Components transform into architecture diagram
+
+SECTION 6:
+Architecture transforms into software/API nodes
+
+SECTION 7:
+Nodes become AI/automation workflow
+
+SECTION 8:
+Everything collapses into a clean project interface
+
+SECTION 9:
+Final camera returns to Earth / deep space
+
+This should feel like one continuous engineering journey.
+
+================================================================
+17. NAVIGATION
+==============
+
+Use a minimal floating navigation.
+
+Sections:
+
+01 / HOME
+02 / ABOUT
+03 / AEROSPACE
+04 / SYSTEMS
+05 / SOFTWARE
+06 / AI & AUTOMATION
+07 / PROJECTS
+08 / EXPERIENCE
+09 / EDUCATION
+10 / CONTACT
+
+Include a small current-section indicator.
+
+================================================================
+18. EXPERIENCE TIMELINE
+=======================
+
+Create a 3D vertical timeline.
+
+Relevant experiences from the source material include:
+
+* Aerospace Engineering — University of Padua
+* Alba CubeSat
+* Space Research Group software development
+* IT Specialist / automation roles
+* Systems Architect / IT management
+* professional integrations / automation
+* previous industrial experience
+
+Be accurate about dates and current status.
+
+================================================================
+19. EDUCATION / CERTIFICATIONS
+==============================
+
+Show:
+
+Aerospace Engineering — University of Padua — ongoing
+
+Diploma:
+Computer Science, Telecommunications & Systems Administration
+
+Certifications / training:
+
+* English B2 certification
+* Team Management training
+* IBM SkillsBuild AI Fundamentals, if completed/current status is clearly indicated
+* IBM Full Stack Developer, only if actually completed
+
+Never display a future or incomplete credential as completed.
+
+================================================================
+20. PUBLICATION
+===============
+
+Create a visual publication card for:
+
+“Simulations and Vibration Test Results for the AlbaSat STM”
+
+4S Symposium 2026
+
+Make this visually important because it provides external technical credibility.
+
+Use the publication details from LinkedIn/CV.
+
+================================================================
+21. ABOUT THE PERSON
+====================
+
+Create a concise human section.
+
+Do not make Matteo look like a corporate robot.
+
+Communicate:
+
+* curiosity
+* engineering mindset
+* interdisciplinary thinking
+* interest in aerospace
+* love for building systems
+* interest in software and AI
+* practical problem solving
+
+Avoid motivational clichés.
+
+================================================================
+22. CONTACT / CTA
+=================
+
+Final CTA:
+
+“Let’s build the next system.”
+
+Buttons:
+
+LinkedIn
+GitHub
+Email
+CV
+
+Use subtle 3D orbital animation behind the CTA.
+
+================================================================
+23. PERFORMANCE
+===============
+
+CRITICAL:
+
+The website must be visually impressive but production performant.
+
+Implement:
+
+* lazy loading for 3D assets
+* Suspense boundaries
+* code splitting
+* compressed GLB assets
+* Draco compression when useful
+* texture compression where appropriate
+* reduced particle counts on mobile
+* adaptive DPR
+* reduced motion support
+* SSR-safe WebGL initialization
+* fallback poster images
+* mobile-specific simplified scenes
+
+The site must remain usable on:
+
+* desktop
+* laptop
+* tablet
+* mobile
+
+Create a “reduced 3D mode” for mobile or low-performance devices.
+
+================================================================
+24. ACCESSIBILITY
+=================
+
+Support:
+
+* keyboard navigation
+* semantic HTML
+* visible focus states
+* ARIA labels
+* reduced-motion preference
+* text alternatives for 3D scenes
+* sufficient contrast
+
+The 3D experience must enhance the content, never hide it.
+
+================================================================
+25. RESPONSIVE BREAKPOINTS
+==========================
+
+Desktop:
+maximum visual complexity.
+
+Tablet:
+reduced particle count and simpler camera motion.
+
+Mobile:
+simplified models
+reduced shaders
+static/fallback scenes where needed
+still visually premium.
+
+Never simply shrink desktop UI onto mobile.
+
+================================================================
+26. TYPOGRAPHY
+==============
+
+Use a premium technical sans-serif.
+
+Suggested:
+Inter
+Geist
+Sora
+Space Grotesk
+IBM Plex Sans
+
+Use monospace sparingly for:
+
+* telemetry
+* technical specifications
+* code labels
+* coordinates
+* status indicators
+
+Do NOT overuse futuristic fonts.
+
+================================================================
+27. MICRO-INTERACTIONS
+======================
+
+Use subtle interactions:
+
+* magnetic buttons
+* hover depth
+* orbital highlights
+* 3D card tilt
+* system node illumination
+* animated connection lines
+* count-up metrics
+* telemetry pulses
+* scroll-triggered reveals
+* shader distortions
+* camera focus transitions
+
+No excessive bouncing.
+No gimmicky effects.
+No excessive glow.
+
+================================================================
+28. CONTENT HIERARCHY
+=====================
+
+The homepage should immediately answer:
+
+WHO IS MATTEO?
+WHAT DOES HE DO?
+WHAT HAS HE BUILT?
+WHY IS HIS PROFILE DIFFERENT?
+
+Within 5 seconds the visitor should understand:
+
+Aerospace + Systems + Software + AI Automation.
+
+Within 30 seconds:
+
+They should see evidence.
+
+Within 2 minutes:
+
+They should be able to inspect technical projects.
+
+================================================================
+29. RECRUITER MODE
+==================
+
+Include a hidden or visible “Recruiter View”.
+
+This version provides:
+
+* skills
+* education
+* experience
+* selected projects
+* contact
+* CV download
+
+with minimal animation.
+
+A recruiter should never have to navigate a cinematic experience for 10 minutes just to find the CV.
+
+================================================================
+30. ENGINEERING MODE
+====================
+
+Add an optional “Engineering View”.
+
+This opens deeper technical information:
+
+Architecture
+Stack
+APIs
+Database
+Deployment
+Security
+System Design
+Lessons Learned
+
+Use BEPI and Space Mission Simulator as flagship technical case studies.
+
+================================================================
+31. PROJECT DETAIL PAGES
+========================
+
+Every major project should have its own detail route.
+
+Example:
+
+/projects/bepi
+/projects/space-mission-simulator
+/projects/instant-translate
+/projects/spese-smart
+/projects/vsl-visualizer
+/projects/drivegen
+
+Project pages must feel like technical case studies, not blog posts.
+
+Structure:
+
+01 Problem
+02 Architecture
+03 Technologies
+04 My Role
+05 Engineering Challenges
+06 Solution
+07 Result
+08 Lessons Learned
+09 Demo / Repository
+
+================================================================
+32. AI ASSISTANCE DISCLOSURE
+============================
+
+Do not hide the fact that AI tools were used during some personal development work.
+
+However, do not make it a central branding point.
+
+Describe the real engineering contribution:
+
+problem definition
+architecture
+integration
+debugging
+testing
+iteration
+system design
+deployment
+
+Never falsely imply every line of code was manually authored.
+
+================================================================
+33. PRIVACY / IP
+================
+
+Professional projects may contain confidential information.
+
+Implement a project visibility system:
+
+PUBLIC
+HIGH-LEVEL ONLY
+PRIVATE / REDACTED
+
+Professional/client projects should display only approved high-level descriptions.
+
+Never expose:
+
+* secrets
+* credentials
+* API keys
+* private URLs
+* proprietary workflow details
+* private code
+* confidential documents
+
+The provided professional-project documentation explicitly states intellectual-property and confidentiality restrictions.
+
+================================================================
+34. SEO
+=======
+
+Optimize for:
+
+Matteo Marcon
+Aerospace Engineer
+Systems Engineer
+Aerospace Systems Engineer
+MBSE
+Digital Twin
+Space Systems
+CubeSat
+Software Engineer
+AI Automation
+Automation Engineer
+Systems Integration
+Aerospace Software Engineer
+Python Developer
+Full Stack Developer
+
+Create professional metadata and OpenGraph previews.
+
+================================================================
+35. FINAL DESIGN PRINCIPLE
+==========================
+
+The website must feel like:
+
+“A spacecraft engineer built a software system and turned it into a website.”
+
+Not:
+
+“A web developer made a space-themed portfolio.”
+
+This distinction is CRITICAL.
+
+The website should make Matteo memorable because his profile is multidisciplinary.
+
+================================================================
+36. REQUIRED DELIVERABLE
+========================
+
+Build the complete website.
+
+Before coding:
+
+1. inspect available source files
+2. inspect LinkedIn
+3. inspect GitHub
+4. inventory projects
+5. identify public vs proprietary projects
+6. research licensed 3D assets and animation resources
+7. select the best 3D models
+8. define the design system
+9. define the site information architecture
+10. then implement
+
+At the end provide:
+
+* complete working website
+* clean component architecture
+* reusable 3D components
+* responsive behavior
+* performance optimizations
+* animation sources
+* asset licenses
+* credits
+* project data structure
+* README
+* deployment instructions
+
+The website must be production-ready.
+
+================================================================
+37. REFERENCE VISUAL DIRECTION
+==============================
+
+Use these references as inspiration, NOT as templates:
+
+Three.js animation / GLTF:
+https://threejs.org/examples/?q=anim
+
+Three.js GLTF loader:
+https://threejs.org/examples/webgl_loader_gltf.html
+
+Space satellite interaction inspiration:
+https://www.awwwards.com/inspiration/satellite-orbit-spaceforce-com
+
+Space sustainability interaction:
+https://immersive-g.com/projects/omega-space/
+
+Do not reproduce these designs.
+
+Use them to understand:
+
+* spatial composition
+* orbital motion
+* 3D storytelling
+* technical interfaces
+* information layering
+
+FINAL RULE:
+
+Every visual effect must support the story.
+
+If an animation does not communicate aerospace, systems, software, engineering or technology, remove it.
+
+The finished result must look like the portfolio of a future aerospace systems/software engineer — not a template.

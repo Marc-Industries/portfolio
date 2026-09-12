@@ -1,0 +1,117 @@
+Matteo Marcon
+Date of birth: 06/09/2004 Nationality: Italian Gender: Male Phone number:
+(+39) 3409950498 (Mobile) Email address: matteo.marcon.6@studenti.unipd.it Email address:
+matteo_marcon@hotmail.com Address: Via Monte Ortigara 15, 36028, Rossano Veneto, Italy (Home)
+ABOUT ME
+Results-driven Aerospace Engineering student and Systems Architect with a specialized focus on the intersection of Space Systems Engineering and Advanced IT Automation. Currently, I am driving the digital transformation of the Space Research Group at the University of Padua by developing an MBSE-based Systems Engineering Platform and Digital Twin ecosystem, leveraging Python and SQL to unify complex aerospace workflows and ensure ECSS/NASA standards compliance. My technical expertise is further demonstrated through my role as an ST&M Subsystem Engineer for the AlbaSat 2U CubeSat mission. I specialize in ECSS-compliant structural modelling and FEM-to-test correlation, having analyzed vibration data from the ESA ESEC-Galaxia campaigna contribution I co-authored for the 4S Symposium 2026. Complementing my academic work, I lead IT operations as a Systems Architect for international firms, designing high-availability automation ecosystems (BPA) and custom middleware. As an independent developer, I build full-stack AI-driven solutions, including linguistic consultation interfaces and space mission simulators, bridgeing the gap between complex data architecture and usercentric software design.
+WORK EXPERIENCE
+IT SOFTWARE DEVELOPMENT & MANAGEMENT ­ SPACE RESEARCH GROUP, UNIVERSITY OF PADUA ­ 03/2026 ­ Current ­ ITALY Department: Dipartimento di Ingegneria Industriale Email: lorenzo.olivieri@unipd.it
+Software Development for a Systems Engineering Platform (MBSE) & Digital Twin for the designated mission requirements: · Mission requirements traceability platform DB development: Design and implementation of a cloud system backend with SQL database implementation using Supabase service, replacing fragmented workflows (Excel, static documents) with a unified digital system model for satellites and complex aerospace systems. · Additional Python integration for report file conversion: Implementation of real-time and downloadable requirements tracking logic, with reports based on ESA or NASA frameworks, where each engineering parameter (mass, power, costs) is sampled and displayed in compliance with the standards imposed by the relevant space agencies (script that allows the generation of these reports in docx or pdf format). · Product Tree Management: Development of functionality for managing Equipment and Subsystems via a restructured and intuitive graphical interface (frontend) and implementation of tables with data sampling in sessions and in SQL databases. · Mission Onboarding: Creation of mission onboarding with guidance on creating and sampling mission data compliant with standards and the option to directly add collaborators. · Data Integration and Automation: Interconnections and bridges with login and invitation systems for missions, implementing Edge Functions for email management and also enabling interoperability with external simulation tools via REST API
+Contact Person: Dr. Lorenzo Olivieri Tel: +39 049 827 6892
+Voluntary Collaboration
+STRUCTURAL ENGINEERING & MECHANISMS -- ST&M SUBSYSTEM ENGINEER ­ 02/11/2025 ­ Current ­ UNIVERSITY OF PADOVA, ITALY
+· Currently studying in depth the FEM simulations and structural design of the AlbaSat 2U CubeSat Structural and Thermal Model (STM), with a focus on ECSScompliant modelling, launcher constraints and numerical results interpretation.
+· Worked closely with the ST&M team to disassemble and reassemble the STM in the laboratory, measuring and verifying the actual mass of structural elements and payload dummies to ensure consistency with the FEM and qualification requirements.
+· Collaborate with teammates involved in the vibration test campaign at ESA's CubeSat Support Facility (CSF), using their test reports and data to better understand FEMtotest correlation and to refine the structural model for future development.
+· Contribute as coauthor to the documentation and conference paper on the AlbaSat STM structural model, simulations and test results, consolidating the work of the wider team into clear technical reporting.
+SPARTAN HEALTH ­ HYBRID
+IT SPECIALIST ­ 01/08/2025 ­ Current Promoted from technical support to leading the company's digital transformation. Currently responsible for the architectural design and maintenance of the entire IT ecosystem, focusing on operational scalability and high-availability systems. Managed IT
+
+systems and business process automation for a health & fitness organization, implementing scalable, secure, and automated operational processes.
+· DriveGen System Development: Engineered "DriveGen," a proprietary automation tool built on Google Apps Script and Node.js logic. This system autonomously generates complex, multi-variable documents and reports on Google Drive triggered by asynchronous webhooks, reducing manual processing time by over 80%.
+· Customer Support Infrastructure (GrooveHQ): Architected a seamless integration between the internal CRM and GrooveHQ. Developed custom middleware to intercept, categorize, and route support tickets based on client metadata, ensuring 100% data consistency across platforms.
+· Fullship Logistics Scraper: Designed and deployed a specialized web scraper to monitor and aggregate real-time shipping data. This tool automates the tracking of supply chain KPIs, providing the management team with instant visibility into logistics performance. Implemented Telegram bots and integrated tools to further streamline operational workflows and enhance team communication efficiency.
+· Web Design & Development: Designed and developed responsive product pages and web services using HTML, CSS, and JavaScript. Built user-centric interfaces and dynamic front-end components to support marketing and operational needs, ensuring cross-browser compatibility and performance optimization. Acted as both web designer and web service developer, bridging UI/UX with backend automation for seamless digital experiences.
+SALESPERSON ­ 01/03/2025 ­ 01/11/2025
+MEGAFITNESS
+IT SPECIALIST / FREELANCE ­ 01/08/2025 ­ Current · Logistics & Shipment Tracking: Implemented a version of the "Fullship Scraper" tailored for large-scale fitness equipment distribution. The system automates the ingestion of carrier data into the central database, triggering automated status updates for customers. · Workflow Optimization: Streamlined internal operations by identifying bottlenecks in data entry and replacing manual tasks with automated "Bridge" architectures, significantly increasing the throughput of the administrative team.
+SALESPERSON ­ 01/03/2026 ­ 01/11/2026
+IT SPECIALIST ­ DOG WELFARE LTD ­ 01/01/2026 ­ Current ­ HYBRID
+· IMAP-Based Communication Bridge: Developed a standalone automation suite for client communications using raw IMAP/ SMTP protocols. This solution bypassed the need for third-party helpdesk platforms, creating a lightweight, cost-effective, and highly secure mailing system.
+· VSL Project & Data Analytics: Built a custom "VSL Visualizer" tool to track, create and analyze Video Sales Letter performance. The system processes raw engagement metrics and translates them into actionable data visualizations, optimizing marketing funnel conversions through data-driven insights.
+IT MANAGER & SYSTEMS ARCHITECT ­ PROBIZ CONSULTING LLC ­ 01/08/2025 ­ 28/02/2026 ­ REMOTE
+Link : https://docs.google.com/document/d/1jDQaudVuvPnFl1RPAP9m_HpbgNQE9cP7PJKcECK3OqQ/edit?usp=sharing
+· Development of a complex data architecture between GoHighLevel, Make.com, and Google Sheets, managing data flows via REST APIs and Webhooks.
+· Distribution Algorithms: Implementation of Round Robin logic for dynamic workload balancing and middleware routing systems.
+· Data Integrity & Synchronization: Design of "unidirectional" synchronization logic to eliminate version conflicts (Race Conditions) and ensure database consistency.
+· Technical Documentation: Authoring of system documentation (v2.0), including flow mapping, integrity constraints, and maintenance protocols.
+· Technical documentation available upon request or at:
+MEMBER INVESTOR & IT RESOURCE ­ POODL BLOCKCHAIN ­ 05/2025 ­ Current
+· Business networking, IT outsourcing and decentralised technology consulting for blockchain startup · Systems Coordination: Development of Poodl Meeting Schedule to optimize internal workflow processes and team
+communication · Time-Zone Management Tool: Implementation of a "Geo-IP-less" time zone management system based on browser metadata
+heuristics and IANA standards
+HEAD WAITER CONTRACT ­ TRATTORIA AL FARO ­ 05/2023 ­ 10/2025 ­ CASTION, ITALY
+Managing floor operations and customer service; ensuring an impeccable service experience through team leadership and order accuracy.
+HEAD WAITER ­ RISTORANTE SAPORE DI MARE ­ 2023 ­ 2026 ­ JESOLO, ITALY
+
+Led front-of-house during peak seasons, optimizing guest flow and cash handling procedures to ensure efficiency and accuracy. Coordinated multi-role teams to maintain service quality under pressure. Assisted international customers, adapting communication style and prioritizing clear, efficient service.
+
+PROJECT INTERN ­ DIELLE ­ 2022 ­ 2022 ­ GALLIERA VENETA, ITALY
+
+Provided 3D modelling assistance for product design documentation and supported industrial electrical systems, including panel wiring, inverter integration, and troubleshooting of industrial control circuits.
+
+EDUCATION AND TRAINING
+01/10/2023 ­ CURRENT Padova, Italy AEROSPACE ENGINEERING Università degli Studi di Padova
+
+· Relevant coursework: Structural Mechanics, Aerospace Systems, Fluid Dynamics ,Aerospace flight dynamics · Active member of the Alba CubeSat team - ST&M (Structural & Mechanisms) subsystem · Active IT Developer for Research Group
+Website www.unipd.it Level in EQF EQF level 6
+16/09/2018 ­ 25/06/2023 Cittadella, Italy DIPLOMA -- COMPUTER SCIENCE, TELECOMMUNICATIONS & SYSTEMS ADMINISTRATION ITIS Meucci
+
+IT infrastructure, programming, electronics, network administration Website www.meuccifanoli.edu.it Final grade 87/100 Level in EQF EQF level 4 LANGUAGE SKILLS
+
+Mother tongue(s): ITALIAN Other language(s):
+
+ENGLISH SPANISH
+
+UNDERSTANDING
+
+Listening
+
+Reading
+
+B2
+
+B2
+
+B1
+
+B1
+
+SPEAKING Spoken production Spoken interaction
+
+B1
+
+B1
+
+A2
+
+A2
+
+WRITING
+B1 A2
+
+PUBLICATIONS
+2026 Simulations and Vibration Test Results for the AlbaSat STM
+
+· Presented structural design and FEM-to-test correlation of the AlbaSat 2U CubeSat. FEM analysis performed in ANSYS Workbench 2025 R1 / SolidWorks; experimental testing at ESA ESEC-Galaxia.
+· We contributed to the structural modelling and the numerical­experimental correlation of the AlbaSat 2U CubeSat Structural and Thermal Model (STM), with a specific focus on first-mode frequency compliance and validation of the finite element model against vibration test data collected on the electrodynamic shaker at ESA ESECGalaxia. In the project documentation, we reported how we built an ECSScompliant simplified STM model in SolidWorks and ANSYS Workbench 2025 R1, using bonded MPC contacts, deformable point masses and distributed mass adjustments to match subsystem inertias, together with launcher-representative boundary conditions reproducing the 3U deployer and 1U dummy configuration used during testing.
+· We jointly documented the modal analysis results (first six natural frequencies, with the first mode at 347.56 Hz, above SSMS requirements) and the full test sequence (quasistatic loads, sine vibration, random vibration and resonance searches along all axes), explaining how we processed resonance search data from a network of triaxial accelerometers to track frequency and amplitude shifts across the campaign. In the paper, we described the FEMtotest correlation procedure, including mode identification across multiple sensors, computation of percentage differences between analytical and experimental frequencies (1% mismatch for most modes, 10% for one mode under further investigation) and the interpretation of local amplitude deviations as mechanical settling rather than structural damage, thereby supporting the structural qualification of the STM and increasing confidence in the structural model for the future Flight Model.
+Co-author
+Journal Name: 4S Symposium 2026 -- Small Satellites Systems and Services
+
+CERTIFICATIONS
+University of Business in Wroclaw, 03/02/2026 Team Management ­ Managerial Training
+Mode of learning: Online
+Link https://navoica.pl/certificates/9570e819d66143a282faeb4df7c9fd93
+Università degli Studi di Padova, 10/07/2024 English B2 - Reading and Listening
+Mode of learning: Presential
+Link https://bestr.it/award/show/aynjai_TQs-c06iQ-7ncVg
+CREATIVE WORKS
+Independent Developer & Systems Architect
+· Instant-Translate: Is a Chrome extension that provides predictive linguistic assistance by integrating generative AI directly into user communication workflows such as chats, emails, and forms. Unlike static translators, it operates non-intrusively with real-time semantic analysis, using a three-level architecture mimicking modern Chrome Background Service Workers for reactive content scripting and input event monitoring. Performance is optimized via a 700ms debouncing mechanism to trigger analysis only after natural typing pauses, minimizing API calls; the geminiService.ts module processes text with Google Gemini 1.5 Flash model via an engineered system prompt that preserves conversational tone, corrects syntax, and adapts lexicon to the target language like Polish. It employs a "Suggestion-First" UX pattern with a floating SuggestionBubble for user validation before DOM injection via hot-swapping on accept, built on React 19, Tailwind CSS, and direct Google Generative AI integration for low-latency state management with loading feedback
+· Spese Smart: Is a high-end cross-platform Personal Finance Management application automating expense entry via AI to eliminate manual data input friction. It features multi-tenancy architecture for isolated user sessions (e.g., Matteo-IT, Diana-PL) with granular authentication, dynamic localization for languages (Italian, English, Polish) and currencies (EUR, PLN, USD), and data persistence via Google Sheets as a JSON Single Source of Truth. A real-time multi-currency conversion engine displays original and normalized amounts for consistent tracking, while the game-changing Telegram Bridge uses Gemini API for semantic parsing of natural language inputs (e.g., "I spent 15 euros on the pizza") to extract amount, category, and currency, assigned via unique Chat ID with background polling for live dashboard sync. Visualizations include responsive pie/bar charts for cash flow (incomes/expenses), temporal breakdowns (daily/weekly/monthly), and PWA-ready design; tech stack comprises React 19, Tailwind CSS, Gemini for NLP, and Google Sheets integration.
+· NeuroLex: Is an ultra-fast linguistic consultation interface leveraging Transformer models to deliver contextual definitions, surpassing traditional static dictionaries. Hosted serverlessly on GitHub Pages for efficiency, it features minimalistic input with zerolatency response, using Hugging Face Inference APIs (GPT-2/RoBERTa) for dynamic NLP generating definitions, synonyms, and semantic explanations for words or phrases. A hybrid AI-visual system maps AI textual output to Pexels API keywords for high-res relevant photography, creating a visual dictionary without early text-to-image glitches; asynchronous responses load definitions and images magically during processing. Efficiency logic in handleFetchSuggestion validates input thresholds (MINWORDSTHRESHOLD), compares AI output to original for "Perfect!" feedback if matching, with innovations like single-field UX reducing cognitive load.
+· Space Mission Simulator: Is a full-stack web app for designing, managing, and preliminarily simulating space missions with a modular client-server three-tier architecture scalable for scientific/industrial extensions. Frontend (React.js, Vite, Material UI, TailwindCSS, React Router, Axios) delivers SPA with CRUD for missions via validated forms, detail views, stats dashboards, and simulation interfaces using Recharts/Chart.js. Backend (FastAPI Python 3.12, Pydantic validation, SQLAlchemy ORM, Uvicorn) exposes RESTful API handling business logic, async queries on SQLite (future PostgreSQL), with Mission schema (id, name, description, date, status, destination, propulsiontype, payloadmass, missioncost, createdat). Simulation module computes Delta-V via Tsiolkovsky equation, fuel mass estimates, launch windows, orbital transfer times for LEO/GEO/Lunar/interplanetary missions, outputting numerics for timelines/reports; DevOps via Git/GitHub, GitHub Pages/Render hosting.
+Link https://docs.google.com/document/d/1xYkkbN6xEyRELKPIVxKKKk-4rxur1Jjj5xhlcQnmAk0/edit?usp=sharing
+
+

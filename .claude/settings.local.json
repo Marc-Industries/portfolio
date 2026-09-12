@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import graphify; print\\(graphify.__file__\\)\")",
+      "Bash(tee graphify-out/.graphify_python)",
+      "Bash(higgsfield workspace *)",
+      "Bash(higgsfield account *)",
+      "Bash(higgsfield model *)"
+    ]
+  }
+}

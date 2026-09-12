@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personnel File · Matteo Marcon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/assets/site.css" />
+  <style>
+    :root {
+      --cv-accent: var(--accent-crimson);
+      --cv-bg: var(--bg-0);
+      --cv-card: var(--bg-2);
+    }
+
+    body {
+      background-color: var(--cv-bg);
+      color: var(--text-1);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+    }
+
+    .dossier-container {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      position: relative;
+    }
+
+    /* Header Section */
+    .dossier-header {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      margin-bottom: 4rem;
+      border-bottom: 2px solid var(--cv-accent);
+      padding-bottom: 2rem;
+    }
+
+    .dossier-photo {
+      position: relative;
+      width: 200px;
+      aspect-ratio: 3/4;
+      background: var(--cv-card);
+      border: 1px solid var(--line-strong);
+      overflow: hidden;
+    }
+
+    .dossier-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(1) contrast(1.2);
+    }
+
+    .dossier-photo::after {
+      content: "CONFIDENTIAL";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      color: rgba(212, 63, 63, 0.3);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 2rem;
+      pointer-events: none;
+    }
+
+    .dossier-info h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--text-0);
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+
+    .dossier-info .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      color: var(--cv-accent);
+      margin-bottom: 1rem;
+    }
+
+    .dossier-info .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--text-2);
+    }
+
+    /* Section Styles */
+    .section {
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      color: var(--text-0);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      color: var(--text-1);
+      max-width: 75ch;
+    }
+
+    /* Experience Cards */
+    .exp-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .exp-card {
+      padding-left: 1.5rem;
+      border-left: 1px solid var(--line);
+      position: relative;
+    }
+
+    .exp-card::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: 0;
+      width: 9px;
+      height: 9px;
+      background: var(--cv-accent);
+      border-radius: 50%;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-title {
+      font-weight: 600;
+      color: var(--text-0);
+      font-size: 1.1rem;
+    }
+
+    .exp-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-2);
+    }
+
+    .exp-company {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--cv-accent);
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .exp-details {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-1);
+    }
+
+    .exp-details li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 1.2rem;
+    }
+
+    .exp-details li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--cv-accent);
+    }
+
+    /* Education & Skills */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .dossier-header { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+      .dossier-info .contact-grid { text-align: center; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+
+    .skill-tag {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      background: var(--cv-card);
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-1);
+      margin: 0 0.4rem 0.4rem 0;
+    }
+
+    .project-highlight {
+      background: var(--cv-card);
+      padding: 1.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+      margin-bottom: 1rem;
+    }
+
+    .project-highlight h4 {
+      margin: 0 0 0.5rem 0;
+      color: var(--text-0);
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .project-highlight p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dossier-container">
+    <header class="dossier-header">
+      <div class="dossier-photo">
+        <img src="/assets/img/logo.jfif" alt="Matteo Marcon" />
+      </div>
+      <div class="dossier-info">
+        <div class="status-badge mono">
+          <span class="dot fire"></span>
+          STATUS: ACTIVE · CLEARANCE: LEVEL 4
+        </div>
+        <h1>Matteo Marcon</h1>
+        <div class="contact-grid mono">
+          <div>EMAIL: matteo.marcon.6@studenti.unipd.it</div>
+          <div>PHONE: (+39) 3409950498</div>
+          <div>LOCATION: Rossano Veneto, IT</div>
+          <div>BORN: 06/09/2004</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Executive Summary</h2>
+      <p class="about-text">
+        Results-driven Aerospace Engineering student and Systems Architect specialized in the intersection of Space Systems Engineering and Advanced IT Automation. Currently driving the digital transformation of the Space Research Group at the University of Padua by developing an MBSE-based Systems Engineering Platform and Digital Twin ecosystem. Independent developer of full-stack AI-driven solutions and ST&M Subsystem Engineer for the AlbaSat 2U CubeSat mission.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="exp-grid">
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <span class="exp-title">IT Software Development & Management</span>
+            <span class="exp-date">03/2026 — Present</span>
+          </div>
+          <span class="exp-company">Space Research Group, University of Padua</span>
+          <ul class="exp-details">
+            <li>Developed an MBSE-based Systems Engineering Platform (BEPI) and Digital Twin ecosystem for satellite mission requirements.</li>
+            <li>Implemented cloud backend using Supabase (PostgreSQL) to replace fragmented Excel/Word workflows.</li>
+            <li>Built automated report generation (docx/pdf) aligned with ESA and NASA standards.</li>
+            <li>Architected product tree management and mission onboarding systems with REST API interoperability.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <span class="exp-title">ST&M Subsystem Engineer</span>
+            <span class="exp-date">11/2025 — Present</span>
+          </div>
+          <span class="exp-company">AlbaSat 2U CubeSat Mission · UniPD</span>
+          <ul class="exp-details">
+            <li>Performing FEM simulations and structural design for the AlbaSat Structural and Thermal Model (STM).</li>
+            <li>Analyzing vibration data from ESA ESEC-Galaxia campaign for FEM-to-test correlation.</li>
+            <li>Co-author of the 4S Symposium 2026 publication on structural qualification.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <span class="exp-title">IT Specialist & Systems Architect</span>
+            <span class="exp-date">08/2025 — Present</span>
+          </div>
+          <span class="exp-company">Spartan Health</span>
+          <ul class="exp-details">
+            <li>Architected "DriveGen," an automation tool (Node.js/GAS) reducing report processing time by 80%.</li>
+            <li>Integrated CRM with GrooveHQ via custom middleware for intelligent ticket routing.</li>
+            <li>Deployed "Fullship" logistics scraper to automate supply chain KPI tracking.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <span class="exp-title">IT Specialist</span>
+            <span class="exp-date">01/2026 — Present</span>
+          </div>
+          <span class="exp-company">Dog Welfare Ltd</span>
+          <ul class="exp-details">
+            <li>Developed an IMAP/SMTP communication bridge for secure, lightweight client mailing.</li>
+            <li>Built "VSL Visualizer" for analyzing Video Sales Letter engagement metrics.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <span class="exp-title">IT Manager & Systems Architect</span>
+            <span class="exp-date">08/2025 — 02/2026</span>
+          </div>
+          <span class="exp-company">ProBiz Consulting LLC</span>
+          <ul class="exp-details">
+            <li>Designed complex data architecture between GoHighLevel, Make.com, and Google Sheets via REST APIs.</li>
+            <li>Implemented Round Robin distribution algorithms for dynamic workload balancing.</li>
+            <li>Authored system documentation v2.0 including integrity constraints and flow mapping.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-header">
+            <span class="exp-title">IT Resource & Member Investor</span>
+            <span class="exp-date">05/2025 — Present</span>
+          </div>
+          <span class="exp-company">Poodl Blockchain</span>
+          <ul class="exp-details">
+            <li>Consulting on decentralized technology and IT outsourcing for blockchain startup.</li>
+            <li>Developed Poodl Meeting Schedule and Geo-IP-less time zone management system.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="exp-grid">
+        <div class="exp-card">
+          <div class="exp-header">
+            <span class="exp-title">B.Sc. Aerospace Engineering</span>
+            <span class="exp-date">2023 — Present</span>
+          </div>
+          <span class="exp-company">Universit&agrave; degli Studi di Padova</span>
+          <p class="exp-details" style="margin: 0; font-size: 0.95rem;">Focus: Structural Mechanics, Aerospace Systems, Fluid Dynamics.</p>
+        </div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <span class="exp-title">Diploma in Computer Science & Systems Admin</span>
+            <span class="exp-date">2018 — 2023</span>
+          </div>
+          <span class="exp-company">ITIS Meucci · Final Grade: 87/100</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="two-col">
+      <section class="section">
+        <h2 class="section-title">Technical Stack</h2>
+        <div class="skill-wall">
+          <span class="skill-tag">Python 3.11+</span>
+          <span class="skill-tag">SQL / PostgreSQL</span>
+          <span class="skill-tag">Supabase</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Streamlit</span>
+          <span class="skill-tag">React 19</span>
+          <span class="skill-tag">Tailwind CSS</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">JavaScript (ES6+)</span>
+          <span class="skill-tag">ANSYS</span>
+          <span class="skill-tag">SolidWorks</span>
+          <span class="skill-tag">MATLAB</span>
+          <span class="skill-tag">Git / GitHub</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">MBSE</span>
+          <span class="skill-tag">ECSS Standards</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Languages</h2>
+        <div class="exp-grid">
+          <div class="exp-card" style="border-left-color: var(--text-2);">
+            <span class="exp-title">Italian</span> <span class="exp-date">Native</span>
+          </div>
+          <div class="exp-card" style="border-left-color: var(--text-2);">
+            <span class="exp-title">English</span> <span class="exp-date">B2 / Professional</span>
+          </div>
+          <div class="exp-card" style="border-left-color: var(--text-2);">
+            <span class="exp-title">Spanish</span> <span class="exp-date">B1 / Conversational</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="section">
+      <h2 class="section-title">Selected Works</h2>
+      <div class="exp-grid">
+        <div class="project-highlight">
+          <h4>Instant-Translate</h4>
+          <p>AI-driven Chrome extension for predictive linguistic assistance using Gemini 1.5 Flash and React 19.</p>
+        </div>
+        <div class="project-highlight">
+          <h4>Spese Smart</h4>
+          <p>AI-powered Personal Finance Manager with Telegram Bridge for natural language expense entry.</p>
+        </div>
+        <div class="project-highlight">
+          <h4>NeuroLex</h4>
+          <p>Linguistic consultation interface using Transformer models (RoBERTa) for contextual definitions.</p>
+        </div>
+        <div class="project-highlight">
+          <h4>Space Mission Simulator</h4>
+          <p>Full-stack simulation tool for Delta-V and orbital transfer calculations using FastAPI and React.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

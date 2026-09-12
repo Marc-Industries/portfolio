@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects · Matteo Marcon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/assets/site.css" />
+  <link rel="stylesheet" href="/assets/projects.css" />
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .project-card {
+      background: var(--bg-2);
+      border: 1px solid var(--line-strong);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-crimson);
+    }
+    .project-card img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-bottom: 1px solid var(--line-strong);
+    }
+    .project-card-content {
+      padding: 1.5rem;
+    }
+    .project-card h3 {
+      margin: 0 0 0.5rem 0;
+      color: var(--text-0);
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .project-card p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-1);
+      line-height: 1.5;
+    }
+    .project-card .tag {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--accent-crimson);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body class="project-page" data-theme="dark">
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="scan-line-global" aria-hidden="true"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="brand">
+        <img src="/assets/img/logo.jfif" alt="Matteo Marcon" class="brand-img" />
+        <span class="brand-text">M·M</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">MAIN</a></li>
+        <li><a href="/scrub.html">TAKE 02</a></li>
+        <li><a href="/recruiter.html">RECRUITER</a></li>
+        <li><a href="/engineering.html">ENGINEERING</a></li>
+        <li><a href="/projects/" class="nav-link active">PROJECTS</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container" style="padding-top: 6.5rem; padding-bottom: 4rem;">
+    <div class="cs-head">
+      <div class="cs-eyebrow mono">
+        <span class="dot fire"></span>
+        <span>ARCHIVE · SELECT PROJECT</span>
+      </div>
+      <h1 class="cs-title">Projects</h1>
+      <p class="cs-tagline">A collection of aerospace engineering, systems architecture, and full-stack AI solutions.</p>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Aerospace / Core -->
+      <a href="/projects/bepi.html" class="project-card">
+        <img src="/assets/img/still-mbse.jpg" alt="BEPI" />
+        <div class="project-card-content">
+          <span class="tag">Aerospace / MBSE</span>
+          <h3>BEPI</h3>
+          <p>Systems Engineering platform for CubeSat missions with ECSS compliance.</p>
+        </div>
+      </a>
+
+      <a href="/projects/albasat.html" class="project-card">
+        <img src="/assets/img/still-aerospace.jpg" alt="AlbaSat" />
+        <div class="project-card-content">
+          <span class="tag">Aerospace / Structural</span>
+          <h3>AlbaSat</h3>
+          <p>Structural qualification and FEM-to-test correlation for 2U CubeSat.</p>
+        </div>
+      </a>
+
+      <!-- IT / Automation -->
+      <a href="/projects/drivegen.html" class="project-card">
+        <img src="/projects/drivegen/App-multiple.png" alt="DriveGen" />
+        <div class="project-card-content">
+          <span class="tag">Automation / Node.js</span>
+          <h3>DriveGen</h3>
+          <p>Autonomous multi-variable document generation system for Google Drive.</p>
+        </div>
+      </a>
+
+      <a href="/projects/fullship.html" class="project-card">
+        <img src="/projects/fullship/output.png" alt="FullShip" />
+        <div class="project-card-content">
+          <span class="tag">Web Scraping / Logistics</span>
+          <h3>FullShip</h3>
+          <p>Real-time shipping data aggregator for supply chain KPI monitoring.</p>
+        </div>
+      </a>
+
+      <a href="/projects/ghl-orchestrator.html" class="project-card">
+        <img src="/projects/ghl-orchestrator/automation-lead.png" alt="GHL Orchestrator" />
+        <div class="project-card-content">
+          <span class="tag">Enterprise / API</span>
+          <h3>GHL Orchestrator</h3>
+          <p>High-availability automation ecosystem with Round Robin workload balancing.</p>
+        </div>
+      </a>
+
+      <a href="/projects/help-desk.html" class="project-card">
+        <img src="/projects/help-desk-automation/Automation.png" alt="Help Desk" />
+        <div class="project-card-content">
+          <span class="tag">Automation / CRM</span>
+          <h3>Help Desk Automation</h3>
+          <p>Streamlined customer support infrastructure with customized routing.</p>
+        </div>
+      </a>
+
+      <a href="/projects/instant-translate.html" class="project-card">
+        <img src="/projects/instant-translate/app.png" alt="Instant Translate" />
+        <div class="project-card-content">
+          <span class="tag">AI / Chrome Extension</span>
+          <h3>Instant Translate</h3>
+          <p>Predictive linguistic assistance using Gemini 1.5 Flash.</p>
+        </div>
+      </a>
+
+      <a href="/projects/neurolex.html" class="project-card">
+        <img src="/projects/neurolex/App.png" alt="NeuroLex" />
+        <div class="project-card-content">
+          <span class="tag">NLP / Transformer</span>
+          <h3>NeuroLex</h3>
+          <p>Ultra-fast linguistic consultation interface with dynamic NLP.</p>
+        </div>
+      </a>
+
+      <a href="/projects/poodl.html" class="project-card">
+        <img src="/projects/poodl-meeting/first.png" alt="Poodl" />
+        <div class="project-card-content">
+          <span class="tag">Blockchain / Workflow</span>
+          <h3>Poodl Meeting</h3>
+          <p>Internal workflow optimization for decentralized technology consulting.</p>
+        </div>
+      </a>
+
+      <a href="/projects/spese-smart.html" class="project-card">
+        <img src="/projects/spese-smart/Dashboard.png" alt="Spese Smart" />
+        <div class="project-card-content">
+          <span class="tag">AI / Finance</span>
+          <h3>Spese Smart</h3>
+          <p>Personal Finance Management with AI-powered semantic parsing.</p>
+        </div>
+      </a>
+
+      <a href="/projects/vsl-visualizer.html" class="project-card">
+        <img src="/projects/vsl-visualizer/App.png" alt="VSL Visualizer" />
+        <div class="project-card-content">
+          <span class="tag">Analytics / Data Viz</span>
+          <h3>VSL Visualizer</h3>
+          <p>Video Sales Letter performance tracking and data visualization.</p>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-hairline"></div>
+      <div class="footer-bottom mono">
+        <div>© <span id="footer-year">2026</span> Matteo Marcon · All rights reserved.</div>
+        <div class="footer-meta">
+          <span>Imagery generated with AI.</span>
+          <span class="footer-status"><span class="dot fire"></span> SYSTEMS NOMINAL</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
