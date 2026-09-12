@@ -1,72 +1,44 @@
-```
-# Compiled and build artifacts
-*.pyc
-__pycache__/
-*.o
-*.obj
-*.class
-*.exe
-*.dll
-*.so
-*.a
-*.out
+# OS & System
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# Dependencies
-node_modules/
-venv/
-.venv/
-.env
-.env.local
-.env.*
-
-# Logs and temp files
-*.log
-*.tmp
+# IDEs & Editors
+.vscode/
+.idea/
 *.swp
 *.swo
 
-# Editors
-.vscode/
-.idea/
+# Dependencies & Environments
+node_modules/
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
 
-# System files
-.DS_Store
-Thumbs.db
+# Secrets & Config
+.env
+.env.*
+*.local
 
-# Coverage
-coverage/
-htmlcov/
-.coverage
-
-# Compressed files
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-*.tar.gz
-*.tar.bz2
-*.tar.xz
-*.tar.zst
-
-# Build directories
+# Build & Temp
 dist/
 build/
-target/
-.gradle/
-.mypy_cache/
+out/
+*.log
+*.tmp
+.cache/
 .pytest_cache/
-```
+.mypy_cache/
+
+# Local Project Data
+# Ignoring local PDFs and large docs that shouldn't be in the main repo
+*.pdf
+*.docx
+*.zip
+*.rar
+
+# Claude Code
+.claude/
