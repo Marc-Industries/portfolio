@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -14,22 +14,18 @@
       --cv-bg: var(--bg-0);
       --cv-card: var(--bg-2);
     }
-
     body {
       background-color: var(--cv-bg);
       color: var(--text-1);
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
     }
-
     .dossier-container {
       max-width: 900px;
       margin: 4rem auto;
       padding: 0 2rem;
       position: relative;
     }
-
-    /* Header Section */
     .dossier-header {
       display: grid;
       grid-template-columns: 1fr 2fr;
@@ -38,7 +34,6 @@
       border-bottom: 2px solid var(--cv-accent);
       padding-bottom: 2rem;
     }
-
     .dossier-photo {
       position: relative;
       width: 200px;
@@ -47,13 +42,11 @@
       border: 1px solid var(--line-strong);
       overflow: hidden;
     }
-
     .dossier-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-
     .dossier-photo::after {
       content: "CONFIDENTIAL";
       position: absolute;
@@ -66,7 +59,6 @@
       font-size: 2rem;
       pointer-events: none;
     }
-
     .dossier-info h1 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: clamp(2rem, 5vw, 3.5rem);
@@ -75,7 +67,6 @@
       text-transform: uppercase;
       letter-spacing: -0.02em;
     }
-
     .dossier-info .status-badge {
       display: inline-flex;
       align-items: center;
@@ -86,7 +77,6 @@
       color: var(--cv-accent);
       margin-bottom: 1rem;
     }
-
     .dossier-info .contact-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -96,13 +86,10 @@
       font-size: 12px;
       color: var(--text-2);
     }
-
-    /* Section Styles */
     .section {
       margin-bottom: 3rem;
       position: relative;
     }
-
     .section-title {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.25rem;
@@ -114,32 +101,26 @@
       align-items: center;
       gap: 1rem;
     }
-
     .section-title::after {
       content: "";
       flex: 1;
       height: 1px;
       background: var(--line);
     }
-
     .about-text {
       font-size: 1.1rem;
       color: var(--text-1);
       max-width: 75ch;
     }
-
-    /* Experience Cards */
     .exp-grid {
       display: grid;
       gap: 2rem;
     }
-
     .exp-card {
       padding-left: 1.5rem;
       border-left: 1px solid var(--line);
       position: relative;
     }
-
     .exp-card::before {
       content: "";
       position: absolute;
@@ -150,26 +131,22 @@
       background: var(--cv-accent);
       border-radius: 50%;
     }
-
     .exp-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       margin-bottom: 0.5rem;
     }
-
     .exp-title {
       font-weight: 600;
       color: var(--text-0);
       font-size: 1.1rem;
     }
-
     .exp-date {
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       color: var(--text-2);
     }
-
     .exp-company {
       font-family: 'JetBrains Mono', monospace;
       font-size: 12px;
@@ -177,7 +154,6 @@
       margin-bottom: 0.75rem;
       display: block;
     }
-
     .exp-details {
       list-style: none;
       padding: 0;
@@ -185,33 +161,27 @@
       font-size: 0.95rem;
       color: var(--text-1);
     }
-
     .exp-details li {
       margin-bottom: 0.5rem;
       position: relative;
       padding-left: 1.2rem;
     }
-
     .exp-details li::before {
       content: "→";
       position: absolute;
       left: 0;
       color: var(--cv-accent);
     }
-
-    /* Education & Skills */
     .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 3rem;
     }
-
     @media (max-width: 768px) {
       .dossier-header { grid-template-columns: 1fr; justify-items: center; text-align: center; }
       .dossier-info .contact-grid { text-align: center; }
       .two-col { grid-template-columns: 1fr; }
     }
-
     .skill-tag {
       display: inline-block;
       padding: 0.2rem 0.6rem;
@@ -223,7 +193,6 @@
       color: var(--text-1);
       margin: 0 0.4rem 0.4rem 0;
     }
-
     .project-highlight {
       background: var(--cv-card);
       padding: 1.5rem;
@@ -231,13 +200,11 @@
       border: 1px solid var(--line);
       margin-bottom: 1rem;
     }
-
     .project-highlight h4 {
       margin: 0 0 0.5rem 0;
       color: var(--text-0);
       font-family: 'Space Grotesk', sans-serif;
     }
-
     .project-highlight p {
       margin: 0;
       font-size: 0.9rem;
@@ -246,7 +213,6 @@
   </style>
 </head>
 <body>
-
   <div class="dossier-container">
     <header class="dossier-header">
       <div class="dossier-photo">
@@ -259,9 +225,9 @@
         </div>
         <h1>Matteo Marcon</h1>
         <div class="contact-grid mono">
-          <div>EMAIL: matteo.marcon.6@studenti.unipd.it</div>
+          <div>EMAIL: matteo_marcon@hotmail.com</div>
           <div>PHONE: (+39) 3409950498</div>
-          <div>LOCATION: Rossano Veneto, IT</div>
+          <div>LOCATION: Italy</div>
           <div>BORN: 06/09/2004</div>
         </div>
       </div>
@@ -270,91 +236,141 @@
     <section class="section">
       <h2 class="section-title">Executive Summary</h2>
       <p class="about-text">
-        Results-driven Aerospace Engineering student and Systems Architect specialized in the intersection of Space Systems Engineering and Advanced IT Automation. Currently driving the digital transformation of the Space Research Group at the University of Padua by developing an MBSE-based Systems Engineering Platform and Digital Twin ecosystem. Independent developer of full-stack AI-driven solutions and ST&M Subsystem Engineer for the AlbaSat 2U CubeSat mission.
+        Aerospace Engineering student focused on Space Systems and MBSE, combining structural analysis with advanced IT automation. Lead developer of an MBSE-based Systems Engineering &amp; Digital Twin platform for the Space Research Group at the University of Padua, ensuring ECSS/NASA-compliant mission data management. ST&amp;M Subsystem Engineer for the AlbaSat 2U CubeSat, co-authoring FEM-to-test correlation work presented at the 4S Symposium 2026.
       </p>
     </section>
 
     <section class="section">
       <h2 class="section-title">Professional Experience</h2>
       <div class="exp-grid">
-
         <div class="exp-card">
           <div class="exp-header">
-            <span class="exp-title">IT Software Development & Management</span>
-            <span class="exp-date">03/2026 — Present</span>
+            <span class="exp-title">Scientific Peer Reviewer</span>
+            <span class="exp-date">Jul 2026 — Present</span>
+          </div>
+          <span class="exp-company">Bon View Publishing · Archives of Advanced Engineering Science (AAES)</span>
+          <ul class="exp-details">
+            <li>Vetted Space Weather Research: Benchmarked manuscripts to validate data accuracy and numerical models.</li>
+            <li>Upheld AAES Publication Criteria: Appraised research methodology, ensuring 100% compliance with journal standards.</li>
+          </ul>
+        </div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <span class="exp-title">IT Software Development &amp; Management</span>
+            <span class="exp-date">Mar 2026 — Present</span>
           </div>
           <span class="exp-company">Space Research Group, University of Padua</span>
           <ul class="exp-details">
-            <li>Developed an MBSE-based Systems Engineering Platform (BEPI) and Digital Twin ecosystem for satellite mission requirements.</li>
-            <li>Implemented cloud backend using Supabase (PostgreSQL) to replace fragmented Excel/Word workflows.</li>
-            <li>Built automated report generation (docx/pdf) aligned with ESA and NASA standards.</li>
-            <li>Architected product tree management and mission onboarding systems with REST API interoperability.</li>
+            <li>Engineered Cloud MBSE Backend: Built a Supabase SQL platform replacing static spreadsheets, cutting data query times by ~60% across satellite workflows.</li>
+            <li>Automated ESA/NASA Reporting: Developed Python scripts to process live mass/power budgets into PDF/DOCX reports, reducing compliance efforts by ~40%.</li>
+            <li>Optimized Product Tree &amp; Sync: Designed dynamic UI sampling and REST APIs to streamline subsystem onboarding and sync external simulation tools.</li>
           </ul>
         </div>
-
         <div class="exp-card">
           <div class="exp-header">
-            <span class="exp-title">ST&M Subsystem Engineer</span>
-            <span class="exp-date">11/2025 — Present</span>
+            <span class="exp-title">ST&amp;M Subsystem Engineer</span>
+            <span class="exp-date">Nov 2025 — Present</span>
           </div>
           <span class="exp-company">AlbaSat 2U CubeSat Mission · UniPD</span>
           <ul class="exp-details">
-            <li>Performing FEM simulations and structural design for the AlbaSat Structural and Thermal Model (STM).</li>
-            <li>Analyzing vibration data from ESA ESEC-Galaxia campaign for FEM-to-test correlation.</li>
-            <li>Co-author of the 4S Symposium 2026 publication on structural qualification.</li>
+            <li>Simulated ECSS Structural Dynamics: Analyzed AlbaSat 2U CubeSat STM finite element models to guarantee compliance with launcher mechanical limits.</li>
+            <li>Correlated Hardware Mass Properties: Disassembled lab prototypes to measure physical components, optimizing FEM accuracy against empirical data.</li>
+            <li>Refined FEM via ESA Test Data: Processed ESA CSF vibration campaign results to improve model accuracy and co-authored the conference paper.</li>
           </ul>
         </div>
-
-        <div class="exp-card">
-          <div class="exp-header">
-            <span class="exp-title">IT Specialist & Systems Architect</span>
-            <span class="exp-date">08/2025 — Present</span>
-          </div>
-          <span class="exp-company">Spartan Health</span>
-          <ul class="exp-details">
-            <li>Architected "DriveGen," an automation tool (Node.js/GAS) reducing report processing time by 80%.</li>
-            <li>Integrated CRM with GrooveHQ via custom middleware for intelligent ticket routing.</li>
-            <li>Deployed "Fullship" logistics scraper to automate supply chain KPI tracking.</li>
-          </ul>
-        </div>
-
         <div class="exp-card">
           <div class="exp-header">
             <span class="exp-title">IT Specialist</span>
-            <span class="exp-date">01/2026 — Present</span>
+            <span class="exp-date">Aug 2025 — Present</span>
+          </div>
+          <span class="exp-company">Spartan Health</span>
+          <ul class="exp-details">
+            <li>Engineered "DriveGen" Automation: Built a Google Apps Script/Node.js document engine via webhooks, reducing manual reporting time by &gt;80%.</li>
+            <li>Architected CRM &amp; Support Middleware: Integrated CRM with GrooveHQ using custom logic to automatically categorize, route, and manage support tickets.</li>
+            <li>Deployed Logistics Scraper &amp; Web UI: Created real-time shipping scrapers with Telegram alerts alongside custom responsive frontend web services.</li>
+          </ul>
+        </div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <span class="exp-title">IT Specialist</span>
+            <span class="exp-date">Jan 2026 — Present</span>
           </div>
           <span class="exp-company">Dog Welfare Ltd</span>
           <ul class="exp-details">
-            <li>Developed an IMAP/SMTP communication bridge for secure, lightweight client mailing.</li>
-            <li>Built "VSL Visualizer" for analyzing Video Sales Letter engagement metrics.</li>
+            <li>Built IMAP/SMTP Communication Bridge: Developed a lightweight, secure mailing suite, cutting platform operational costs by ~30%.</li>
+            <li>Engineered VSL Analytics Visualizer: Built a custom tracking tool to parse Video Sales Letter metrics, boosting visual data analysis efficiency.</li>
           </ul>
         </div>
-
         <div class="exp-card">
           <div class="exp-header">
-            <span class="exp-title">IT Manager & Systems Architect</span>
-            <span class="exp-date">08/2025 — 02/2026</span>
+            <span class="exp-title">IT Manager &amp; Systems Architect</span>
+            <span class="exp-date">Aug 2025 — Feb 2026</span>
           </div>
           <span class="exp-company">ProBiz Consulting LLC</span>
           <ul class="exp-details">
-            <li>Designed complex data architecture between GoHighLevel, Make.com, and Google Sheets via REST APIs.</li>
-            <li>Implemented Round Robin distribution algorithms for dynamic workload balancing.</li>
-            <li>Authored system documentation v2.0 including integrity constraints and flow mapping.</li>
+            <li>Architected API Data Pipeline: Integrated GoHighLevel, Make, and Google Sheets via REST APIs/webhooks, reducing data sync latencies by ~50%.</li>
+            <li>Engineered Dynamic Middleware Logic: Implemented Round Robin workload algorithms and unidirectional sync protocols.</li>
+            <li>Authored Technical System Documentation: Created comprehensive workflow mappings and integrity constraints, cutting onboarding time by ~30%.</li>
           </ul>
         </div>
-
         <div class="exp-card">
           <div class="exp-header">
-            <span class="exp-title">IT Resource & Member Investor</span>
-            <span class="exp-date">05/2025 — Present</span>
+            <span class="exp-title">IT Specialist / Freelance</span>
+            <span class="exp-date">Aug 2025 — Present</span>
           </div>
-          <span class="exp-company">Poodl Blockchain</span>
+          <span class="exp-company">Mega Fitness</span>
           <ul class="exp-details">
-            <li>Consulting on decentralized technology and IT outsourcing for blockchain startup.</li>
-            <li>Developed Poodl Meeting Schedule and Geo-IP-less time zone management system.</li>
+            <li>Automated Shipment Tracking: Deployed a custom Fullship scraper to ingest carrier data, automating status updates for 500+ equipment orders.</li>
+            <li>Streamlined Internal Workflows: Replaced manual data entry with automated API bridges, cutting operational processing bottlenecks by ~50%.</li>
           </ul>
         </div>
-
+        <div class="exp-card">
+          <div class="exp-header">
+            <span class="exp-title">Salesperson</span>
+            <span class="exp-date">Mar 2025 — Nov 2026</span>
+          </div>
+          <span class="exp-company">Spartan Health &amp; Mega Fitness</span>
+          <ul class="exp-details">
+            <li>Managed 130+ Monthly Leads: Converted warm and cold prospects via structured pipelines.</li>
+            <li>Designed Excel Dashboards: Formatted tracking sheets to streamline lead data workflows.</li>
+            <li>Secured 5-Star Trustpilot Reviews: Directed client onboarding, earning direct online mentions.</li>
+          </ul>
+        </div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <span class="exp-title">Head Waiter Contract</span>
+            <span class="exp-date">May 2023 — Oct 2025</span>
+          </div>
+          <span class="exp-company">Trattoria Al Faro • Castion</span>
+          <ul class="exp-details">
+            <li>Led Floor Operations: Supervised shift teams in high-volume settings to optimize table turnover and service speed.</li>
+            <li>Maintained Order Accuracy: Ensured a high level of guest satisfaction.</li>
+            <li>Trained Service Team: Mentored new waitstaff over 3 years on hospitality standards and menu upselling techniques.</li>
+          </ul>
+        </div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <span class="exp-title">Head Waiter</span>
+            <span class="exp-date">2023 — 2026</span>
+          </div>
+          <span class="exp-company">Ristorante Sapore Di Mare • Jesolo</span>
+          <ul class="exp-details">
+            <li>Led Peak Floor Operations: Managed front-of-house workflow during peak seasons, handling 300+ daily covers.</li>
+            <li>Coordinated Multi-Role Teams: Supervised 6+ staff members to maintain high service quality under high-pressure shifts.</li>
+            <li>Served International Clientele: Delivered multilingual service to foreign guests, improving communication efficiency.</li>
+          </ul>
+        </div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <span class="exp-title">Project Intern</span>
+            <span class="exp-date">2022</span>
+          </div>
+          <span class="exp-company">Dielle • Galliera Veneta</span>
+          <ul class="exp-details">
+            <li>Assisted 3D CAD Modeling: Generated 3D models and technical documentation for product design.</li>
+            <li>Maintained Industrial Circuits: Wired panels, integrated inverters, and resolved system faults.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -364,15 +380,15 @@
         <div class="exp-card">
           <div class="exp-header">
             <span class="exp-title">B.Sc. Aerospace Engineering</span>
-            <span class="exp-date">2023 — Present</span>
+            <span class="exp-date">Oct 2023 — 2027</span>
           </div>
-          <span class="exp-company">Universit&agrave; degli Studi di Padova</span>
+          <span class="exp-company">Università degli Studi di Padova</span>
           <p class="exp-details" style="margin: 0; font-size: 0.95rem;">Focus: Structural Mechanics, Aerospace Systems, Fluid Dynamics.</p>
         </div>
         <div class="exp-card">
           <div class="exp-header">
-            <span class="exp-title">Diploma in Computer Science & Systems Admin</span>
-            <span class="exp-date">2018 — 2023</span>
+            <span class="exp-title">Diploma in Computer Science &amp; Systems Admin</span>
+            <span class="exp-date">Sep 2018 — Jun 2023</span>
           </div>
           <span class="exp-company">ITIS Meucci · Final Grade: 87/100</span>
         </div>
@@ -383,22 +399,23 @@
       <section class="section">
         <h2 class="section-title">Technical Stack</h2>
         <div class="skill-wall">
-          <span class="skill-tag">Python 3.11+</span>
-          <span class="skill-tag">SQL / PostgreSQL</span>
-          <span class="skill-tag">Supabase</span>
-          <span class="skill-tag">FastAPI</span>
-          <span class="skill-tag">Streamlit</span>
-          <span class="skill-tag">React 19</span>
-          <span class="skill-tag">Tailwind CSS</span>
-          <span class="skill-tag">Node.js</span>
-          <span class="skill-tag">JavaScript (ES6+)</span>
-          <span class="skill-tag">ANSYS</span>
-          <span class="skill-tag">SolidWorks</span>
-          <span class="skill-tag">MATLAB</span>
-          <span class="skill-tag">Git / GitHub</span>
-          <span class="skill-tag">REST APIs</span>
-          <span class="skill-tag">MBSE</span>
-          <span class="skill-tag">ECSS Standards</span>
+          <span class="skill-tag">MBSE &amp; Systems Engineering (ECSS/NASA)</span>
+          <span class="skill-tag">FEM Structural Analysis (ANSYS / SolidWorks)</span>
+          <span class="skill-tag">Vibration Testing &amp; Data Correlation</span>
+          <span class="skill-tag">Orbital Mechanics &amp; Mission Simulation</span>
+          <span class="skill-tag">Python (FastAPI / Data Processing)</span>
+          <span class="skill-tag">JavaScript / TypeScript (React / Node.js)</span>
+          <span class="skill-tag">SQL &amp; Database Architecture (Supabase / PostgreSQL)</span>
+          <span class="skill-tag">REST APIs &amp; Webhooks Integration</span>
+          <span class="skill-tag">Business Process Automation</span>
+          <span class="skill-tag">AI &amp; LLM Integration</span>
+          <span class="skill-tag">Web Scraping &amp; Workflow Automation</span>
+          <span class="skill-tag">Git &amp; Version Control</span>
+          <span class="skill-tag">Industrial Electrical Systems &amp; Wiring</span>
+          <span class="skill-tag">Technical Writing &amp; Reporting</span>
+          <span class="skill-tag">Team Leadership &amp; Operations Management</span>
+          <span class="skill-tag">AI Fundamentals (IBM Certified)</span>
+          <span class="skill-tag">Peer Review &amp; Scientific Evaluation</span>
         </div>
       </section>
 
@@ -423,23 +440,22 @@
       <div class="exp-grid">
         <div class="project-highlight">
           <h4>Instant-Translate</h4>
-          <p>AI-driven Chrome extension for predictive linguistic assistance using Gemini 1.5 Flash and React 19.</p>
+          <p>Chrome extension providing predictive linguistic assistance through generative AI in chats, emails and forms. Built with React 19, Tailwind CSS and Google Gemini 1.5 Flash.</p>
         </div>
         <div class="project-highlight">
           <h4>Spese Smart</h4>
-          <p>AI-powered Personal Finance Manager with Telegram Bridge for natural language expense entry.</p>
+          <p>Cross-platform personal finance management application automating expense entry with AI, multi-tenancy, and Telegram integration.</p>
         </div>
         <div class="project-highlight">
           <h4>NeuroLex</h4>
-          <p>Linguistic consultation interface using Transformer models (RoBERTa) for contextual definitions.</p>
+          <p>Linguistic consultation interface using Hugging Face Transformer inference APIs to provide contextual definitions and semantic explanations.</p>
         </div>
         <div class="project-highlight">
           <h4>Space Mission Simulator</h4>
-          <p>Full-stack simulation tool for Delta-V and orbital transfer calculations using FastAPI and React.</p>
+          <p>Full-stack web application for designing, managing and preliminarily simulating space missions using React and FastAPI.</p>
         </div>
       </div>
     </section>
   </div>
-
 </body>
 </html>
