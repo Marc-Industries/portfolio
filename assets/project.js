@@ -59,10 +59,10 @@ function setupLoader() {
 
   const onTimeUpdate = () => tickProgress();
 
-  // Force loader duration to 4 seconds.
+  // Force loader duration to 5 seconds.
   // We loop the video and use a timer to ensure consistency across all pages.
   video.loop = true;
-  setTimeout(finishLoader, 4000);
+  setTimeout(finishLoader, 5000);
 
   video.addEventListener('timeupdate', onTimeUpdate);
 
