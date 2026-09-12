@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <title>Recruiter Brief · Matteo Marcon</title>
-  <meta name="description" content="Recruiter brief: skills, availability, location, contact channels for Matteo Marcon." />
+  <title>Personnel Brief · Matteo Marcon</title>
+  <meta name="description" content="Executive recruiter brief for Matteo Marcon — Aerospace Systems & AI Automation." />
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23050000'/%3E%3Crect x='12' y='12' width='8' height='8' fill='%23D43F3F' transform='rotate(45 16 16)'/%3E%3C/svg%3E" />
 
@@ -12,6 +12,199 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="/assets/site.css" />
+  <style>
+    :root {
+      --brief-accent: var(--accent-crimson);
+    }
+    body { background-color: var(--bg-0); }
+
+    .brief-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 7rem 1.5rem 4rem;
+    }
+
+    /* Header Section - Dossier Style */
+    .brief-header {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+      border-bottom: 2px solid var(--brief-accent);
+      padding-bottom: 3rem;
+      align-items: start;
+    }
+
+    .brief-photo {
+      position: relative;
+      width: 240px;
+      aspect-ratio: 3/4;
+      background: var(--bg-2);
+      border: 1px solid var(--line-strong);
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    }
+    .brief-photo img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: grayscale(1) contrast(1.2);
+    }
+    .brief-photo::after {
+      content: "RECRUITER ACCESS";
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      color: rgba(212, 63, 63, 0.2);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700; font-size: 1.5rem;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .brief-info h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      color: var(--text-0);
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      color: var(--brief-accent);
+      margin-bottom: 1rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.75rem;
+      margin-top: 2rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--text-2);
+    }
+
+    /* Sections */
+    .brief-section {
+      margin-bottom: 4rem;
+    }
+    .brief-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      color: var(--text-0);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .brief-title::after {
+      content: ""; flex: 1; height: 1px; background: var(--line);
+    }
+
+    .value-prop {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: var(--text-1);
+      max-width: 80ch;
+      margin-bottom: 3rem;
+    }
+
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .role-card {
+      padding: 2rem;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--bg-2), var(--bg-0));
+      position: relative;
+      transition: border-color 0.3s ease;
+    }
+    .role-card:hover { border-color: var(--brief-accent); }
+    .role-card::before {
+      content: ""; position: absolute; top: 0; left: 0; width: 12px; height: 12px;
+      border-top: 2px solid var(--brief-accent); border-left: 2px solid var(--brief-accent);
+    }
+    .role-card::after {
+      content: ""; position: absolute; bottom: 0; right: 0; width: 12px; height: 12px;
+      border-bottom: 2px solid var(--brief-accent); border-right: 2px solid var(--brief-accent);
+    }
+
+    .role-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; letter-spacing: 0.3em;
+      color: var(--brief-accent);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .role-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      color: var(--text-0);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .role-list {
+      list-style: none; padding: 0; margin: 0;
+      display: flex; flex-direction: column; gap: 0.5rem;
+    }
+    .role-list li {
+      font-size: 0.9rem; color: var(--text-2);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .role-list li::before {
+      content: "→"; color: var(--brief-accent);
+    }
+
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .matrix-card {
+      padding: 1.5rem;
+      border: 1px solid var(--line);
+      background: rgba(22, 4, 4, 0.4);
+    }
+    .matrix-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; letter-spacing: 0.3em;
+      color: var(--text-3);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .matrix-tags {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+    }
+
+    .action-footer {
+      margin-top: 6rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--line-strong);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 850px) {
+      .brief-header { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+      .brief-photo { margin: 0 auto; }
+      .contact-grid { justify-items: center; text-align: center; }
+      .brief-info h1 { font-size: 2.5rem; }
+    }
+  </style>
 </head>
 <body data-theme="dark">
   <div class="page-bg" aria-hidden="true"></div>
@@ -32,159 +225,129 @@
     </div>
   </nav>
 
-  <section class="block" style="padding-top: 7rem;">
-    <div class="container">
-      <div class="block-head">
-        <span class="block-num mono">RB</span>
-        <span class="block-hairline"></span>
-        <span class="block-eyebrow mono">// RECRUITER BRIEF</span>
+  <div class="brief-container">
+    <header class="brief-header">
+      <div class="brief-photo">
+        <img src="/assets/img/logo.jfif" alt="Matteo Marcon" />
       </div>
-      <h1 class="block-title">Recruiter brief.</h1>
-      <p class="block-lede">
-        One page that answers the questions a hiring loop asks first.
-        Skills matrix, availability, location, and how to reach me.
-      </p>
-
-      <div class="card corner-brackets" style="background: linear-gradient(135deg, var(--bg-2), var(--bg-1));">
-        <div class="card-label mono" style="color:var(--accent-crimson); font-weight: 700;">PERSONNEL STATUS / CLEARANCE</div>
-        <div class="status-list">
-          <div class="status-row"><span class="mono">AVAILABILITY</span><span class="status-v">Open to opportunities <span class="dot fire"></span></span></div>
-          <div class="status-row"><span class="mono">RELOCATION</span><span class="status-v">Open <span class="dot ember"></span></span></div>
-          <div class="status-row"><span class="mono">REMOTE</span><span class="status-v">Yes <span class="dot amber"></span></span></div>
-          <div class="status-row"><span class="mono">LOCATION</span><span class="status-v">Padova, IT <span class="dot fire"></span></span></div>
-          <div class="status-row"><span class="mono">TIMEZONE</span><span class="status-v">CET · UTC+1</span></div>
-          <div class="status-row"><span class="mono">RESPONSE</span><span class="status-v">~24h via LinkedIn</span></div>
+      <div class="brief-info">
+        <div class="status-badge mono">
+          <span class="dot fire"></span>
+          STATUS: ACTIVE · CLEARANCE: LEVEL 4
+        </div>
+        <h1>Matteo Marcon</h1>
+        <p class="mono" style="color: var(--text-1); margin-top: 0.5rem; letter-spacing: 0.1em;">
+          Systems Architect · Aerospace Engineer · AI Automation Expert
+        </p>
+        <div class="contact-grid mono">
+          <div>EMAIL: matteo.marcon.6@studenti.unipd.it</div>
+          <div>PHONE: (+39) 3409950498</div>
+          <div>LOCATION: Padova, IT</div>
+          <div>TIMEZONE: CET (UTC+1)</div>
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <section class="block">
-    <div class="container">
-      <div class="cs-grid" style="grid-template-columns: 1fr; gap: 2rem;">
-        <div>
-          <h2 class="block-title" style="font-size: clamp(1.5rem, 3vw, 2.25rem);">The Value Proposition.</h2>
-          <p class="block-lede" style="color: var(--text-1); max-width: 65ch; margin-bottom: 2rem;">
-            I bridge the gap between <strong>rigorous aerospace systems engineering</strong> and <strong>modern AI-driven software automation</strong>.
-            Whether it's designing a CubeSat structural model or architecting a multi-tenant MBSE platform, I focus on
-            scalability, ECSS compliance, and operational efficiency.
-          </p>
+    <section class="brief-section">
+      <h2 class="brief-title">The Value Proposition</h2>
+      <div class="value-prop">
+        I bridge the gap between <strong class="accent">rigorous aerospace systems engineering</strong> and <strong class="accent">modern AI-driven software automation</strong>.
+        From designing 2U CubeSat structural models to architecting multi-tenant MBSE platforms, I deliver systems that are
+        observable, scalable, and aligned with international standards (ECSS, NASA).
+      </div>
+    </section>
+
+    <section class="brief-section">
+      <h2 class="brief-title">Target Roles</h2>
+      <div class="role-grid">
+        <div class="role-card">
+          <span class="role-label">PRIMARY FOCUS</span>
+          <span class="role-name">Systems Engineer / MBSE Architect</span>
+          <ul class="role-list">
+            <li>Digital Twin Ecosystems</li>
+            <li>Requirements Traceability & Management</li>
+            <li>Full-Lifecycle Space Mission Design</li>
+            <li>ECSS-Aligned Documentation & Workflows</li>
+          </ul>
         </div>
+        <div class="role-card">
+          <span class="role-label">TECHNICAL EDGE</span>
+          <span class="role-name">AI Automation Engineer</span>
+          <ul class="role-list">
+            <li>Agentic Workflow Orchestration (n8n, Make)</li>
+            <li>LLM-driven Data Extraction & Processing</li>
+            <li>Custom Internal Tooling & Ops Automation</li>
+            <li>API Middleware & Integration Architecture</li>
+          </ul>
+        </div>
+        <div class="role-card">
+          <span class="role-label">FOUNDATION</span>
+          <span class="role-name">Full-stack Software Engineer</span>
+          <ul class="role-list">
+            <li>Modern Frontend (React, Next.js, TS)</li>
+            <li>High-performance Backends (FastAPI, Node.js)</li>
+            <li>Database Design & Security (Postgres, RLS)</li>
+            <li>3D Web Visualization (Three.js, R3F)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <div class="flag-card-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-          <div class="card corner-brackets">
-            <div class="card-label mono" style="color:var(--accent-crimson);">AEROSPACE · SYSTEMS</div>
-            <ul class="list" style="margin-top: 0.75rem;">
-              <li><span class="dot fire"></span><span class="mono">Systems Engineer</span></li>
-              <li><span class="dot fire"></span><span class="mono">MBSE / Digital Engineering</span></li>
-              <li><span class="dot fire"></span><span class="mono">Structural / FEM engineer</span></li>
-              <li><span class="dot fire"></span><span class="mono">CubeSat / small-sat AIT</span></li>
-            </ul>
+    <section class="brief-section">
+      <h2 class="brief-title">Skills Matrix</h2>
+      <div class="matrix-grid">
+        <div class="matrix-card">
+          <span class="matrix-label">AEROSPACE & SYSTEMS</span>
+          <div class="matrix-tags">
+            <span class="tag">CubeSat Engineering</span>
+            <span class="tag">ECSS Standards</span>
+            <span class="tag">FMECA</span>
+            <span class="tag">PDR/CDR Deliverables</span>
+            <span class="tag">SolidWorks</span>
+            <span class="tag">ANSYS (FEM)</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">Vibration Testing</span>
           </div>
-          <div class="card corner-brackets">
-            <div class="card-label mono" style="color:var(--accent-crimson);">SOFTWARE</div>
-            <ul class="list" style="margin-top: 0.75rem;">
-              <li><span class="dot fire"></span><span class="mono">Full-stack engineer</span></li>
-              <li><span class="dot fire"></span><span class="mono">Frontend / React / Next.js</span></li>
-              <li><span class="dot fire"></span><span class="mono">Backend / FastAPI / Python</span></li>
-              <li><span class="dot fire"></span><span class="mono">Three.js / R3F</span></li>
-            </ul>
-          </div>
-          <div class="card corner-brackets">
-            <div class="card-label mono" style="color:var(--accent-crimson);">AI · AUTOMATION</div>
-            <ul class="list" style="margin-top: 0.75rem;">
-              <li><span class="dot fire"></span><span class="mono">AI Automation Engineer</span></li>
-              <li><span class="dot fire"></span><span class="mono">Prompt + workflow engineer</span></li>
-              <li><span class="dot fire"></span><span class="mono">Internal tools / ops engineer</span></li>
-            </ul>
+        </div>
+        <div class="matrix-card">
+          <span class="matrix-label">SOFTWARE & DATA</span>
+          <div class="matrix-tags">
+            <span class="tag">React 19</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Python 3.11+</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Three.js / R3F</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <h2 class="block-title" style="font-size: clamp(1.5rem, 3vw, 2.25rem);">Skills matrix.</h2>
-      <div class="card corner-brackets">
-        <div class="card-label mono">AEROSPACE</div>
-        <div class="tag-wall" style="margin-top: 0.5rem;">
-          <span class="tag">CubeSat engineering</span>
-          <span class="tag">ECSS-M-ST-10C</span>
-          <span class="tag">FMECA</span>
-          <span class="tag">PDR / CDR</span>
-          <span class="tag">SolidWorks</span>
-          <span class="tag">ANSYS</span>
-          <span class="tag">MATLAB</span>
-          <span class="tag">Vibration testing</span>
-        </div>
-      </div>
-      <div class="card corner-brackets" style="margin-top: 1rem;">
-        <div class="card-label mono">SOFTWARE</div>
-        <div class="tag-wall" style="margin-top: 0.5rem;">
-          <span class="tag">React</span>
-          <span class="tag">Next.js</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">Tailwind</span>
-          <span class="tag">Python</span>
-          <span class="tag">FastAPI</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">Postgres</span>
-          <span class="tag">Supabase RLS</span>
-          <span class="tag">Three.js</span>
-          <span class="tag">R3F</span>
-        </div>
-      </div>
-      <div class="card corner-brackets" style="margin-top: 1rem;">
-        <div class="card-label mono">AUTOMATION · AI</div>
-        <div class="tag-wall" style="margin-top: 0.5rem;">
-          <span class="tag">n8n</span>
-          <span class="tag">Make</span>
-          <span class="tag">Google Apps Script</span>
-          <span class="tag">Webhooks</span>
-          <span class="tag">OpenAI</span>
-          <span class="tag">Gemini</span>
-          <span class="tag">Hugging Face</span>
-          <span class="tag">Prompt engineering</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="container">
-      <div class="cs-grid" style="grid-template-columns: 1fr; gap: 2rem;">
-        <div>
-          <h2 class="block-title" style="font-size: clamp(1.5rem, 3vw, 2.25rem);">Education & Languages.</h2>
-          <div class="card corner-brackets" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; padding: 1.5rem;">
-            <div>
-              <div class="card-label mono" style="margin-bottom: 0.5rem;">DEGREE</div>
-              <div class="mono" style="font-size: 14px; color: var(--text-0);">B.Sc. Aerospace Engineering</div>
-              <div class="mono" style="font-size: 12px; color: var(--text-2);">University of Padua · In Progress</div>
-            </div>
-            <div>
-              <div class="card-label mono" style="margin-bottom: 0.5rem;">LANGUAGES</div>
-              <div class="mono" style="font-size: 14px; color: var(--text-0);">Italian (Native)</div>
-              <div class="mono" style="font-size: 14px; color: var(--text-0);">English (B2 / Professional)</div>
-              <div class="mono" style="font-size: 14px; color: var(--text-0);">Spanish (B1 / Conversational)</div>
-            </div>
+        <div class="matrix-card">
+          <span class="matrix-label">AI & AUTOMATION</span>
+          <div class="matrix-tags">
+            <span class="tag">n8n</span>
+            <span class="tag">Make.com</span>
+            <span class="tag">Gemini / OpenAI API</span>
+            <span class="tag">Prompt Engineering</span>
+            <span class="tag">Google Apps Script</span>
+            <span class="tag">Webhook Orchestration</span>
+            <span class="tag">REST API Design</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="block">
-    <div class="container">
-      <h2 class="block-title" style="font-size: clamp(1.5rem, 3vw, 2.25rem);">How to reach me.</h2>
-      <div class="contact-ctas" style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem;">
-        <a href="https://www.linkedin.com/in/matteo-marcon-287999368/" target="_blank" rel="noreferrer" class="btn btn-primary">LinkedIn <span>↗</span></a>
-        <a href="https://github.com/Marc-Industries" target="_blank" rel="noreferrer" class="btn">GitHub <span>↗</span></a>
-        <a href="/cv.html" class="btn">View Personnel File <span>↗</span></a>
-        <a href="/" class="btn">Back to main <span>→</span></a>
+    <footer class="action-footer">
+      <div class="mono" style="font-size: 11px; color: var(--text-3);">
+        READY FOR IMMEDIATE ENGAGEMENT · OPEN TO RELOCATION
       </div>
-    </div>
-  </section>
+      <div class="contact-ctas" style="display: flex; gap: 0.75rem;">
+        <a href="https://www.linkedin.com/in/matteo-marcon-287999368/" target="_blank" rel="noreferrer" class="btn btn-primary">Connect on LinkedIn ↗</a>
+        <a href="/cv.html" class="btn">View Full Personnel File →</a>
+        <a href="/" class="btn">Return to Portfolio ←</a>
+      </div>
+    </footer>
+  </div>
 
   <footer class="footer">
     <div class="container">
@@ -192,7 +355,6 @@
       <div class="footer-bottom mono">
         <div>© <span id="footer-year">2026</span> Matteo Marcon · All rights reserved.</div>
         <div class="footer-meta">
-          <span>Imagery generated with AI.</span>
           <span class="footer-status"><span class="dot fire"></span> SYSTEMS NOMINAL</span>
         </div>
       </div>
