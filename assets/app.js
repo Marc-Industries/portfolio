@@ -194,6 +194,18 @@ const DOMAINS = [
 
 const EXPERIENCE = [
   {
+    role: 'Professor of Electrotechnics and Electronics',
+    company: 'ITTS “Vito Volterra”',
+    domain: 'EDUCATION · ELECTROTECHNICS & ELECTRONICS',
+    location: 'Italy',
+    dates: 'Sep 2026 to Present',
+    summary: 'Full-time teaching position focused on Electrotechnics and Electronics theory, laboratory practice and student learning.',
+    bullets: [
+      'Teaching Electrotechnics and Electronics through theoretical lessons and laboratory activities',
+      'Developing educational materials and managing student assessments',
+    ],
+  },
+  {
     role: 'IT Software Development & Management',
     company: 'Space Research Group · University of Padua',
     domain: 'SYSTEMS ENGINEERING · MBSE',
