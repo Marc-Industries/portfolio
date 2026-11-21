@@ -1261,6 +1261,11 @@ body {
   border-color: rgba(224, 91, 79, 0.22);
 }
 .publication-card-secondary .publication-title { max-width: 26ch; }
+.publication-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+}
 .publication-source {
   display: inline-flex;
   margin-top: 1.25rem;

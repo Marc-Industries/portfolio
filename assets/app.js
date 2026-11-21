@@ -7,7 +7,7 @@
  *   - In-view section observer (toggles .in-view on every .block)
  *   - Nav active state via IntersectionObserver
  *   - Nav scrolled shadow toggle
- *   - Telemetry UTC clock + ticker content
+ *   - Scroll progress rail
  *   - Hero scroll-scrub video: video.currentTime is driven by page scroll
  *     progress (rAF lerp), not by autoplay. The satellite plays forward as
  *     the user scrolls, holds when they hold, and rewinds when they scroll up.
@@ -15,8 +15,8 @@
  *   - Hero poster fallback when video file is absent or fails
  *     (also used when prefers-reduced-motion is set)
  *   - Counter animation for [data-count]
- *   - About-graph SVG (M.M. at center, 7 domain nodes, animated edges)
- *   - Automation flow SVG (5 nodes + animated edges + legend counter)
+ *   - About-graph SVG (M.M. at center, 7 domain nodes)
+ *   - Automation flow SVG (5 nodes + explanatory labels)
  *   - Projects filter chips + featured + compact grid render
  *   - Timeline alternating rows
  *   - Education + certification cards
@@ -298,27 +298,12 @@ const CERTIFICATIONS = [
   { name: 'Cisco Certified Network Associate (CCNA)', issuer: 'Cisco Networking Academy', status: 'COMPLETED', dot: 'fire' },
 ];
 
-const TICKER_ITEMS = [
-  'M.M. // IDENTITY · ONLINE',
-  'SYSTEMS // NOMINAL',
-  'AEROSPACE // LIFECYCLE A–E',
-  'MBSE // 22 / 79 / 18 / 11 / 9 / 8',
-  'AUTOMATION // 5 NODES · 120ms p99',
-  'EDUCATION // UNIPD · IN PROGRESS',
-  'PUBLICATION // 4S SYMPOSIUM 2026',
-  'CHANNELS // LINKEDIN · GITHUB',
-];
-
 const NAV_LINKS = [
-  { href: '#about',      label: '01 IDENTITY'  },
-  { href: '#aerospace',  label: '02 AEROSPACE' },
-  { href: '#mbse',       label: '03 MBSE'      },
-  { href: '#software',   label: '04 SOFTWARE'  },
-  { href: '#automation', label: '05 AUTOMATION'},
-  { href: '#projects',   label: '06 PROJECTS'  },
-  { href: '#experience', label: '07 EXPERIENCE'},
-  { href: '#education',  label: '09 EDUCATION' },
-  { href: '#contact',    label: '10 CONTACT'   },
+  { href: '#about',      label: 'ABOUT'      },
+  { href: '#aerospace',  label: 'CAPABILITIES' },
+  { href: '#projects',   label: 'SELECTED WORK' },
+  { href: '#experience', label: 'EXPERIENCE' },
+  { href: '#contact',    label: 'CONTACT'   },
 ];
 
 // =============================================================================
@@ -404,26 +389,22 @@ function renderNav() {
 }
 
 // =============================================================================
-// TELEMETRY — clock + ticker
+// SCROLL PROGRESS — one quiet visual index for the long-form page.
 // =============================================================================
-function renderTelemetry() {
-  const tickClock = () => {
-    const d = new Date();
-    const hh = String(d.getUTCHours()).padStart(2, '0');
-    const mm = String(d.getUTCMinutes()).padStart(2, '0');
-    const ss = String(d.getUTCSeconds()).padStart(2, '0');
-    const v = `${hh}:${mm}:${ss}`;
-    $('#utc-clock').textContent = v;
-    const bottom = $('#utc-clock-bottom');
-    if (bottom) bottom.textContent = v;
+function setupScrollProgress() {
+  const rail = $('#scroll-progress');
+  if (!rail) return;
+  let frame = 0;
+  const update = () => {
+    frame = 0;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    const progress = max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0;
+    rail.style.setProperty('--progress', progress.toFixed(4));
   };
-  tickClock();
-  setInterval(tickClock, 1000);
-
-  const ticker = $('#ticker');
-  if (!ticker) return;
-  const items = TICKER_ITEMS.concat(TICKER_ITEMS);
-  ticker.innerHTML = items.map(t => `<span>${t}</span>`).join('');
+  const requestUpdate = () => { if (!frame) frame = requestAnimationFrame(update); };
+  addEventListener('scroll', requestUpdate, { passive: true });
+  addEventListener('resize', requestUpdate, { passive: true });
+  update();
 }
 
 // =============================================================================
@@ -465,6 +446,8 @@ function animateCounters() {
 function renderAboutGraph() {
   const root = $('#about-graph');
   if (!root) return;
+  root.setAttribute('role', 'img');
+  root.setAttribute('aria-label', 'Aerospace, systems, software, AI, automation, data and embedded engineering domains.');
 
   const NODES = [
     { id: 'aero',    label: 'AERO',    angle: -90 },
@@ -557,7 +540,7 @@ function renderAboutGraph() {
 }
 
 // =============================================================================
-// AUTOMATION FLOW — 5 nodes + animated edges
+// AUTOMATION FLOW — 5 explanatory nodes
 // =============================================================================
 function renderFlow() {
   const svg = $('#flow-svg');
@@ -606,18 +589,10 @@ function renderFlow() {
     path.setAttribute('opacity', '0.45');
     edges.appendChild(path);
 
-    // Animated packet
-    if (!REDUCED) {
-      const dot = document.createElementNS(svg.namespaceURI, 'circle');
-      dot.setAttribute('r', '3');
-      dot.setAttribute('fill', '#FF5C3A');
-      const animateMotion = document.createElementNS(svg.namespaceURI, 'animateMotion');
-      animateMotion.setAttribute('dur', `${2.5 + i * 0.3}s`);
-      animateMotion.setAttribute('repeatCount', 'indefinite');
-      animateMotion.setAttribute('path', `M ${a.x} ${a.y} Q ${mx} ${my} ${b.x} ${b.y}`);
-      dot.appendChild(animateMotion);
-      edges.appendChild(dot);
-    }
+    path.style.strokeDasharray = '520';
+    path.style.strokeDashoffset = '520';
+    path.style.transition = `stroke-dashoffset 1s cubic-bezier(.2,.8,.2,1) ${i * 90}ms`;
+    requestAnimationFrame(() => { path.style.strokeDashoffset = '0'; });
   }
 
   // Build nodes
@@ -653,16 +628,8 @@ function renderFlow() {
     nodeGroup.appendChild(g);
   }
 
-  // Live legend counter
-  if (!REDUCED) {
-    const el = $('#flow-legend-v');
-    const updateLegend = () => {
-      const ms = 100 + Math.floor(Math.random() * 50);
-      if (el) el.textContent = `~${ms}ms · p99`;
-      requestAnimationFrame(() => setTimeout(updateLegend, 1500));
-    };
-    updateLegend();
-  }
+  const legend = $('#flow-legend-v');
+  if (legend) legend.textContent = 'TRIGGER → AGENT → AUDIT';
 }
 
 // =============================================================================
@@ -1037,7 +1004,7 @@ function boot() {
   // 2. Wrap renderers in try-catch to prevent one failure from blocking the whole site
   const tasks = [
     renderNav,
-    renderTelemetry,
+    setupScrollProgress,
     animateCounters,
     renderAboutGraph,
     renderFlow,
