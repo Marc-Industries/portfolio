@@ -316,6 +316,21 @@ export const data = {
   // ---------------------------------------------------------------------------
   experience: [
     {
+      id: 'volterra-prof',
+      company: 'ITTS “Vito Volterra”',
+      role: 'Professor of Electrotechnics and Electronics',
+      start: '2026-09',
+      end: null,
+      location: 'Italy',
+      domain: 'industrial',
+      visibility: 'PUBLIC',
+      summary: 'Full-time teaching position for Electrotechnics and Electronics.',
+      bullets: [
+        'Instructing students in Electrotechnics and Electronics theory and laboratory practices.',
+        'Developing educational curriculum and managing student assessments.',
+      ],
+    },
+    {
       id: 'bepi-role',
       company: 'BEPI — multi-mission CubeSat SE platform',
       role: 'Full-stack contributor / Frontend engineer',
