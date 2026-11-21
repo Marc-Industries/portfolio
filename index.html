@@ -54,21 +54,8 @@
     </div>
   </nav>
 
-  <!-- ============================================================
-       TELEMETRY BAR — fixed, just under nav
-       ============================================================ -->
-  <div class="telemetry" id="telemetry">
-    <div class="telemetry-left">
-      <span class="dot fire"></span>
-      <span class="mono">LIVE</span>
-    </div>
-    <div class="telemetry-track">
-      <div class="ticker" id="ticker"></div>
-    </div>
-    <div class="telemetry-right">
-      <span class="mono">UTC <span id="utc-clock">--:--:--</span></span>
-    </div>
-  </div>
+  <!-- A quiet progress rail replaces the old simulated telemetry strip. -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
   <!-- ============================================================
        HERO — autoplay video + auto-cycling captions
@@ -76,7 +63,7 @@
   <section id="hero" class="hero">
     <div class="hero-load" id="hero-load">
       <div class="hero-load-ring"></div>
-      <div class="hero-load-label mono">INITIALISING MISSION</div>
+      <div class="hero-load-label mono">LOADING VISUALS</div>
     </div>
 
     <div class="hero-poster" id="hero-poster" hidden>
@@ -99,25 +86,24 @@
 
     <div class="hero-meta hero-meta-tl">
       <img src="/assets/img/logo.jfif" alt="" class="hero-logo" />
-      <span class="dot fire"></span>
-      <span class="mono">SYSTEMS ONLINE · MISSION READY</span>
+      <span class="mono">AEROSPACE · SYSTEMS · SOFTWARE</span>
     </div>
     <div class="hero-meta hero-meta-tr mono">
-      <div>LAT 45.4064 N</div>
-      <div>LON 11.8768 E</div>
-      <div class="hero-meta-em">— PDV / UTC+01 —</div>
+      <div>PADOVA, IT</div>
+      <div class="hero-meta-em">SELECTED WORK · 2026</div>
     </div>
     <div class="hero-meta hero-meta-br mono">
-      <div>SECTION 00 · IDENTITY</div>
-      <div class="hero-meta-em">SCROLL TO PROCEED</div>
+      <div>SCROLL TO EXPLORE</div>
     </div>
 
     <div class="hero-ctas">
-      <a href="#projects" class="btn btn-primary">View Projects <span>→</span></a>
-      <a href="#contact" class="btn">Get in Touch</a>
-      <a href="/scrub.html" class="btn">Take 02 · Alt framing <span>→</span></a>
-      <a href="https://www.linkedin.com/in/matteo-marcon-287999368/" target="_blank" rel="noreferrer" class="btn">LinkedIn ↗</a>
-      <a href="https://github.com/Marc-Industries" target="_blank" rel="noreferrer" class="btn">GitHub ↗</a>
+      <a href="#projects" class="btn btn-primary">Explore selected work <span>↘</span></a>
+      <a href="#contact" class="btn">Start a conversation <span>↘</span></a>
+    </div>
+    <div class="hero-secondary-links mono" aria-label="External profiles">
+      <a href="/scrub.html">Alternate framing</a>
+      <a href="https://www.linkedin.com/in/matteo-marcon-287999368/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      <a href="https://github.com/Marc-Industries" target="_blank" rel="noreferrer">GitHub ↗</a>
     </div>
   </section>
 
@@ -495,15 +481,16 @@
         </div>
 
         <div class="card corner-brackets" style="overflow-x:auto;">
-          <div class="card-label mono" style="color:var(--accent-crimson); margin-bottom:1.5rem;">EVENT FLOW · ANIMATED</div>
+          <div class="card-label mono" style="color:var(--accent-crimson); margin-bottom:1.5rem;">HOW THE WORKFLOWS CONNECT</div>
+          <p class="diagram-caption">A practical sequence for turning structured inputs into reliable, auditable outcomes.</p>
           <svg viewBox="0 0 800 320" class="flow-svg" aria-hidden="true" id="flow-svg">
             <g id="flow-edges"></g>
             <g id="flow-nodes"></g>
             <g>
-              <text x="20" y="20" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--text-3)" id="flow-legend-l">FLOW LATENCY</text>
-              <text x="20" y="40" font-family="JetBrains Mono, monospace" font-size="14" fill="var(--accent-crimson)" id="flow-legend-v">~120ms · p99</text>
-              <text x="780" y="20" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--text-3)">NODES</text>
-              <text x="780" y="40" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="14" fill="var(--accent-crimson)">5 / 5 ONLINE</text>
+              <text x="20" y="20" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--text-3)" id="flow-legend-l">SEQUENCE</text>
+              <text x="20" y="40" font-family="JetBrains Mono, monospace" font-size="14" fill="var(--accent-crimson)" id="flow-legend-v">TRIGGER → AUDIT</text>
+              <text x="780" y="20" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--text-3)">PURPOSE</text>
+              <text x="780" y="40" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="14" fill="var(--accent-crimson)">RELIABLE AUTOMATION</text>
             </g>
           </svg>
         </div>
@@ -608,6 +595,33 @@
             <span class="publication-stamp-year">2026</span>
           </div>
         </div>
+
+        <div class="card corner-brackets publication-card publication-card-secondary">
+          <div class="publication-stripe" aria-hidden="true"></div>
+          <div class="publication-body">
+            <div class="card-label mono" style="color:var(--accent-crimson);">SCHOOL FEATURE · NOV 2026</div>
+            <h3 class="publication-title">From School to Innovation: Volterra Students at EICMA 2026</h3>
+            <p class="publication-lede">
+              The fourth-year Electrotechnics and Electronics classes visited EICMA 2026 in Milan
+              to connect classroom and laboratory learning with the technologies shaping modern
+              two-wheel mobility: electric motors, batteries, control units, sensors, actuators,
+              assisted braking and stability systems. The article highlights the visit as a bridge
+              between technical education, industrial innovation, energy efficiency, safety and
+              the future of work, and thanks Professor Marcon and the accompanying teachers for
+              supporting the experience.
+            </p>
+            <div class="publication-chips">
+              <span class="chip mono">ITTS VITO VOLTERRA</span>
+              <span class="chip mono">EICMA 2026</span>
+              <span class="chip mono">ELECTROTECHNICS · AUTOMATION</span>
+            </div>
+            <a class="publication-source mono" href="https://www.istitutovolterra.edu.it/dalla-scuola-allinnovazione-le-classi-quarte-del-volterra-a-eicma-2026-alla-scoperta-delle-tecnologie-del-mondo-delle-due-ruote/" target="_blank" rel="noreferrer noopener">Original source ↗</a>
+          </div>
+          <div class="publication-stamp">
+            <span class="mono publication-stamp-label">FEATURE</span>
+            <span class="publication-stamp-year">2026</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -669,14 +683,10 @@
             </div>
           </div>
 
-          <div class="card corner-brackets">
-            <div class="card-label mono" style="color:var(--accent-crimson);">SYSTEM STATUS</div>
-            <div class="status-list">
-              <div class="status-row"><span class="mono">AVAILABILITY</span><span class="status-v">Open to opportunities <span class="dot fire"></span></span></div>
-              <div class="status-row"><span class="mono">RELOCATION</span><span class="status-v">Open <span class="dot ember"></span></span></div>
-              <div class="status-row"><span class="mono">REMOTE</span><span class="status-v">Yes <span class="dot amber"></span></span></div>
-              <div class="status-row"><span class="mono">LOCATION</span><span class="status-v">Padova, IT <span class="dot fire"></span></span></div>
-            </div>
+          <div class="card corner-brackets contact-note">
+            <div class="card-label mono" style="color:var(--accent-crimson);">CURRENT FOCUS</div>
+            <p>Open to aerospace systems, software, MBSE and automation opportunities.</p>
+            <div class="contact-note-meta mono">PADOVA, IT · REMOTE / RELOCATION OPEN</div>
           </div>
         </div>
 
