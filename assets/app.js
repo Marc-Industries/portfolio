@@ -338,7 +338,7 @@ function renderNav() {
     list.append(el('li', {}, el('a', { href: link.href, class: 'nav-link', 'data-target': link.href.slice(1) }, link.label)));
   }
 
-  const drawer = el('div', { class: 'nav-drawer', id: 'nav-drawer' });
+  const drawer = el('div', { class: 'nav-drawer', id: 'nav-drawer', 'aria-label': 'Mobile navigation', 'aria-hidden': 'true', hidden: '' });
   const drawerList = el('ul');
   for (const link of NAV_LINKS) {
     drawerList.append(el('li', {}, el('a', { href: link.href, class: 'nav-link', 'data-target': link.href.slice(1) }, link.label)));
@@ -347,10 +347,28 @@ function renderNav() {
   document.body.appendChild(drawer);
 
   const toggle = $('#nav-toggle');
-  toggle?.addEventListener('click', () => {
-    const open = drawer.classList.toggle('open');
+  let lastFocus = null;
+  const setDrawer = (open) => {
+    drawer.classList.toggle('open', open);
+    drawer.hidden = !open;
+    drawer.setAttribute('aria-hidden', String(!open));
     toggle.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if (open) {
+      lastFocus = document.activeElement;
+      drawer.querySelector('a')?.focus();
+    } else {
+      lastFocus?.focus?.();
+      lastFocus = null;
+    }
+  };
+  toggle?.addEventListener('click', () => setDrawer(!drawer.classList.contains('open')));
+  drawer.addEventListener('click', (event) => {
+    if (event.target === drawer) setDrawer(false);
+  });
+  addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && drawer.classList.contains('open')) setDrawer(false);
   });
 
   // Smooth scroll for in-page anchors (offset for fixed nav)
@@ -362,9 +380,7 @@ function renderNav() {
       e.preventDefault();
       const y = target.getBoundingClientRect().top + scrollY - 72;
       scrollTo({ top: y, behavior: REDUCED ? 'auto' : 'smooth' });
-      drawer.classList.remove('open');
-      toggle.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
+      setDrawer(false);
     });
   });
 
@@ -651,6 +667,8 @@ function renderProjects() {
       chip.className = 'filter-chip' + (d.id === activeFilter ? ' active' : '');
       chip.type = 'button';
       chip.textContent = `${d.label} · ${d.count}`;
+      chip.setAttribute('aria-pressed', String(d.id === activeFilter));
+      chip.setAttribute('aria-label', `Filter projects by ${d.label}, ${d.count} projects`);
       chip.addEventListener('click', () => { activeFilter = d.id; draw(); });
       filterBar.appendChild(chip);
     }
@@ -672,12 +690,12 @@ function renderProjects() {
 }
 
 function projectCard(p, featured) {
-  const card = el('div', { class: 'card corner-brackets' + (featured ? ' project-featured' : '') });
+  const card = el('article', { class: 'card corner-brackets' + (featured ? ' project-featured' : '') });
 
   if (featured) {
     const visual = el('div', { class: 'project-visual' });
     if (p.image) {
-      const img = el('img', { src: p.image, alt: '', loading: 'lazy' });
+      const img = el('img', { src: p.image, alt: `${p.name} project visual`, loading: 'lazy' });
       visual.appendChild(img);
     } else {
       const placeholder = el('div', { class: 'project-visual-placeholder' });
@@ -718,8 +736,8 @@ function projectCard(p, featured) {
     card.appendChild(visual);
   }
 
-  card.appendChild(el('div', { class: 'project-name' }, p.name));
-  card.appendChild(el('div', { class: 'project-headline' }, p.headline));
+  card.appendChild(el('h3', { class: 'project-name' }, p.name));
+  card.appendChild(el('p', { class: 'project-headline' }, p.headline));
   card.appendChild(el('p', { class: 'project-body muted' }, p.body));
 
   const tags = el('div', { class: 'tag-wall' });
@@ -742,7 +760,7 @@ function renderTimeline() {
   if (!root) return;
 
   EXPERIENCE.forEach((item, i) => {
-    const row = el('div', { class: `timeline-row ${i % 2 === 0 ? 'rtl' : 'ltr'}` });
+    const row = el('article', { class: `timeline-row ${i % 2 === 0 ? 'rtl' : 'ltr'}` });
 
     const side = el('div', { class: 'timeline-side' });
     side.appendChild(el('div', { class: 'timeline-dates' }, item.dates));
@@ -753,7 +771,7 @@ function renderTimeline() {
 
     const content = el('div', { class: 'timeline-content card corner-brackets' });
     content.appendChild(el('div', { class: 'timeline-domain' }, item.domain));
-    content.appendChild(el('div', { class: 'timeline-role' }, item.role));
+    content.appendChild(el('h3', { class: 'timeline-role' }, item.role));
     content.appendChild(el('div', { class: 'timeline-company' }, item.company));
     content.appendChild(el('div', { class: 'timeline-summary' }, item.summary));
 
@@ -887,6 +905,9 @@ function setupHero() {
     };
     addEventListener('scroll', maybeToggle, { passive: true });
     addEventListener('resize', maybeToggle, { passive: true });
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) stop(); else maybeToggle();
+    });
   }
 }
 
@@ -911,7 +932,7 @@ function setupPlanetScrub() {
   video.load();
 
   function startScrub() {
-    if (REDUCED) return; // reduced-motion users see the poster, no scrub
+    if (REDUCED || MOBILE) return; // poster fallback on reduced-motion and mobile
 
     let target = 0;
     let current = 0;

@@ -30,7 +30,7 @@ html { background: var(--bg-0); color: var(--text-0); scroll-behavior: smooth; }
 body {
   background: var(--bg-0);
   color: var(--text-0);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-feature-settings: 'cv11', 'ss01', 'ss03';
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
@@ -39,8 +39,8 @@ body {
 ::selection { background: var(--accent-crimson); color: var(--text-0); }
 
 /* Mono / Display utility */
-.mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
-.display { font-family: 'Space Grotesk', 'Inter', sans-serif; }
+.mono { font-family: 'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace; }
+.display { font-family: 'Space Grotesk', 'DM Sans', sans-serif; }
 
 /* Accent helpers */
 .accent { color: var(--accent-crimson); }
@@ -51,6 +51,20 @@ body {
 
 /* Utility classes */
 .hidden { display: none !important; }
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  padding: 0.7rem 0.9rem;
+  color: var(--bg-0);
+  background: var(--text-0);
+  font: 600 0.8rem 'IBM Plex Mono', monospace;
+  text-decoration: none;
+  transform: translateY(-180%);
+  transition: transform 0.2s ease;
+}
+.skip-link:focus { transform: translateY(0); }
 
 /* =============================================================================
    PAGE BACKGROUND
@@ -310,6 +324,7 @@ body {
 /* Mobile drawer */
 .nav-drawer {
   position: fixed; inset: 0; z-index: 40;
+  display: block;
   background: rgba(5, 0, 0, 0.95);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
@@ -796,7 +811,10 @@ body {
   gap: 0.5rem;
 }
 @media (max-width: 768px) {
-  .ecss-phases { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.25rem; }
+  .ecss-phases { grid-template-columns: 1fr; gap: 0.75rem; }
+  .ecss-phase { text-align: left; padding: 0 0 0 3.25rem; min-height: 3rem; }
+  .ecss-dot { top: 0; left: 0; transform: none; }
+  .ecss-desc { font-size: 0.75rem; }
 }
 .ecss-phase {
   position: relative; padding-top: 56px;
@@ -1550,6 +1568,9 @@ body {
    ============================================================================= */
 @media (max-width: 768px) {
   .block { padding: 5.5rem 0; }
+  .flow-svg { min-width: 0; }
+  .flow-svg text { font-size: 9px; }
+  .publication-actions { flex-direction: column; gap: 0.25rem; }
   .container { padding-left: 1rem; padding-right: 1rem; }
   .layer-tag { display: none; }
   .ecss-desc { font-size: 0.65rem; }
@@ -1604,9 +1625,10 @@ body {
 }
 
 /* Focus */
-a:focus-visible, button:focus-visible {
-  outline: 2px solid var(--accent-crimson);
-  outline-offset: 2px;
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--text-0);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 5px var(--accent-crimson);
 }
 
 /* Scrollbars */

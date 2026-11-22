@@ -18,14 +18,15 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
 
   <link rel="stylesheet" href="/assets/site.css" />
 </head>
 <body data-theme="dark">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- ============================================================
-       PAGE BACKGROUND — engineering grid + red vignette
+       PAGE BACKGROUND — restrained engineering field
        ============================================================ -->
   <div class="page-bg" aria-hidden="true"></div>
   <div class="site-planet-bg" id="site-planet-bg" aria-hidden="true">
@@ -39,7 +40,7 @@
   <!-- ============================================================
        NAV — fixed top
        ============================================================ -->
-  <nav class="nav" id="nav">
+  <nav class="nav" id="nav" aria-label="Primary navigation">
     <div class="nav-inner">
       <a href="#hero" class="brand">
         <img src="/assets/img/logo.jfif" alt="Matteo Marcon" class="brand-img" />
@@ -50,7 +51,7 @@
         <button type="button" class="language-button active" data-language="en" aria-pressed="true">EN</button>
         <button type="button" class="language-button" data-language="it" aria-pressed="false">IT</button>
       </div>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">≡ MENU</button>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">≡ MENU</button>
     </div>
   </nav>
 
@@ -60,7 +61,7 @@
   <!-- ============================================================
        HERO — autoplay video + auto-cycling captions
        ============================================================ -->
-  <section id="hero" class="hero">
+  <section id="hero" class="hero" aria-labelledby="hero-title">
     <div class="hero-load" id="hero-load">
       <div class="hero-load-ring"></div>
       <div class="hero-load-label mono">LOADING VISUALS</div>
@@ -81,7 +82,7 @@
       <div class="hero-caption" data-beat="1">Aerospace engineer.</div>
       <div class="hero-caption" data-beat="2">Software, too.</div>
       <div class="hero-caption" data-beat="3">MBSE, AI, automation.</div>
-      <div class="hero-caption hero-caption-final notranslate" data-beat="4" translate="no">Matteo Marcon.</div>
+      <h1 id="hero-title" class="hero-caption hero-caption-final notranslate" data-beat="4" translate="no">Matteo Marcon.</h1>
     </div>
 
     <div class="hero-meta hero-meta-tl">
